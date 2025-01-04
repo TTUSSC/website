@@ -9,7 +9,9 @@
           <div class="row d-flex">
             <div class="col-md-9 mb-5">
               <p class="lead display-5">科學開源服務社</p>
-              <p class="col-md-10">科學開源服務社是透過開源的方式進行服務的社團。會有技術型的社課，亦致力於校園內推廣開源文化。希望可以改善整體風氣，提供一個舒適的學習平台。</p>
+              <p class="col-md-10">
+                科學開源服務社致力於推廣開源文化、技術學習與志工服務。我們舉辦社課與講座學習開源工具，透過專案實作累積經驗，並參與資訊營隊與研討會志工，實踐服務與學習的結合。在這裡，你能與志同道合的夥伴一起探索開源的魅力，感受分享與協作的力量。加入我們，讓開源點亮你的生活！
+              </p>
             </div>
             <div class="col-md-3 d-flex">
               <img class="mx-auto" style="max-height: 200px;" src="/logo.png" alt="">
