@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <div class="row">
-    <div class="col-md-8 mx-auto my-5">
+  <div class="row my-5">
+    <div class="col-md-8 mx-auto">
       <h1 class="mb-4">開源，開啟協作與分享的新篇章</h1>
       <p>
         在資訊爆炸與技術革新的時代，人們越來越重視智慧財產的保護，期望透過規範帶來便利與創新。然而，隨之而來的專利戰與過度保護，往往阻礙了知識的流通與技術的進步。面對這樣的現實，我們相信事情可以有另一種選擇。
