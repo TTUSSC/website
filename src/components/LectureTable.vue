@@ -77,13 +77,13 @@ function convertDifficultyToMoon(difficulty) {
       </table>
     </div>
     <div class="col-12 d-lg-none">
-      <div class="card shadow mb-3" v-for="lecture in props.tableData" :key="lecture.name">
+      <div class="card shadow mb-3" v-for="lecture in props.tableData" :key="lecture.name" data-bs-toggle="modal"
+        :data-bs-target="'#modal-' + encodeURIComponent(lecture.name)">
         <div class="card-body">
           <h5 class="card-title">{{ lecture.name }}</h5>
           <div class="card-text fs-6">日期：{{ lecture.date }}</div>
           <div class="card-text fs-6">難度：<span class="text-nowrap">{{ convertDifficultyToMoon(lecture.difficulty)
-              }}</span>
-          </div>
+              }}</span></div>
           <div class="card-text fs-6">講師：{{ lecture.lecturer }}</div>
           <div class="card-text fs-6">地點：{{ lecture.location }}</div>
           <div class="mt-2 card-text">
@@ -160,5 +160,11 @@ function convertDifficultyToMoon(difficulty) {
 
 .card {
   border: none !important;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: rgba(var(--bs-emphasis-color-rgb), 0.075);
 }
 </style>
