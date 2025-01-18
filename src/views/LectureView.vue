@@ -788,7 +788,7 @@ function handleSelectYear(year) {
       </div>
       <ul class="nav flex-column nav-pills">
         <li class="nav-item" v-for="year in years" :key="year.value">
-          <a class="nav-link" :class="{ active: selectedYear === year }" href="#"
+          <a class="nav-link" :class="{ active: selectedYear.value === year.value }" href="#"
             @click.prevent="handleSelectYear(year)">
             {{ year.name }}
           </a>

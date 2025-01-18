@@ -38,31 +38,51 @@ function convertDifficultyToMoon(difficulty) {
 </script>
 
 <template>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">日期</th>
-        <th scope="col">名稱</th>
-        <th scope="col">難度</th>
-        <th scope="col">講師</th>
-        <th scope="col">地點</th>
-        <th scope="col">標籤</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-if="props.tableData.length === 0">
-        <td colspan="6" class="text-center">目前沒有課程資料</td>
-      </tr>
-      <tr v-for="lecture in props.tableData" :key="lecture.name">
-        <td>{{ lecture.date }}</td>
-        <td>{{ lecture.name }}</td>
-        <td>{{ convertDifficultyToMoon(lecture.difficulty) }}</td>
-        <td>{{ lecture.lecturer }}</td>
-        <td>{{ lecture.location }}</td>
-        <td>
-          <span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light">#{{ tag }}</span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-12 d-none d-md-block">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">日期</th>
+            <th scope="col">名稱</th>
+            <th scope="col">難度</th>
+            <th scope="col">講師</th>
+            <th scope="col">地點</th>
+            <th scope="col">標籤</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-if="props.tableData.length === 0">
+            <td colspan="6" class="text-center">目前沒有課程資料</td>
+          </tr>
+          <tr v-for="lecture in props.tableData" :key="lecture.name">
+            <td>{{ lecture.date }}</td>
+            <td>{{ lecture.name }}</td>
+            <td class="text-nowrap">{{ convertDifficultyToMoon(lecture.difficulty) }}</td>
+            <td>{{ lecture.lecturer }}</td>
+            <td>{{ lecture.location }}</td>
+            <td>
+              <span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light">#{{ tag }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 d-md-none">
+      <div class="card mb-3" v-for="lecture in props.tableData" :key="lecture.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ lecture.name }}</h5>
+          <div class="card-text fs-6">日期：{{ lecture.date }}</div>
+          <div class="card-text fs-6">難度：<span class="text-nowrap">{{ convertDifficultyToMoon(lecture.difficulty)
+              }}</span>
+          </div>
+          <div class="card-text fs-6">講師：{{ lecture.lecturer }}</div>
+          <div class="card-text fs-6">地點：{{ lecture.location }}</div>
+          <div class="mt-2 card-text">
+            <span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light">#{{ tag }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
