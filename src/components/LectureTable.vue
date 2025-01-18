@@ -1,6 +1,11 @@
 <script setup>
 import { defineProps } from 'vue';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFilePowerpoint, faCircleQuestion } from '@fortawesome/free-regular-svg-icons'
+import { faFileLines, faBook } from '@fortawesome/free-solid-svg-icons';
+library.add(faFilePowerpoint, faFileLines, faCircleQuestion, faBook);
+
 const props = defineProps({
   year: String,
   tableData: Array
@@ -39,8 +44,8 @@ function convertDifficultyToMoon(difficulty) {
 
 <template>
   <div class="row">
-    <div class="col-md-12 d-none d-md-block">
-      <table class="table">
+    <div class="col-md-12 d-none d-lg-block">
+      <table class="table table-hover">
         <thead>
           <tr>
             <th scope="col">日期</th>
@@ -55,9 +60,12 @@ function convertDifficultyToMoon(difficulty) {
           <tr v-if="props.tableData.length === 0">
             <td colspan="6" class="text-center">目前沒有課程資料</td>
           </tr>
-          <tr v-for="lecture in props.tableData" :key="lecture.name">
+          <tr v-for="lecture in props.tableData" :key="lecture.name" data-bs-toggle="modal"
+            :data-bs-target="'#modal-' + encodeURIComponent(lecture.name)">
             <td>{{ lecture.date }}</td>
-            <td>{{ lecture.name }}</td>
+            <td>
+              {{ lecture.name }}
+            </td>
             <td class="text-nowrap">{{ convertDifficultyToMoon(lecture.difficulty) }}</td>
             <td>{{ lecture.lecturer }}</td>
             <td>{{ lecture.location }}</td>
@@ -68,8 +76,8 @@ function convertDifficultyToMoon(difficulty) {
         </tbody>
       </table>
     </div>
-    <div class="col-12 d-md-none">
-      <div class="card mb-3" v-for="lecture in props.tableData" :key="lecture.name">
+    <div class="col-12 d-lg-none">
+      <div class="card shadow mb-3" v-for="lecture in props.tableData" :key="lecture.name">
         <div class="card-body">
           <h5 class="card-title">{{ lecture.name }}</h5>
           <div class="card-text fs-6">日期：{{ lecture.date }}</div>
@@ -85,4 +93,72 @@ function convertDifficultyToMoon(difficulty) {
       </div>
     </div>
   </div>
+  <div v-for="lecture in props.tableData" :key="'modal-' + encodeURIComponent(lecture.name)" class="modal modal-lg fade"
+    :id="'modal-' + encodeURIComponent(lecture.name)" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"><strong>{{ lecture.name }}</strong></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div><strong>講師：</strong>{{ lecture.lecturer }}</div>
+          <div><strong>地點：</strong>{{ lecture.location }}</div>
+          <div><strong>時間：</strong>{{ lecture.date }}</div>
+          <div class="my-3">
+            <a v-if="lecture.slide" :href="lecture.slide" type="button" class="btn btn-warning me-2">
+              <font-awesome-icon :icon="['far', 'file-powerpoint']" />
+              簡報
+            </a>
+            <a v-if="lecture.slido" :href="lecture.slido" type="button" class="btn btn-success me-2">
+              <font-awesome-icon :icon="['far', 'circle-question']" />
+              Slido
+            </a>
+            <a v-if="lecture.handout" :href="lecture.handout" type="button" class="btn btn-info me-2">
+              <font-awesome-icon :icon="['far', 'book']" />
+              講義
+            </a>
+            <a v-if="lecture.note" :href="lecture.note" type="button" class="btn btn-dark me-2">
+              <font-awesome-icon :icon="['fas', 'file-lines']" />
+              共筆
+            </a>
+          </div>
+          <div v-if="lecture.description">
+            <h4 class="mt-4"><strong>活動簡介</strong></h4>
+            <p class="mt-2">{{ lecture.description }}</p>
+          </div>
+          <div v-if="lecture.timeline">
+            <h4 class="mt-4"><strong>活動時程</strong></h4>
+            <p class="mt-2">
+            <ul class="mb-6">
+              <li v-for="time in lecture.timeline" :key="time.id">
+                {{ time }}
+              </li>
+            </ul>
+            </p>
+          </div>
+          <div><strong></strong><span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light">#{{ tag
+              }}</span></div>
+        </div>
+        <div class="modal-footer">
+          <a :href="lecture.kktix">
+            <button type="button" :disabled="!lecture.kktix || lecture.kktix.trim() === ''" class="btn btn-success">
+              KKTIX 報名
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.table-hover tbody tr:hover {
+  cursor: pointer;
+}
+
+.card {
+  border: none !important;
+}
+</style>

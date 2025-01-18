@@ -795,7 +795,7 @@ function handleSelectYear(year) {
         </li>
       </ul>
     </div>
-    <div class="col-md-10">
+    <div class="col-lg-10">
       <h3>{{ selectedYear.name }}</h3>
       <LectureTable :year="selectedYear.value" :table-data="lectureData[selectedYear.value]" />
     </div>
