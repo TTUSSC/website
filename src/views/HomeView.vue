@@ -30,9 +30,9 @@
 
   <div class="row mb-5">
     <div class="row col-lg-10 mx-auto">
-      <div class="col-sm-4 mb-3">
+      <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
-          <div class="ratio ratio-4x3">
+          <div class="ratio ratio-16x9">
             <img src="https://picsum.photos/300" class="card-img-top" alt="...">
           </div>
           <div class="card-body d-flex flex-column">
@@ -43,9 +43,9 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 mb-3">
+      <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
-          <div class="ratio ratio-4x3">
+          <div class="ratio ratio-16x9">
             <img src="https://picsum.photos/300" class="card-img-top" alt="...">
           </div>
           <div class="card-body d-flex flex-column">
@@ -54,9 +54,9 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 mb-3">
+      <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
-          <div class="ratio ratio-4x3">
+          <div class="ratio ratio-16x9">
             <img src="https://picsum.photos/300" class="card-img-top" alt="...">
           </div>
           <div class="card-body d-flex flex-column">
@@ -95,3 +95,16 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.card {
+  border: none !important;
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+</style>
