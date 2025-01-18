@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: Copy index.html to 404.html
-        run: cp ./dist/index.html ./public/404.html
+        run: cp ./dist/index.html ./dist/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
