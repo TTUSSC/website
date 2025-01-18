@@ -5,6 +5,36 @@ const props = defineProps({
   year: String,
   tableData: Array
 });
+
+function convertDifficultyToMoon(difficulty) {
+  // 確保難度在 0 到 5 之間
+  if (difficulty < 0 || difficulty > 5) {
+    throw new Error("難度必須在 0 到 5 之間");
+  }
+
+  const moonPhases = ['🌑', '🌑', '🌑', '🌑', '🌑']; // 初始化五顆月亮
+
+  // 計算每顆月亮的值
+  for (let i = 0; i < 5; i++) {
+    if (difficulty >= 1) {
+      moonPhases[i] = '🌕'; // 完全的滿月
+      difficulty -= 1; // 減去 1
+    } else if (difficulty >= 0.75) {
+      moonPhases[i] = '🌖'; // 0.75 的月亮
+      difficulty -= 0.75; // 減去 0.75
+    } else if (difficulty >= 0.5) {
+      moonPhases[i] = '🌗'; // 0.5 的月亮
+      difficulty -= 0.5; // 減去 0.5
+    } else if (difficulty >= 0.25) {
+      moonPhases[i] = '🌘'; // 0.25 的月亮
+      difficulty -= 0.25; // 減去 0.25
+    } else {
+      moonPhases[i] = '🌑'; // 0 的月亮
+    }
+  }
+
+  return moonPhases.join(''); // 返回月亮的字串
+}
 </script>
 
 <template>
@@ -26,7 +56,7 @@ const props = defineProps({
       <tr v-for="lecture in props.tableData" :key="lecture.name">
         <td>{{ lecture.date }}</td>
         <td>{{ lecture.name }}</td>
-        <td>{{ lecture.difficulty }}</td>
+        <td>{{ convertDifficultyToMoon(lecture.difficulty) }}</td>
         <td>{{ lecture.lecturer }}</td>
         <td>{{ lecture.location }}</td>
         <td>
