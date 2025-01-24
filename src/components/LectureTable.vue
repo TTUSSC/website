@@ -70,7 +70,7 @@ function convertDifficultyToMoon(difficulty) {
             <td>{{ lecture.lecturer }}</td>
             <td>{{ lecture.location }}</td>
             <td>
-              <span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light">#{{ tag }}</span>
+              <span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light me-1">#{{ tag }}</span>
             </td>
           </tr>
         </tbody>
@@ -87,7 +87,7 @@ function convertDifficultyToMoon(difficulty) {
           <div class="card-text fs-6">講師：{{ lecture.lecturer }}</div>
           <div class="card-text fs-6">地點：{{ lecture.location }}</div>
           <div class="mt-2 card-text">
-            <span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light">#{{ tag }}</span>
+            <span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light me-1">#{{ tag }}</span>
           </div>
         </div>
       </div>
@@ -130,15 +130,13 @@ function convertDifficultyToMoon(difficulty) {
           </div>
           <div v-if="lecture.timeline">
             <h4 class="mt-4"><strong>活動時程</strong></h4>
-            <p class="mt-2">
-            <ul class="mb-6">
+            <ul class="mt-2 mb-6">
               <li v-for="time in lecture.timeline" :key="time.id">
                 {{ time }}
               </li>
             </ul>
-            </p>
           </div>
-          <div><strong></strong><span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light">#{{ tag
+          <div><strong></strong><span v-for="tag in lecture.tags" :key="tag" class="badge text-bg-light me-1">#{{ tag
               }}</span></div>
         </div>
         <div class="modal-footer">

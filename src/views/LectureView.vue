@@ -3,6 +3,7 @@ import LectureTable from '@/components/LectureTable.vue';
 import { ref } from 'vue';
 
 const years = [
+  { name: '113 下學期', value: '2025-spring' },
   { name: '113 上學期', value: '2024-fall' },
   { name: '112 下學期', value: '2024-spring' },
   { name: '112 上學期', value: '2023-fall' },
@@ -11,6 +12,26 @@ const years = [
 ];
 
 const lectureData = {
+  '2025-spring': [
+    // {
+    //   date: "",
+    //   name: "",
+    //   difficulty: 0.0,
+    //   lecturer: "",
+    //   location: "A3-200",
+    //   tags: [],
+    //   description: "",
+    //   timeline: [
+    //     "17:30~18:00 場地佈置、進場",
+    //     "19:50~20:00 填寫問卷、收拾場地"
+    //   ],
+    //   slide: "",
+    //   slido: "",
+    //   handout: "",
+    //   note: "",
+    //   kktix: "",
+    // },
+  ],
   '2024-fall': [
     {
       date: "9/12",
