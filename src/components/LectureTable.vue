@@ -173,6 +173,6 @@ function convertDifficultyToMoon(difficulty) {
 
 .card:hover {
   cursor: pointer;
-  background-color: rgba(var(--bs-emphasis-color-rgb), 0.075);
+  background-color: rgba(var(--bs-emphasis-color-rgb), 0.035);
 }
 </style>
