@@ -25,6 +25,9 @@ library.add(faMugSaucer, faDiscord)
             <RouterLink class="nav-link" to="/about">關於</RouterLink>
           </li>
           <li class="nav-item">
+            <RouterLink class="nav-link" to="/member">社團成員</RouterLink>
+          </li>
+          <li class="nav-item">
             <RouterLink class="nav-link" to="/lecture">社課</RouterLink>
           </li>
           <li class="nav-item">
