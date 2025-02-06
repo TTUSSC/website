@@ -76,7 +76,15 @@ function convertDifficultyToMoon(difficulty) {
         </tbody>
       </table>
     </div>
+
+    <!-- 手機板檢視卡片 -->
     <div class="col-12 d-lg-none">
+      <div v-if="props.tableData.length === 0" class="card shadow mb-3">
+        <div class="card-body text-center">
+          目前沒有課程資料
+        </div>
+      </div>
+      
       <div class="card shadow mb-3" v-for="lecture in props.tableData" :key="lecture.name" data-bs-toggle="modal"
         :data-bs-target="'#modal-' + encodeURIComponent(lecture.name)">
         <div class="card-body">
@@ -93,6 +101,8 @@ function convertDifficultyToMoon(difficulty) {
       </div>
     </div>
   </div>
+
+  <!-- 跳出視窗 -->
   <div v-for="lecture in props.tableData" :key="'modal-' + encodeURIComponent(lecture.name)" class="modal modal-lg fade"
     :id="'modal-' + encodeURIComponent(lecture.name)" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
