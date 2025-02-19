@@ -33,7 +33,7 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
           <div class="ratio ratio-16x9">
-            <img src="https://picsum.photos/300" class="card-img-top" alt="...">
+            <img src="/img/open-source.jpg" class="card-img-top" style="object-fit: cover;" alt="...">
           </div>
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">開源文化</h4>
@@ -46,7 +46,7 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
           <div class="ratio ratio-16x9">
-            <img src="https://picsum.photos/300" class="card-img-top" alt="...">
+            <img src="/img/tech-learning.jpg" class="card-img-top" style="object-fit: cover;" alt="...">
           </div>
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">技術學習</h4>
@@ -57,7 +57,7 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
           <div class="ratio ratio-16x9">
-            <img src="https://picsum.photos/300" class="card-img-top" alt="...">
+            <img src="/img/other-activities.jpg" class="card-img-top" style="object-fit: cover;" alt="...">
           </div>
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">其他內容</h4>
