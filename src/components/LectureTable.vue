@@ -136,7 +136,7 @@ function convertDifficultyToMoon(difficulty) {
           </div>
           <div v-if="lecture.description">
             <h4 class="mt-4"><strong>活動簡介</strong></h4>
-            <p class="mt-2">{{ lecture.description }}</p>
+            <p v-html="lecture.description"></p>
           </div>
           <div v-if="lecture.timeline">
             <h4 class="mt-4"><strong>活動時程</strong></h4>
