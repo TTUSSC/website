@@ -328,7 +328,7 @@ const lectureData = {
     {
       date: "9/19",
       name: "開源新手村",
-      difficulty: 0.0,
+      difficulty: 1.0,
       lecturer: "威力",
       location: "A3-200",
       tags: ["開源"],
@@ -348,7 +348,7 @@ const lectureData = {
     {
       date: "9/26",
       name: "0 到 1 的社群協作守則",
-      difficulty: 0.0,
+      difficulty: 1.25,
       lecturer: "小方",
       location: "A3-200",
       tags: ["HackMD", "Markdown", "協作"],
@@ -371,7 +371,7 @@ const lectureData = {
     {
       date: "10/3",
       name: "怕麻煩的話，就 Shell 出你的指令吧",
-      difficulty: 0.0,
+      difficulty: 2.0,
       lecturer: "芋泥",
       location: "A3-200",
       tags: ["Linux", "Shell"],
@@ -394,7 +394,7 @@ const lectureData = {
     {
       date: "10/7",
       name: "Re：從 C 開始的大學生活（上）",
-      difficulty: 0.0,
+      difficulty: 2.0,
       lecturer: "阿文",
       location: "A3-200",
       tags: ["C", "程式設計"],
@@ -417,7 +417,7 @@ const lectureData = {
     {
       date: "10/17",
       name: "Re：從 C 開始的大學生活（下）",
-      difficulty: 0.0,
+      difficulty: 2.5,
       lecturer: "阿文",
       location: "A3-200",
       tags: ["C", "程式設計"],
@@ -459,9 +459,9 @@ const lectureData = {
     {
       date: "11/4",
       name: "Email(工作坊)",
-      difficulty: 0.0,
-      lecturer: "神秘講者",
-      location: "待定",
+      difficulty: 1.0,
+      lecturer: "卓立教授",
+      location: "A3-206",
       tags: ["工作坊", "Email"],
       description: "Email 是現代人與人溝通的重要工具，掌握 Email 的使用可以大大提高工作效率。這次社課將帶領大家認識 Email 的基本概念和使用方法，並透過實際操作練習，讓大家能夠熟練運用 Email 來與人溝通和協作。",
       timeline: [
@@ -482,7 +482,7 @@ const lectureData = {
     {
       date: "11/7",
       name: "Arduino 微處理器入門",
-      difficulty: 0.0,
+      difficulty: 2.0,
       lecturer: "Allen",
       location: "A3-200",
       tags: ["Arduino"],
@@ -504,31 +504,30 @@ const lectureData = {
     },
     {
       date: "11/14",
-      name: "無用盒專題實作",
-      difficulty: 0.0,
-      lecturer: "呆呆",
-      location: "A3-200",
-      tags: ["Arduino", "創客"],
-      description: "無用盒專題實作是科學開源服務社的特色活動之一，透過實際操作來學習和應用開源軟體和硬體的知識。這次社課將帶領大家認識無用盒專題實作的背景和目的，並透過實際操作練習，讓大家能夠熟練運用開源軟體和硬體來開發各種應用。",
+      name: "做自己的夢，Just Do It ！",
+      difficulty: 1.0,
+      lecturer: "柳橙學姊",  // 將 "劉辰盈" 改為 "柳橙學姊"
+      location: "A3-201",
+      tags: ["生涯規劃", "職涯發展"],
+      description: "對自己未來的自己迷惘嗎？<br>可以做更多還在想什麼嗎？？<br>勇敢向前衝，做就對了！！<br><br>這堂課，邀請到了我們的校外指導老師，劉辰盈學姊，在短短時間內將帶領大家找到屬於自己想要做的事情😉<br><br>透過老師引導以及輕鬆小短片，觸動自己對未來的不可能，最後再分類出哪些屬性夢想該如何往前🤔<br><br>還在對未來很迷惘的夥伴們趕快報名起來吧～",
       timeline: [
         "17:30~18:00 場地佈置、進場",
         "18:00~18:10 開場介紹",
-        "18:10~18:30 介紹無用盒專題實作的背景和目的",
-        "18:30~18:40 實際操作練習",
-        "18:40~19:10 分享與討論",
-        "19:10~19:50 桌遊團康活動",
+        "18:10~19:00 生涯探索與規劃",
+        "19:00~19:30 小組討論與分享",
+        "19:30~19:50 總結與回饋",
         "19:50~20:00 填寫問卷、收拾場地"
       ],
-      slide: "https://www.canva.com/design/DAGQ5_ONUM4/8bSIXCfQ4ihhEAWvy0Aobg/view?utm_content=DAGQ5_ONUM4&utm_campaign=designshare&utm_medium=link&utm_source=editor",
-      slido: "https://app.sli.do/event/3x9JxEntqCz1dXFiZ8KvzB",
+      slide: "",
+      slido: "",
       handout: "",
-      note: "https://hackmd.io/@ttussc/Bk8ycCF30",
-      kktix: "https://ttussc.kktix.cc/events/opensrc113",
+      note: "",
+      kktix: "https://kktix.com/events/just-do-it113",
     },
     {
       date: "11/21",
       name: "Arduino RFID 實戰",
-      difficulty: 0.0,
+      difficulty: 3.0,
       lecturer: "Allen",
       location: "A3-200",
       tags: ["Arduino", "創客"],
@@ -551,8 +550,8 @@ const lectureData = {
     {
       date: "11/28",
       name: "作業系統生存指南",
-      difficulty: 0.0,
-      lecturer: "小方",
+      difficulty: 2.0,
+      lecturer: "Yuto",
       location: "A3-200",
       tags: ["OS", "Linux"],
       description: "作業系統是電腦運作的核心，掌握作業系統的使用可以大大提高工作效率。這次社課將帶領大家認識作業系統的基本概念和使用方法，並透過實際操作練習，讓大家能夠熟練運用作業系統來管理電腦和執行各種任務。",
@@ -574,7 +573,7 @@ const lectureData = {
     {
       date: "12/5",
       name: "想學黑魔法嗎？我告訴你有哪些技能",
-      difficulty: 0.0,
+      difficulty: 2.5,
       lecturer: "Timothy",
       location: "A3-307",
       tags: ["資訊安全"],
@@ -653,7 +652,7 @@ const lectureData = {
     {
       date: "2/29",
       name: "新學期啟航！回顧及展望",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動，會呼吸即可
       lecturer: "Yuto",
       location: "A3-307",
       tags: ["期初大會"]
@@ -661,7 +660,7 @@ const lectureData = {
     {
       date: "3/7",
       name: "來從開源一路細說到FOSDEM去",
-      difficulty: 0.0,
+      difficulty: 1.0,  // 開源文化入門
       lecturer: "Timothy",
       location: "A3-200",
       tags: ["開源文化"]
@@ -669,7 +668,7 @@ const lectureData = {
     {
       date: "3/9",
       name: "SITCON 學生計算機年會",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動
       lecturer: "無",
       location: "中研院",
       tags: ["SITCON"]
@@ -677,7 +676,7 @@ const lectureData = {
     {
       date: "3/14",
       name: "古老卻強大的編譯器-Vim",
-      difficulty: 0.0,
+      difficulty: 2.0,  // vim 需要一定學習曲線
       lecturer: "Timothy",
       location: "A3-200",
       tags: ["vim", "shell"]
@@ -685,7 +684,7 @@ const lectureData = {
     {
       date: "3/16",
       name: "天使心志工活動",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動
       lecturer: "無",
       location: "台北市立木柵動物園",
       tags: ["服務"]
@@ -693,7 +692,7 @@ const lectureData = {
     {
       date: "3/21",
       name: "想要擁有自己的網站嗎？boostrap帶你上手",
-      difficulty: 0.0,
+      difficulty: 1.25,  // 類似前面的 HTML 課程
       lecturer: "張哲嘉",
       location: "A3-200",
       tags: ["網頁前端", "Bootstrap"]
@@ -701,7 +700,7 @@ const lectureData = {
     {
       date: "3/28",
       name: "vue出新世界",
-      difficulty: 0.0,
+      difficulty: 2.5,  // 需要 HTML/JS 基礎
       lecturer: "張哲嘉",
       location: "A3-200",
       tags: ["網頁前端"]
@@ -709,7 +708,7 @@ const lectureData = {
     {
       date: "4/13",
       name: "開源工具大補帖",
-      difficulty: 0.0,
+      difficulty: 1.5,  // 基礎工具教學
       lecturer: "Yuto",
       location: "A3 8F 樂學空間",
       tags: ["Linux", "Markdown"]
@@ -717,7 +716,7 @@ const lectureData = {
     {
       date: "4/15",
       name: "Denny學長的Git教學（上）",
-      difficulty: 0.0,
+      difficulty: 3.25,  // 參考你提供的範例
       lecturer: "Denny",
       location: "A3-200",
       tags: ["Git", "多人協作"]
@@ -725,7 +724,7 @@ const lectureData = {
     {
       date: "4/22",
       name: "Denny學長的Git教學（下）",
-      difficulty: 0.0,
+      difficulty: 3.5,  // 參考你提供的範例
       lecturer: "Denny",
       location: "A3-200",
       tags: ["Git", "多人協作"]
@@ -733,7 +732,7 @@ const lectureData = {
     {
       date: "5/2",
       name: "從C語言快速上手Python的基礎實戰",
-      difficulty: 0.0,
+      difficulty: 2.0,  // Python 基礎，需要 C 語言知識
       lecturer: "Yuto",
       location: "A3-200",
       tags: ["Python"]
@@ -741,7 +740,7 @@ const lectureData = {
     {
       date: "5/9",
       name: "從Python爬蟲認識網路世界",
-      difficulty: 0.0,
+      difficulty: 2.5,  // 需要 Python 基礎
       lecturer: "Yuto",
       location: "A3-200",
       tags: ["Python", "網路爬蟲"]
@@ -749,7 +748,7 @@ const lectureData = {
     {
       date: "5/16",
       name: "Jerry 的 HEXO 分享",
-      difficulty: 0.0,
+      difficulty: 2.25,  // 類似 GitHub Pages
       lecturer: "小方",
       location: "A3-200",
       tags: ["GitHub", "HEXO"]
@@ -757,7 +756,7 @@ const lectureData = {
     {
       date: "5/23",
       name: "社團總結&交接",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動
       lecturer: "張芯瑜",
       location: "A3-307",
       tags: ["期末派對"]
@@ -767,7 +766,7 @@ const lectureData = {
     {
       date: "9/18",
       name: "期初迎新",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動，會呼吸即可
       lecturer: "Yuto",
       location: "A3-102",
       tags: ["迎新"]
@@ -775,7 +774,7 @@ const lectureData = {
     {
       date: "9/25",
       name: "開源是什麼?蛤?雞排?",
-      difficulty: 0.0,
+      difficulty: 1.0,  // 開源文化入門
       lecturer: "Yuto",
       location: "A3-200",
       tags: ["開源文化"]
@@ -857,7 +856,7 @@ const lectureData = {
     {
       date: "2/20",
       name: "時間回復！讓我們聊聊過去、現在與未來",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動，會呼吸即可
       lecturer: "Timothy",
       location: "A3-307",
       tags: []
@@ -865,7 +864,7 @@ const lectureData = {
     {
       date: "3/06",
       name: "做孩子的啦啦隊",
-      difficulty: 0.0,
+      difficulty: 1.0,  // 基礎講座
       lecturer: "幼竹老師",
       location: "A3-307",
       tags: []
@@ -873,7 +872,7 @@ const lectureData = {
     {
       date: "3/13",
       name: "一起來做個tldr，畢竟我們可是要教小學生呢！（水火箭）",
-      difficulty: 3.0,
+      difficulty: 2.0,  // 需要基礎物理知識
       lecturer: "Timothy",
       location: "A3-202",
       tags: []
@@ -881,7 +880,7 @@ const lectureData = {
     {
       date: "3/20",
       name: "打扣必備的版本控管工具，讓你從入門到放棄-Git教學",
-      difficulty: 0.0,
+      difficulty: 3.25,  // 參考你提供的Git課程難度
       lecturer: "Yuto",
       location: "A5-807",
       tags: []
@@ -889,7 +888,7 @@ const lectureData = {
     {
       date: "3/27",
       name: "淺談分支概念與Github實戰-Git教學（二）",
-      difficulty: 0.0,
+      difficulty: 3.5,  // 參考你提供的Git進階課程難度
       lecturer: "Yuto",
       location: "A5-807",
       tags: []
@@ -897,15 +896,15 @@ const lectureData = {
     {
       date: "4/17",
       name: "做自己的夢，Just Do IT! ",
-      difficulty: 0.0,
-      lecturer: "劉辰盈",
+      difficulty: 1.0,  // 基礎講座
+      lecturer: "柳橙學姊",  // 將 "劉辰盈" 改為 "柳橙學姊"
       location: "A3-307",
       tags: []
     },
     {
       date: "4/24",
       name: "有FB有IG，為什麼要有自己的網站? 談談架站的好處是什麼",
-      difficulty: 0.0,
+      difficulty: 1.0,  // 概念介紹
       lecturer: "Brian",
       location: "A5-807",
       tags: []
@@ -913,7 +912,7 @@ const lectureData = {
     {
       date: "5/01",
       name: "聊了那麼久的OS，讓我們來架一個安全的Ubuntu！",
-      difficulty: 0.0,
+      difficulty: 2.5,  // 需要基礎Linux知識
       lecturer: "Brian",
       location: "A5-807",
       tags: []
@@ -921,7 +920,7 @@ const lectureData = {
     {
       date: "5/08",
       name: "腳把腳教你架自己的部落格 - WordPress",
-      difficulty: 0.0,
+      difficulty: 2.0,  // 需要基礎網站概念
       lecturer: "Brian",
       location: "A5-807",
       tags: []
@@ -929,7 +928,7 @@ const lectureData = {
     {
       date: "5/15",
       name: "Nginx反向代理 - 資安是什麼? 能喝嗎?",
-      difficulty: 0.0,
+      difficulty: 3.0,  // 需要網站和Linux基礎
       lecturer: "Brian",
       location: "A5-807",
       tags: []
@@ -937,7 +936,7 @@ const lectureData = {
     {
       date: "5/22",
       name: "想學黑魔法嗎？我告訴你有哪些技能",
-      difficulty: 0.0,
+      difficulty: 2.5,  // 資安入門，需要基礎知識
       lecturer: "Timothy",
       location: "A5-807",
       tags: []
@@ -945,7 +944,7 @@ const lectureData = {
     {
       date: "05/29",
       name: "社團總結",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動，會呼吸即可
       lecturer: "Timothy",
       location: "A3-307",
       tags: []
@@ -955,7 +954,7 @@ const lectureData = {
     {
       date: "9/12",
       name: "期初大會（迎新）",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動，會呼吸即可
       lecturer: "Timothy",
       location: "A3-102",
       tags: []
@@ -963,7 +962,7 @@ const lectureData = {
     {
       date: "9/19",
       name: "大開源時代！所以開源是什麼？聽起來很好吃？",
-      difficulty: 0.0,
+      difficulty: 1.0,  // 開源文化入門
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -971,7 +970,7 @@ const lectureData = {
     {
       date: "10/03",
       name: "HackMD 開啟凡人的開源之路（Markdown語法）",
-      difficulty: 0.0,
+      difficulty: 1.25,  // 類似前面的 Markdown 課程
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -979,7 +978,7 @@ const lectureData = {
     {
       date: "10/17",
       name: "誰說這是個無聊的社團？讓我們一起說笑話聊開源OwO",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純交流活動，會呼吸即可
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -987,7 +986,7 @@ const lectureData = {
     {
       date: "11/07",
       name: "讓我們來認識『林姓商人』Linux！各種OS的形狀",
-      difficulty: 0.0,
+      difficulty: 1.5,  // Linux 基礎概念
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -995,7 +994,7 @@ const lectureData = {
     {
       date: "11/14",
       name: "手把手帶你學會使用Shell！讓你成為專業的電腦用戶",
-      difficulty: 0.0,
+      difficulty: 2.0,  // Shell 基礎，需要 Linux 知識
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -1003,7 +1002,7 @@ const lectureData = {
     {
       date: "11/21",
       name: "古老卻強大的編輯器『Vim』",
-      difficulty: 0.0,
+      difficulty: 2.0,  // Vim 需要一定學習曲線
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -1011,7 +1010,7 @@ const lectureData = {
     {
       date: "11/28",
       name: "滿天飛的程式課程？！那我們到底要這麼多東西幹嘛？",
-      difficulty: 0.0,
+      difficulty: 1.0,  // 概念介紹
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -1019,7 +1018,7 @@ const lectureData = {
     {
       date: "12/05",
       name: "拯救你的Ｃ語言教學（一）",
-      difficulty: 0.0,
+      difficulty: 2.0,  // C語言基礎
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -1027,7 +1026,7 @@ const lectureData = {
     {
       date: "12/12",
       name: "拯救你的Ｃ語言教學（二）",
-      difficulty: 0.0,
+      difficulty: 2.5,  // C語言進階
       lecturer: "Timothy",
       location: "A3-200",
       tags: []
@@ -1035,7 +1034,7 @@ const lectureData = {
     {
       date: "12/19",
       name: "期末大會+『左邊一點Shell、右邊一點C…哇！變成惡意軟體了…』",
-      difficulty: 0.0,
+      difficulty: 0.0,  // 純參加活動，會呼吸即可
       lecturer: "Timothy",
       location: "A3-307",
       tags: []
