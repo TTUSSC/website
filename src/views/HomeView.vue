@@ -1,4 +1,5 @@
 <script setup>
+import LazyImage from '@/components/LazyImage.vue';
 </script>
 
 <template>
@@ -33,7 +34,9 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
           <div class="ratio ratio-16x9">
-            <img src="/img/open-source.jpg" class="card-img-top" style="object-fit: cover;" alt="...">
+            <LazyImage class="card-img-top" src="/img/open-source.jpg" alt="..." fit="cover"
+              style="position: absolute; inset: 0;"
+              blurhash="|JIOa|-r-q~q-pt7WAkBRiITxTRhD*IUWBt6t7f84TbIWVRiayWBWCWBogR+Rkt7xuxuofWVa#ofRoofRjRjWBofofWBWB?HtSogaebFa}a{WAaxE1jXj?RjWBjuj]ogof%LM|ofxuofWVWBj[j]ROogWVRiaykBayV@af" />
           </div>
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">開源文化</h4>
@@ -46,7 +49,11 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
           <div class="ratio ratio-16x9">
-            <img src="/img/tech-learning.jpg" class="card-img-top" style="object-fit: cover;" alt="...">
+            <div class="ratio ratio-16x9">
+              <LazyImage class="card-img-top" src="/img/tech-learning.jpg" alt="..." fit="cover"
+                style="position: absolute; inset: 0;"
+                blurhash="|ZGSGvs6NGxuxve-jEtRog%%I9xZWBNHt6j=j]og%hRhWAt8ofWBWVoMbHt8s,RjW=WVjYj[WBaeMxR+WBt7ofoet7a{ayRPogt7j@WBRjWCWBWBRjWCWBRjayofofs:j[t7fPazoLofoLWBWXWVozjYkCaxR*ayWAayof" />
+            </div>
           </div>
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">技術學習</h4>
@@ -57,7 +64,9 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card shadow h-100 d-flex flex-column">
           <div class="ratio ratio-16x9">
-            <img src="/img/other-activities.jpg" class="card-img-top" style="object-fit: cover;" alt="...">
+            <LazyImage class="card-img-top" src="/img/other-activities.jpg" alt="..." fit="cover"
+              style="position: absolute; inset: 0;"
+              blurhash="|HE:3t00%LS0NExuxuogf8_44n%NxuV@t5RiWUtRIUj]j^xtM{oyWBaxoJxubHe.jGM_kBkCWYV[x]IUs.t7jZadoJNGbHxun$Rkt7bHt7t7WBaxtRoeNGxaRjt7f7juayt6j]axayWBa|s;oLkCadRkofogj[j[ofaeog" />
           </div>
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">其他內容</h4>

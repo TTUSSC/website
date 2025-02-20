@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import LazyImage from '@/components/LazyImage.vue';
 
 const baseUrl = import.meta.env.BASE_URL;
 const trueURL = (url) => {
@@ -284,10 +285,23 @@ function handleSelectYear(year) {
               <div class="d-flex mb-3">
                 <!-- 左側大頭貼 -->
                 <div class="me-3">
-                  <div style="width: 100px; height: 100px; border-radius: 4px; overflow: hidden;">
-                    <img v-if="member.image != ''" :src="member.image" alt=""
-                      style="width: 100%; height: 100%; object-fit: cover;">
-                    <img v-else :src="trueURL('img/peek.png')" style="width: 100%; height: 100%; object-fit: cover;">
+                  <div style="width: 100px; height: 100px; border-radius: 4px; overflow: hidden; position: relative;">
+                    <LazyImage
+                      v-if="member.image != ''"
+                      :src="member.image"
+                      alt=""
+                      fit="cover"
+                      width="100%"
+                      height="100%"
+                    />
+                    <LazyImage
+                      v-else
+                      :src="trueURL('img/peek.png')"
+                      alt=""
+                      fit="cover"
+                      width="100%"
+                      height="100%"
+                    />
                   </div>
                 </div>
 
