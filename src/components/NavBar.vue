@@ -6,6 +6,16 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMugSaucer } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 library.add(faMugSaucer, faDiscord)
+
+// 新增收合導覽列的函數
+const closeNavbar = () => {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+  if (navbarCollapse.classList.contains('show')) {
+    navbarToggler.click();
+  }
+}
 </script>
 
 <template>
@@ -19,38 +29,38 @@ library.add(faMugSaucer, faDiscord)
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/">首頁</RouterLink>
+            <RouterLink class="nav-link" to="/" @click="closeNavbar">首頁</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/about">關於</RouterLink>
+            <RouterLink class="nav-link" to="/about" @click="closeNavbar">關於</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/member">社團成員</RouterLink>
+            <RouterLink class="nav-link" to="/member" @click="closeNavbar">社團成員</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/lecture">社課</RouterLink>
+            <RouterLink class="nav-link" to="/lecture" @click="closeNavbar">社課</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/project">專案</RouterLink>
+            <RouterLink class="nav-link" to="/project" @click="closeNavbar">專案</RouterLink>
           </li>
         </ul>
         <!-- 靠右導覽按鈕 -->
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/about">
+            <div class="nav-link" to="" @click="closeNavbar">
               <a class="btn btn-outline-primary icon-link icon-link-hover" href="https://discord.com/invite/29PsKfe45h">
                 <font-awesome-icon :icon="['fab', 'discord']" />
                 Discord
               </a>
-            </RouterLink>
+            </div>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/about">
+            <div class="nav-link" to="" @click="closeNavbar">
               <a class="btn btn-outline-success icon-link icon-link-hover" href="https://buymeacoffee.com/ttussc">
                 <font-awesome-icon :icon="['fas', 'mug-saucer']" />
                 贊助我們
               </a>
-            </RouterLink>
+            </div>
           </li>
         </ul>
       </div>
