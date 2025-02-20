@@ -12,6 +12,7 @@ const members = {
   '12':[
     {
       image: trueURL("img/member/willy.jpg"),
+      blurhash: "|~LEWrRkWVfRj[ayfkfkay~qRkayj[afj[fQfQazRjj[aeayfPj[fPfPj[M{jufkfQj[ayj[ayfQtRayj[a|j[fPazfQfQozayayj[ayjtayj[fQRjj[j[aza|j[j[ayfQj[fRj[ayoLfQfkfQfQofayf6j[ayj@ayj[fQ",
       name: "游凱崴",
       title: "社長",
       ig: "willyyu.20041019",
@@ -20,6 +21,7 @@ const members = {
     },
     {
       image: "",
+      blurhash: "",
       name: "陳柏屹",
       title: "副社長",
       ig: "boyce.chen03",
@@ -28,6 +30,7 @@ const members = {
     },
     {
       image: trueURL("img/member/jerry.jpg"),
+      blurhash: "|i8a4[WYQ.oxaLWBa#kDi^*0a#RPoIflW=WAjYkAxVkBWCjFfkbIaxjXkCt8ayWXj[aeaebIj]f5n$j?azf6j@fkayjsj]ozfQafazj?fka{jZa#jEf6a}fkjZaya#j[fkofj[a#f7f6fPfkfkfPjsf6ayfkj@azfQfPfQ",
       name: "盧佳緯",
       title: "副社長",
       ig: "jerrylu8631",
@@ -36,6 +39,7 @@ const members = {
     },
     {
       image: trueURL("img/member/fang.jpg"),
+      blurhash: "|OF~U3r@TJ00-oj[W=t8%M_NV@V?RPRkx]V@xuogWVIUofxuafofRjjsRjRiWBV@ofozRjofV@aeR*ofMxRjR*aKf5kCofR+WBaeoftRRjWARjayxuRPR*ofxtRjV@xaj[xuofR*t7oJWBR*ofaeofofj[ogR*ofoft7ay",
       name: "方健宇",
       title: "教學組長",
       ig: "jerry_0804_",
@@ -44,6 +48,7 @@ const members = {
     },
     {
       image: trueURL("img/member/hyn.jpg"),
+      blurhash: "|EKljq9uzn=z5r}DEMQ,^P8wEh~CD$9|xusC^j=tL1I.9aT|IpOTxC=tTIoMxtt6E3xut5icR%S$-7wJS2M{sRxuRnkDRj%2t6M{NaX8a#S$n+%0kBWrn,R*S$M|t3RjxZwbslf9ozNdV@ocnPW;rrt6n%S2ozV[bbafjJ",
       name: "黃郁寧",
       title: "編輯組長",
       ig: "__hhyn.7",
@@ -52,6 +57,7 @@ const members = {
     },
     {
       image: "",
+      blurhash: "",
       name: "蔡詠竣",
       title: "資訊組長",
       ig: "speedcubing.top",
@@ -60,6 +66,7 @@ const members = {
     },
     {
       image: "",
+      blurhash: "",
       name: "連婉妤",
       title: "設計組長",
       ig: "kt._422",
@@ -68,6 +75,7 @@ const members = {
     },
     {
       image: trueURL("img/member/star.jpg"),
+      blurhash: "|SIOwq9Hnm%gOTM|i~xakotT%MspRjbvt7oMofkVIoxuX9nhxZtSjcWBoL.Tx]s;WBs+WVf8j?WAtRtRogV@V@WVoMWURjn~RPbHWAjYWCayofayt5ogfPRjRkWUn%j[ayxGbHj[V@RkWVoen*a|s;WAaeoeahayj?j]of",
       name: "張乃文",
       title: "紀錄組長",
       ig: "best_twisted_fate",
@@ -76,6 +84,7 @@ const members = {
     },
     {
       image: trueURL("img/member/stanley.jpg"),
+      blurhash: "|eHenJI[%LRjNGa}ofofRj_4NHRjoffPfQoLWBj[E4xYRjbHt7fRWBayofD+odbbayj[ayWBj[j[aKNHj@j[WBjtofayaz%1WXt6a}WBj[ofa}WBa{xYayayjsayayayfPNKaxWCj[s:fkWCj[ofs:WXayj[fkayayayfQ",
       name: "陳威翰",
       title: "財務組長",
       ig: "stanley_1106_",
@@ -87,6 +96,7 @@ const members = {
     },
     {
       image: trueURL("img/member/tty.jpg"),
+      blurhash: "|jI#Jo-;_N?bR*-:RkjFt7D*V@M{j[oLoft7ofofxuads:WBRjRjf6RjWBxuoeoJt7M{ofRkWBbH%2WAofbHWBj]oej[fQxuj[WVt7RjoLWWjZofa}oJWCayjZWCoeofays;WBayWVaea#oLj[fkf6j@WBayayayj@oeay",
       name: "曹延宥",
       title: "器材組長",
       ig: "tty_9_28",
@@ -95,6 +105,7 @@ const members = {
     },
     {
       image: trueURL("img/member/yuto.jpg"),
+      blurhash: "|AI#}j4|Dg_0Dn$Hto_2V@0J?J-WEg9%$vE3t1jETC9I~VM^D%%KD*t7xvtAxt9ZV[RiSi%2WAo#?Ios4.j0%LS6%LIUD%%iRiRjV@xsWqMx%MNGVWt8tSM{ROxtRkNGt8tTn$V?t7oNozflMxoLMxR*W=xas,M|M{kBoz",
       name: "羅崧瑋",
       title: "活動組長",
       ig: "sw_1a4",
@@ -106,6 +117,7 @@ const members = {
     },
     {
       image: trueURL("img/member/allen.jpg"),
+      blurhash: "|cN[{D9#WF%0-m$%WBM|M|~AxtofWXR+WCjYn~jZIrxas:R,NHNHWBoJs--TWXWXj[oKoKoLoLj@EMayWCWCazoes:s.oL%0WBjss-oLa#WCR,WXIpjYjYaya|a}a#WXa}s,Rkaej?oeoej[j[j[RkoJjZf6aya}a}fkj[",
       name: "陳彥廷",
       title: "前副社長",
       ig: "maverick_01_freedom",
@@ -286,22 +298,10 @@ function handleSelectYear(year) {
                 <!-- 左側大頭貼 -->
                 <div class="me-3">
                   <div style="width: 100px; height: 100px; border-radius: 4px; overflow: hidden; position: relative;">
-                    <LazyImage
-                      v-if="member.image != ''"
-                      :src="member.image"
-                      alt=""
-                      fit="cover"
-                      width="100%"
-                      height="100%"
-                    />
-                    <LazyImage
-                      v-else
-                      :src="trueURL('img/peek.png')"
-                      alt=""
-                      fit="cover"
-                      width="100%"
-                      height="100%"
-                    />
+                    <LazyImage v-if="member.image != ''" :src="member.image" alt="" fit="cover" width="100%"
+                      height="100%" />
+                    <LazyImage v-else :src="trueURL('img/peek.png')" alt="" fit="cover" width="100%" height="100%"
+                      blurhash="|^KnYnR*bcWVt7fQWVayWB_4Rkofa}ayj[ayayfRofayWBfPRjj[ayj[oyadayWVj[ayayazfRa}bcayoKj[ofWBj@j[WBt6ayWBofayWBj[j[ofWBfjjsj[WBayj]fQofbIa|j[ayoej[j[ayayt7ayayWBkCoeWBa|WB" />
                   </div>
                 </div>
 
