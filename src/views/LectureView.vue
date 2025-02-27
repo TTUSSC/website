@@ -75,7 +75,7 @@ const lectureData = {
       slido: "https://app.sli.do/event/iqM25TgEYb792AaU4Yv9Vk",
       handout: "",
       note: "https://hackmd.io/@ttussc/H1X5wrnt1e",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/python-2",
     },
     {
       date: "3/13",
@@ -97,11 +97,11 @@ const lectureData = {
       slido: "https://app.sli.do/event/2yR677sxAfZJW7m6dTotYa",
       handout: "",
       note: "https://hackmd.io/@ttussc/HkdHqBhF1e",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/gdb",
     },
     {
       date: "3/20",
-      name: "Java（一）",
+      name: "Java（上）",
       difficulty: 2.0,
       lecturer: "詠竣",
       location: "A3-200",
@@ -118,11 +118,11 @@ const lectureData = {
       slido: "https://app.sli.do/event/ehmaXz25cxapQ4snM2UAkt",
       handout: "",
       note: "https://hackmd.io/@ttussc/SyGh7pp9Jg",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/java-1",
     },
     {
       date: "3/27",
-      name: "Java（二）",
+      name: "Java（下）",
       difficulty: 2.5,
       lecturer: "詠竣",
       location: "A3-200",
@@ -138,7 +138,7 @@ const lectureData = {
       slido: "https://app.sli.do/event/sR3MTgHAymt6LnCLChXczS",
       handout: "",
       note: "https://hackmd.io/@ttussc/rko2mTpqJx",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/java-2",
     },
     {
       date: "3/31",
@@ -194,7 +194,7 @@ const lectureData = {
       slido: "https://app.sli.do/event/fAMhbRNE6AiDbmnSBijuPf",
       handout: "",
       note: "https://hackmd.io/@ttussc/BkvTXpa91l",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/git-0x01",
     },
     {
       date: "5/1",
@@ -214,7 +214,7 @@ const lectureData = {
       slido: "https://app.sli.do/event/8p4t9VGsHpsLEXCN3x6oPn",
       handout: "",
       note: "https://hackmd.io/@ttussc/ByapQp69yg",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/git-0x02",
     },
     {
       date: "5/8",
@@ -236,7 +236,7 @@ const lectureData = {
       slido: "https://app.sli.do/event/p8zr1ZDpbHKHJrZ8hrZ9fw",
       handout: "",
       note: "https://hackmd.io/@ttussc/SkDCmTTqyg",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/front-end",
     },
     {
       date: "5/15",
@@ -258,7 +258,7 @@ const lectureData = {
       slido: "https://app.sli.do/event/qge2DdLjQcmXARHkjTiQ2Q",
       handout: "",
       note: "https://hackmd.io/@ttussc/rkTCQpa5kx",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/github-pages",
     },
     {
       date: "5/22",
@@ -280,7 +280,7 @@ const lectureData = {
       slido: "https://app.sli.do/event/tKKSJ11dqKCm2jHjmKwARX",
       handout: "",
       note: "https://hackmd.io/@ttussc/BkH1VaT9Je",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/finalparty",
     },
     {
       date: "5/26",
