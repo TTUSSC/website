@@ -240,7 +240,7 @@ const lectureData = {
     },
     {
       date: "5/15",
-      name: "前端小白的 Github pages 入門",
+      name: "前端小白的 GitHub Pages 入門",
       difficulty: 2.25,
       lecturer: "小方",
       location: "A3-200",
