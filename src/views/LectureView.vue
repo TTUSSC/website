@@ -178,7 +178,7 @@ const lectureData = {
     },
     {
       date: "4/24",
-      name: "Denny 學長的 Git 教學(上)",
+      name: "Denny 學長的 Git 教學 （上）",
       difficulty: 3.25,
       lecturer: "Denny",
       location: "A3-200",
@@ -198,7 +198,7 @@ const lectureData = {
     },
     {
       date: "5/1",
-      name: "Denny 學長的 Git 教學(下)",
+      name: "Denny 學長的 Git 教學（下）",
       difficulty: 3.5,
       lecturer: "Denny",
       location: "A3-200",
