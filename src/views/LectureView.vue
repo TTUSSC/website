@@ -72,7 +72,7 @@ const lectureData = {
         "19:50~20:00 表單回饋"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/iqM25TgEYb792AaU4Yv9Vk",
       handout: "",
       note: "",
       kktix: "",
@@ -94,7 +94,7 @@ const lectureData = {
         "19:50~20:00 填寫問卷、收拾場地"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/2yR677sxAfZJW7m6dTotYa",
       handout: "",
       note: "",
       kktix: "",
@@ -115,7 +115,7 @@ const lectureData = {
         "20:00~20:10 表單回饋"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/ehmaXz25cxapQ4snM2UAkt",
       handout: "",
       note: "",
       kktix: "",
@@ -135,7 +135,7 @@ const lectureData = {
         "20:00~20:10 表單回饋"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/sR3MTgHAymt6LnCLChXczS",
       handout: "",
       note: "",
       kktix: "",
@@ -191,7 +191,7 @@ const lectureData = {
         "19:00~20:00 git 基本指令教學",
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/fAMhbRNE6AiDbmnSBijuPf",
       handout: "",
       note: "",
       kktix: "",
@@ -211,7 +211,7 @@ const lectureData = {
         "19:00~20:00 練習將 Git 與 GitHub 結合"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/8p4t9VGsHpsLEXCN3x6oPn",
       handout: "",
       note: "",
       kktix: "",
@@ -233,7 +233,7 @@ const lectureData = {
         "20:00~20:30 表單回饋、場地復原"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/p8zr1ZDpbHKHJrZ8hrZ9fw",
       handout: "",
       note: "",
       kktix: "",
@@ -255,7 +255,7 @@ const lectureData = {
         "19:40~20:00 成果發表，瀏覽成員之網頁"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/qge2DdLjQcmXARHkjTiQ2Q",
       handout: "",
       note: "",
       kktix: "",
@@ -277,7 +277,7 @@ const lectureData = {
         "19:45~20:00 填寫回饋表單、場復"
       ],
       slide: "",
-      slido: "",
+      slido: "https://app.sli.do/event/tKKSJ11dqKCm2jHjmKwARX",
       handout: "",
       note: "",
       kktix: "",
