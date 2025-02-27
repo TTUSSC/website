@@ -51,11 +51,11 @@ const lectureData = {
         "18:20~19:50 Python 基礎教學 (語言特性、輸出/入、變數與資料型態、運算與條件判斷)",
         "19:50~20:00 填寫回饋表單、場地復原"
       ],
-      slide: "",
-      slido: "",
+      slide: "https://www.canva.com/design/DAGeacDaUtc/0UVrt6Fm9mQ9fQGOygm7NA/view?utm_content=DAGeacDaUtc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbc24679e33",
+      slido: "https://app.sli.do/event/4TW296oA3oAEFayFQBJsK1/live/questions",
       handout: "",
-      note: "",
-      kktix: "",
+      note: "https://hackmd.io/@ttussc/SJiOwrhYyg",
+      kktix: "https://ttussc.kktix.cc/events/python-1",
     },
     {
       date: "3/6",
