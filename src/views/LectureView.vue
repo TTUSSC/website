@@ -74,7 +74,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/iqM25TgEYb792AaU4Yv9Vk",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/H1X5wrnt1e",
       kktix: "",
     },
     {
@@ -96,7 +96,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/2yR677sxAfZJW7m6dTotYa",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/HkdHqBhF1e",
       kktix: "",
     },
     {
@@ -117,7 +117,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/ehmaXz25cxapQ4snM2UAkt",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/SyGh7pp9Jg",
       kktix: "",
     },
     {
@@ -137,7 +137,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/sR3MTgHAymt6LnCLChXczS",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/rko2mTpqJx",
       kktix: "",
     },
     {
@@ -193,7 +193,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/fAMhbRNE6AiDbmnSBijuPf",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/BkvTXpa91l",
       kktix: "",
     },
     {
@@ -213,7 +213,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/8p4t9VGsHpsLEXCN3x6oPn",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/ByapQp69yg",
       kktix: "",
     },
     {
@@ -235,7 +235,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/p8zr1ZDpbHKHJrZ8hrZ9fw",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/SkDCmTTqyg",
       kktix: "",
     },
     {
@@ -257,7 +257,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/qge2DdLjQcmXARHkjTiQ2Q",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/rkTCQpa5kx",
       kktix: "",
     },
     {
@@ -279,7 +279,7 @@ const lectureData = {
       slide: "",
       slido: "https://app.sli.do/event/tKKSJ11dqKCm2jHjmKwARX",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/BkH1VaT9Je",
       kktix: "",
     },
     {
