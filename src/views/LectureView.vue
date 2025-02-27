@@ -40,7 +40,7 @@ const lectureData = {
     {
       date: "2/27",
       name: "蛇年就來學 Python 吧！（上）",
-      difficulty: 2.0,
+      difficulty: 1.5,
       lecturer: "阿文",
       location: "A3-200",
       tags: ["Python", "程式設計"],
@@ -60,7 +60,7 @@ const lectureData = {
     {
       date: "3/6",
       name: "蛇年就來學 Python 吧！（下）",
-      difficulty: 2.5,
+      difficulty: 2,
       lecturer: "阿文",
       location: "A3-200",
       tags: ["Python", "程式設計"],
