@@ -71,7 +71,7 @@ const lectureData = {
         "18:20~19:50 正式社課 (for、while 邏輯與使用、字串和 list 處理技巧、導入模組與 random 用法、終極密碼實作)",
         "19:50~20:00 表單回饋"
       ],
-      slide: "",
+      slide: "https://www.canva.com/design/DAGfzW4GRPc/7q6safQvyNWXUbZ9IsA34w/view?utm_content=DAGfzW4GRPc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3165f349e6",
       slido: "https://app.sli.do/event/iqM25TgEYb792AaU4Yv9Vk",
       handout: "",
       note: "https://hackmd.io/@ttussc/H1X5wrnt1e",
