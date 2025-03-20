@@ -114,7 +114,7 @@ const lectureData = {
         "18:30~20:00 正式社課 (hello world、基本資料型態與變數、運算子、流程控制、陣列、靜態方法)",
         "20:00~20:10 表單回饋"
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubin/deck-850388#/1/1",
       slido: "https://app.sli.do/event/ehmaXz25cxapQ4snM2UAkt",
       handout: "",
       note: "https://hackmd.io/@ttussc/SyGh7pp9Jg",
