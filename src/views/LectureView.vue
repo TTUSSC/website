@@ -134,7 +134,7 @@ const lectureData = {
         "18:20~20:00 正式社課 (物件導向、類別、實例、參照/GC、靜態、this、繼承、final)",
         "20:00~20:10 表單回饋"
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubin/deck-850388#/18",
       slido: "https://app.sli.do/event/sR3MTgHAymt6LnCLChXczS",
       handout: "",
       note: "https://hackmd.io/@ttussc/rko2mTpqJx",
