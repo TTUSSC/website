@@ -20,21 +20,12 @@ const members = {
       tags: []
     },
     {
-      image: "",
-      blurhash: "",
+      image: trueURL("img/member/boyce.jpg"),
+      blurhash: "|VGa?}$fxuRQIV%MMxt7jF~VxZWXM{M|ofn$jtoL4.xvM_NGoyM{%MRjbI4:xui_s.%1WBkDR*R*jGRkR*s.xYkCNGWXWB%1RjWqWVWWW;a{WpjZWUV@xuWXf+juofoeWBNGRjxakCofofWVofo0NGRkoet7WBj[WBays:",
       name: "陳柏屹",
       title: "副社長",
       ig: "boyce.chen03",
       desc: "資工系學生，目前在學習如何通靈。",
-      tags: []
-    },
-    {
-      image: trueURL("img/member/jerry.jpg"),
-      blurhash: "|i8a4[WYQ.oxaLWBa#kDi^*0a#RPoIflW=WAjYkAxVkBWCjFfkbIaxjXkCt8ayWXj[aeaebIj]f5n$j?azf6j@fkayjsj]ozfQafazj?fka{jZa#jEf6a}fkjZaya#j[fkofj[a#f7f6fPfkfkfPjsf6ayfkj@azfQfPfQ",
-      name: "盧佳緯",
-      title: "副社長",
-      ig: "jerrylu8631",
-      desc: "電機系學生，吃貨一枚，有啥想問的也可以問我喔",
       tags: []
     },
     {
@@ -62,15 +53,6 @@ const members = {
       title: "資訊組長",
       ig: "speedcubing.top",
       desc: "資工系學生",
-      tags: []
-    },
-    {
-      image: "",
-      blurhash: "",
-      name: "連婉妤",
-      title: "設計組長",
-      ig: "kt._422",
-      desc: "",
       tags: []
     },
     {
@@ -122,6 +104,24 @@ const members = {
       title: "前副社長",
       ig: "maverick_01_freedom",
       desc: "電機系學生，能自己完成的就自己做，不忘初心，盡力就好，一切隨緣....",
+      tags: []
+    },
+    {
+      image: trueURL("img/member/jerry.jpg"),
+      blurhash: "|i8a4[WYQ.oxaLWBa#kDi^*0a#RPoIflW=WAjYkAxVkBWCjFfkbIaxjXkCt8ayWXj[aeaebIj]f5n$j?azf6j@fkayjsj]ozfQafazj?fka{jZa#jEf6a}fkjZaya#j[fkofj[a#f7f6fPfkfkfPjsf6ayfkj@azfQfPfQ",
+      name: "盧佳緯",
+      title: "前副社長",
+      ig: "jerrylu8631",
+      desc: "電機系學生，吃貨一枚，有啥想問的也可以問我喔",
+      tags: []
+    },
+    {
+      image: "",
+      blurhash: "",
+      name: "連婉妤",
+      title: "設計組長",
+      ig: "kt._422",
+      desc: "",
       tags: []
     },
   ],
