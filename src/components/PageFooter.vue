@@ -20,13 +20,13 @@ library.add(faFacebook, faInstagram)
           <h5 class="text-uppercase">社群媒體</h5>
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="https://instagram.com/ttussc_" target="_blank" rel="noopener noreferrer" class="text-dark">
+              <a href="https://instagram.com/ttussc_/" target="_blank" rel="noopener noreferrer" class="text-dark">
                 <font-awesome-icon :icon="['fab', 'instagram']" />
                 @ttussc_
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/ttussc" target="_blank" rel="noopener noreferrer" class="text-dark">
+              <a href="https://www.facebook.com/ttussc/" target="_blank" rel="noopener noreferrer" class="text-dark">
                 <font-awesome-icon :icon="['fab', 'facebook']" />
                 @ttussc
               </a>
@@ -37,17 +37,17 @@ library.add(faFacebook, faInstagram)
           <h5 class="text-uppercase">Links</h5>
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-dark">
+              <a href="https://ocf.tw/" target="_blank" rel="noopener noreferrer" class="text-dark">
                 開放文化基金會
               </a>
             </li>
             <li>
-              <a href="#!" class="text-dark">
+              <a href="https://coscup.org/" target="_blank" rel="noopener noreferrer" class="text-dark">
                 COSCUP 開源人年會
               </a>
             </li>
             <li>
-              <a href="#!" class="text-dark">
+              <a href="https://sitcon.org/" target="_blank" rel="noopener noreferrer" class="text-dark">
                 SITCON 學生計算機年會
               </a>
             </li>
