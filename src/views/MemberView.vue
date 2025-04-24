@@ -51,8 +51,8 @@ const members = {
       blurhash: "",
       name: "蔡詠竣",
       title: "資訊組長",
-      ig: "speedcubing.top",
-      desc: "資工系學生",
+      ig: "",
+      desc: "",
       tags: []
     },
     {

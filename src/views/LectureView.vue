@@ -114,7 +114,7 @@ const lectureData = {
         "18:30~20:00 正式社課 (hello world、基本資料型態與變數、運算子、流程控制、陣列、靜態方法)",
         "20:00~20:10 表單回饋"
       ],
-      slide: "https://slides.com/speedcubin/deck-850388#/1/1",
+      slide: "https://hackmd.io/@speedcubing/java/",
       slido: "https://app.sli.do/event/ehmaXz25cxapQ4snM2UAkt",
       handout: "",
       note: "https://hackmd.io/@ttussc/SyGh7pp9Jg",
@@ -134,7 +134,7 @@ const lectureData = {
         "18:20~20:00 正式社課 (物件導向、類別、實例、參照/GC、靜態、this、繼承、final)",
         "20:00~20:10 表單回饋"
       ],
-      slide: "https://slides.com/speedcubin/deck-850388#/18",
+      slide: "https://hackmd.io/@speedcubing/java/",
       slido: "https://app.sli.do/event/sR3MTgHAymt6LnCLChXczS",
       handout: "",
       note: "https://hackmd.io/@ttussc/rko2mTpqJx",
@@ -190,7 +190,7 @@ const lectureData = {
         "18:30~19:00 安裝 git 與環境設定", 
         "19:00~20:00 git 基本指令教學",
       ],
-      slide: "",
+      slide: "https://denny.one/git-slide/",
       slido: "https://app.sli.do/event/fAMhbRNE6AiDbmnSBijuPf",
       handout: "",
       note: "https://hackmd.io/@ttussc/BkvTXpa91l",
@@ -210,7 +210,7 @@ const lectureData = {
         "18:30~19:00 熟習 GitHub",
         "19:00~20:00 練習將 Git 與 GitHub 結合"
       ],
-      slide: "",
+      slide: "https://denny.one/git-slide/",
       slido: "https://app.sli.do/event/8p4t9VGsHpsLEXCN3x6oPn",
       handout: "",
       note: "https://hackmd.io/@ttussc/ByapQp69yg",
