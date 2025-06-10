@@ -8,6 +8,130 @@ const trueURL = (url) => {
 }
 
 const members = {
+    // 第拾參屆
+    '13':[
+    {
+      image: trueURL("img/member/boyce.jpg"),
+      blurhash: "|VGa?}$fxuRQIV%MMxt7jF~VxZWXM{M|ofn$jtoL4.xvM_NGoyM{%MRjbI4:xui_s.%1WBkDR*R*jGRkR*s.xYkCNGWXWB%1RjWqWVWWW;a{WpjZWUV@xuWXf+juofoeWBNGRjxakCofofWVofo0NGRkoet7WBj[WBays:",
+      name: "陳柏屹",
+      title: "社長",
+      ig: "boyce.chen03",
+      desc: "資工系學生，目前在學習如何通靈。",
+      tags: []
+    },
+    {
+      image: trueURL("img/member/willy.jpg"),
+      blurhash: "|~LEWrRkWVfRj[ayfkfkay~qRkayj[afj[fQfQazRjj[aeayfPj[fPfPj[M{jufkfQj[ayj[ayfQtRayj[a|j[fPazfQfQozayayj[ayjtayj[fQRjj[j[aza|j[j[ayfQj[fRj[ayoLfQfkfQfQofayf6j[ayj@ayj[fQ",
+      name: "游凱崴",
+      title: "副社長 x 文書組長",
+      ig: "kwy_1019",
+      desc: "電機系學生，對於電資相關領域感到興趣，平時喜歡看科技相關的酷東東以及探索各種沒接觸過的東西😆",
+      tags: [
+	    "通訊",
+		"電機人"
+	  ]
+    },
+    {
+      image: "",
+      blurhash: "",
+      name: "洪苡倢",
+      title: "財務組長",
+      ig: "",
+      desc: "",
+      tags: []
+    },
+    {
+      image: "",
+      blurhash: "",
+      name: "張登評",
+      title: "器材組長",
+      ig: "",
+      desc: "",
+      tags: []
+    },
+    {
+      image: "",
+      blurhash: "",
+      name: "蔡詠竣",
+      title: "教學組長 x 資訊組長",
+      ig: "",
+      desc: "",
+      tags: []
+    },
+    {
+      image: trueURL("img/member/hyn.jpg"),
+      blurhash: "|EKljq9uzn=z5r}DEMQ,^P8wEh~CD$9|xusC^j=tL1I.9aT|IpOTxC=tTIoMxtt6E3xut5icR%S$-7wJS2M{sRxuRnkDRj%2t6M{NaX8a#S$n+%0kBWrn,R*S$M|t3RjxZwbslf9ozNdV@ocnPW;rrt6n%S2ozV[bbafjJ",
+      name: "黃郁寧",
+      title: "活動組長",
+      ig: "__hhyn.7",
+      desc: "資工系學生，也可以叫我芋泥，但我不吃芋泥跟芋頭，特別不能加在火鍋裡面。",
+      tags: []
+    },
+    {
+      image: "",
+      blurhash: "",
+      name: "陳心妮",
+      title: "編輯組長",
+      ig: "",
+      desc: "",
+      tags: []
+    },
+    {
+      image: trueURL("img/member/zhaoyu.png"),
+      blurhash: "LLGtvX~A^*b^58?atR^%tlWC-Uae",
+      name: "陳昭妤",
+      title: "編輯組長",
+      ig: "yo_man_yaha",
+      desc: "資工系學生，喜歡組鋼彈和追星，偶爾看動漫，是個吃貨🤤",
+      tags: [
+	    "貓派",
+		"ENTJ",
+		"聽團仔"
+      ]
+    },
+    {
+      image: trueURL("img/member/star.jpg"),
+      blurhash: "|SIOwq9Hnm%gOTM|i~xakotT%MspRjbvt7oMofkVIoxuX9nhxZtSjcWBoL.Tx]s;WBs+WVf8j?WAtRtRogV@V@WVoMWURjn~RPbHWAjYWCayofayt5ogfPRjRkWUn%j[ayxGbHj[V@RkWVoen*a|s;WAaeoeahayj?j]of",
+      name: "張乃文",
+      title: "紀錄組長",
+      ig: "best_twisted_fate",
+      desc: "資工系學生，喜歡睡覺，吃水餃不沾醬油，吃咖哩要拌。",
+      tags: []
+    },
+    {
+      image: trueURL("img/member/fang.jpg"),
+      blurhash: "|OF~U3r@TJ00-oj[W=t8%M_NV@V?RPRkx]V@xuogWVIUofxuafofRjjsRjRiWBV@ofozRjofV@aeR*ofMxRjR*aKf5kCofR+WBaeoftRRjWARjayxuRPR*ofxtRjV@xaj[xuofR*t7oJWBR*ofaeofofj[ogR*ofoft7ay",
+      name: "方健宇",
+      title: "教學",
+      ig: "jerry_0804_",
+      desc: "資工系的學生，喜歡一個人躲在角落看書。最近在努力學習各種知識，藉此增加資工領域的能力。以前從來沒有想過會走資工，覺得和同學們格格不入，希望大學四年能夠找到好夥伴。",
+      tags: []
+    },
+    {
+      image: trueURL("img/member/yuto.jpg"),
+      blurhash: "|AI#}j4|Dg_0Dn$Hto_2V@0J?J-WEg9%$vE3t1jETC9I~VM^D%%KD*t7xvtAxt9ZV[RiSi%2WAo#?Ios4.j0%LS6%LIUD%%iRiRjV@xsWqMx%MNGVWt8tSM{ROxtRkNGt8tTn$V?t7oNozflMxoLMxR*W=xas,M|M{kBoz",
+      name: "羅崧瑋",
+      title: "編輯 x 資訊",
+      ig: "sw_1a4",
+      desc: "資工系學生，熱衷於研究網頁前後端、電腦底層技術，目前正努力學習資訊安全。",
+      tags: [
+        "弓道",
+        "網頁前後端",
+      ]
+    },
+    {
+      image: trueURL("img/member/stanley.jpg"),
+      blurhash: "|eHenJI[%LRjNGa}ofofRj_4NHRjoffPfQoLWBj[E4xYRjbHt7fRWBayofD+odbbayj[ayWBj[j[aKNHj@j[WBjtofayaz%1WXt6a}WBj[ofa}WBa{xYayayjsayayayfPNKaxWCj[s:fkWCj[ofs:WXayj[fkayayayfQ",
+      name: "陳威翰",
+      title: "財務 x 資訊",
+      ig: "stanley_1106_",
+      desc: "資工系學生，喜歡參加各式各樣的活動，努力學習資安中",
+      tags: [
+        "貝斯(新)手",
+        "社花"
+      ]
+    },
+  ],
   // 第拾貳屆
   '12':[
     {
@@ -248,6 +372,7 @@ const members = {
 };
 
 const years = [
+  { name: '第拾參屆', value: '13' },
   { name: '第拾貳屆', value: '12' },
   { name: '第拾壹屆', value: '11' },
   { name: '第拾屆', value: '10' },
