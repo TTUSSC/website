@@ -8,8 +8,8 @@ const trueURL = (url) => {
 }
 
 const members = {
-    // 第拾參屆
-    '13':[
+  // 第拾參屆
+  '13': [
     {
       image: trueURL("img/member/boyce.jpg"),
       blurhash: "|VGa?}$fxuRQIV%MMxt7jF~VxZWXM{M|ofn$jtoL4.xvM_NGoyM{%MRjbI4:xui_s.%1WBkDR*R*jGRkR*s.xYkCNGWXWB%1RjWqWVWWW;a{WpjZWUV@xuWXf+juofoeWBNGRjxakCofofWVofo0NGRkoet7WBj[WBays:",
@@ -27,16 +27,15 @@ const members = {
       ig: "kwy_1019",
       desc: "電機系學生，對於電資相關領域感到興趣，平時喜歡看科技相關的酷東東以及探索各種沒接觸過的東西😆",
       tags: [
-	    "通訊",
-		"電機人"
-	  ]
+        "通訊",
+        "電機人"
+      ]
     },
     {
       image: "",
       blurhash: "",
       name: "洪苡倢",
       title: "財務組長",
-      ig: "",
       desc: "",
       tags: []
     },
@@ -45,7 +44,6 @@ const members = {
       blurhash: "",
       name: "張登評",
       title: "器材組長",
-      ig: "",
       desc: "",
       tags: []
     },
@@ -54,7 +52,6 @@ const members = {
       blurhash: "",
       name: "蔡詠竣",
       title: "教學組長 x 資訊組長",
-      ig: "",
       desc: "",
       tags: []
     },
@@ -72,7 +69,6 @@ const members = {
       blurhash: "",
       name: "陳心妮",
       title: "編輯組長",
-      ig: "",
       desc: "",
       tags: []
     },
@@ -80,13 +76,13 @@ const members = {
       image: trueURL("img/member/zhaoyu.png"),
       blurhash: "LLGtvX~A^*b^58?atR^%tlWC-Uae",
       name: "陳昭妤",
-      title: "編輯組長",
+      title: "設計組長",
       ig: "yo_man_yaha",
       desc: "資工系學生，喜歡組鋼彈和追星，偶爾看動漫，是個吃貨🤤",
       tags: [
-	    "貓派",
-		"ENTJ",
-		"聽團仔"
+        "貓派",
+        "ENTJ",
+        "聽團仔"
       ]
     },
     {
@@ -133,7 +129,7 @@ const members = {
     },
   ],
   // 第拾貳屆
-  '12':[
+  '12': [
     {
       image: trueURL("img/member/willy.jpg"),
       blurhash: "|~LEWrRkWVfRj[ayfkfkay~qRkayj[afj[fQfQazRjj[aeayfPj[fPfPj[M{jufkfQj[ayj[ayfQtRayj[a|j[fPazfQfQozayayj[ayjtayj[fQRjj[j[aza|j[j[ayfQj[fRj[ayoLfQfkfQfQofayf6j[ayj@ayj[fQ",
@@ -250,7 +246,7 @@ const members = {
     },
   ],
   // 第拾壹屆
-  '11':[
+  '11': [
     {
       image: trueURL("img/member/yuto.jpg"),
       name: "羅崧瑋",
@@ -343,7 +339,7 @@ const members = {
     }
   ],
   // 第拾屆
-  '10':[
+  '10': [
     {
       image: trueURL("img/member/timothy.jpg"),
       name: "Timothy ",
