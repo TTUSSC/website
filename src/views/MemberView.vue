@@ -70,7 +70,9 @@ const members = {
       name: "陳心妮",
       title: "編輯組長",
       desc: "",
-      tags: []
+      tags: [
+        "狗派",
+      ]
     },
     {
       image: trueURL("img/member/zhaoyu.png"),
