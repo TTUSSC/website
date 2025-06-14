@@ -32,11 +32,12 @@ const members = {
       ]
     },
     {
-      image: "",
-      blurhash: "",
+      image: trueURL("img/member/hyijeee.jpg"),
+      blurhash: "LUKToW^+~qE1RktRnOn$-pozoMt7",
       name: "洪苡倢",
       title: "財務組長",
-      desc: "",
+      ig: "hyijeee",
+      desc: "化工系學生，喜歡摸索新事物，在努力學英文（底子太爛國小生都不如，吃咖哩要攪派，讚",
       tags: []
     },
     {
@@ -62,7 +63,10 @@ const members = {
       title: "活動組長",
       ig: "__hhyn.7",
       desc: "資工系學生，也可以叫我芋泥，但我不吃芋泥跟芋頭，特別不能加在火鍋裡面。",
-      tags: []
+      tags: [
+        "貓派",
+        "小精靈"
+      ]
     },
     {
       image: "",
