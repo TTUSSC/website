@@ -43,6 +43,10 @@ const router = createRouter({
         title: "專案"
       },
     },
+    {
+      path: '/qrcode',
+      redirect: '/',
+    },
   ],
 })
 
