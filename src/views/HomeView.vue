@@ -95,7 +95,7 @@ import LazyImage from '@/components/LazyImage.vue';
                 <strong>我們歡迎無論是對開源、服務有興趣的學生加入。</strong>
               </p>
             </div>
-            <a class="btn btn-lg btn-outline-success col-md-8 mx-auto mt-5" href="https://forms.gle/9bsZQXTAdzzdd2Xy9">
+            <a class="btn btn-lg btn-outline-success col-md-8 mx-auto mt-5" href="https://forms.gle/GWUsti9y7igNq9gXA">
               立即填寫入社表單
             </a>
           </div>
@@ -116,4 +116,5 @@ import LazyImage from '@/components/LazyImage.vue';
   transform: scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
+
 </style>
