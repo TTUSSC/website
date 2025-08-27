@@ -200,7 +200,7 @@ const lectureData = {
     },
     {
       date: "12/15",
-      name: "考前讀書會 ",
+      name: "考前讀書會",
       difficulty: 0.0,
       lecturer: "芋泥",
       location: "",
@@ -1293,4 +1293,5 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
