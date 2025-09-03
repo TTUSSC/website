@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 /* import icons */
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -16,12 +18,31 @@ const closeNavbar = () => {
     navbarToggler.click();
   }
 }
+
+const iconClickCount = ref(0);
+const lastClickTime = ref(0);
+
+const handleIconClick = () => {
+  const currentTime = Date.now();
+    
+    if (currentTime - lastClickTime.value > 10000) {
+      iconClickCount.value = 0;
+    }
+    
+    iconClickCount.value++;
+    lastClickTime.value = currentTime;
+    
+    if (iconClickCount.value === 10) {
+      alert('ttussc{dont_h4ck_us_j0in_us}');
+      iconClickCount.value = 0;
+    }
+};
 </script>
 
 <template>
   <header class="navbar navbar-expand-md bg-body-tertiary sticky-top shadow">
     <nav class="container-xl flex-wrap flex-lg-nowrap">
-      <RouterLink class="nav-link me-2" to="/"><img src="/logo.png" height="24" alt="">TTUSSC </RouterLink><button
+      <RouterLink class="nav-link me-2" to="/" @click="handleIconClick"><img src="/logo.png" height="24" alt="">TTUSSC </RouterLink><button
         class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span
           class="navbar-toggler-icon"></span></button>
