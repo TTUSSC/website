@@ -19,15 +19,21 @@ const lectureData = {
       name: "期初大會",
       difficulty: 0.0,
       lecturer: "柏屹",
-      location: "",
+      location: "A3-307",
       tags: ["期初大會"],
-      description: "",
-      timeline: [],
+      description: "幹部將全面介紹科學開源服務社的背景、宗旨及年度計劃，讓新生充分了解社團的定位與未來方向。過程中，透過晚餐營造輕鬆氛圍，促進成員間的互動和交流，並解答新生的各種疑問，增強彼此的理解與信任。之後，安排桌遊活動，幹部與新生輕鬆互動、聊聊天，讓新社員在遊戲中熟悉彼此，並透過自然的交流，快速融入社團生活，為未來的社團活動建立信任與合作的基礎。",
+      timeline: [
+        "18:00 ~ 18:30 場地佈置、進場",
+        "18:30 ~ 19:00 介紹科學開源服務社",
+        "19:00 ~ 19:30 吃東西、交流",
+        "19:30 ~ 20:20 團康",
+        "20:20 ~ 20:30 填寫回饋表單",
+	    ],
       slide: "",
       slido: "",
       handout: "",
       note: "",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/teaparty2025",
     },
     {
       date: "9/18",
@@ -42,7 +48,7 @@ const lectureData = {
         "18:30 ~ 20:00 簡報介紹",
         "20:00 ~ 20:20 Kahoot！時間",
         "20:20 ~ 20:30 填寫回饋表單",
-	  ],
+	    ],
       slide: "",
       slido: "",
       handout: "",
@@ -1326,6 +1332,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
