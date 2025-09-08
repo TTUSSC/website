@@ -57,13 +57,19 @@ const lectureData = {
     },
     {
       date: "9/25",
-      name: "Markdown教學",
+      name: "1 到 10 的社群協作守則",
       difficulty: 1.25,
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["HackMD", "Markdown", "協作"],
-      description: "",
-      timeline: [],
+      description: "想把筆記寫得更清楚，或嘗試和夥伴一起協作嗎？這次社課將帶大家從 Markdown 基礎語法 開始，學習如何用簡單的方式排版出乾淨、好讀的筆記。接著會實際操作 HackMD 平台，體驗即時多人共筆的流程，了解協作筆記在學習與專案中的應用。不需要任何基礎，只要帶著電腦與好奇心，就能一起探索更有效率的學習與協作方式。",
+      timeline: [
+        "18:30 ~ 18:50 介紹 共筆文化",
+        "18:50 ~ 19:10 介紹 HackMD",
+        "19:10 ~ 19:40 介紹 Markdown 基礎文法與用法",
+        "19:40 ~ 20:00 實作時間",
+        "20:00 ~ 20:10 表單回饋"
+      ],
       slide: "",
       slido: "",
       handout: "",
@@ -72,13 +78,19 @@ const lectureData = {
     },
     {
       date: "10/02",
-      name: "Shell ",
+      name: "Shell I be the commander?",
       difficulty: 2,
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["Linux", "Shell"],
-      description: "",
-      timeline: [],
+      description: "想更有效率地操作電腦嗎？本課程將帶你認識 Shell 的基礎操作與指令，學習如何用文字介面快速完成檔案管理與自動化任務，並體驗 Vim 編輯器的高效編輯方式。透過實作練習，你將能夠運用 Shell 與 Vim 提升日常工作與學習效率，踏出資訊操作進階的第一步！",
+      timeline: [
+        "18:30 ~ 19:00 介紹 Shell 的基本觀念",
+        "19:00 ~ 20:00 介紹 + 操作基本的檔案系統指令",
+        "20:00 ~ 20:20 介紹 Shell Script",
+        "20:20 ~ 20:50 介紹 + 操作 Vim",
+        "20:50 ~ 21:00 表單回饋"
+      ],
       slide: "",
       slido: "",
       handout: "",
@@ -1332,6 +1344,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
