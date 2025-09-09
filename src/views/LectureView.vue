@@ -57,7 +57,7 @@ const lectureData = {
     },
     {
       date: "9/25",
-      name: "協作筆記：HackMD x Markdow",
+      name: "協作筆記：HackMD x Markdown",
       difficulty: 1.25,
       lecturer: "烤餅",
       location: "A3-200",
@@ -1350,6 +1350,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
