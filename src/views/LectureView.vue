@@ -202,13 +202,19 @@ const lectureData = {
     },
     {
       date: "11/27",
-      name: "Discord Bot",
+      name: "Discord Bot 入門",
       difficulty: 2.0,
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["Python", "程式設計"],
-      description: "",
-      timeline: [],
+      description: "你是否曾經想打造一個自己的 Discord 機器人，讓它自動歡迎新成員、分配身分組，甚至播放音樂或處理瑣碎任務？本課程將帶你從 註冊 Bot、建立 Python 開發環境 到 上線並撰寫事件與 Slash Command 指令，讓你親手打造專屬機器人，體驗程式設計的趣味與社群自動化的便利。無須擔心太複雜，從零開始就能動手操作！",
+      timeline: [
+        "18:30 ~ 19:00 環境架設",
+        "19:00 ~ 19:20 註冊 Discord Bot",
+        "19:20 ~ 19:30 讓你的 Discord Bot 上線",
+        "19:30 ~ 20:50 Events & Slash Commands",
+        "20:50 ~ 21:00 填寫回饋表單"
+      ],
       slide: "",
       slido: "",
       handout: "",
@@ -1344,6 +1350,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
