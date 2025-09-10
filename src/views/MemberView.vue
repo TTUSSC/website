@@ -73,6 +73,7 @@ const members = {
       blurhash: "",
       name: "陳心妮",
       title: "編輯組長",
+      ig: "shinni.c",
       desc: "",
       tags: [
         "狗派",
