@@ -79,7 +79,7 @@ const members = {
       ]
     },
     {
-      image: "trueURL("img/member/rain.jpg"),
+      image: trueURL("img/member/rain.jpg"),
       blurhash: "",
       name: "余萬崧",
       title: "資訊組長",
