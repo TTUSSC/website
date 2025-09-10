@@ -40,7 +40,7 @@ const lectureData = {
       name: "大學生的開源生存指南",
       difficulty: 1.0,
       lecturer: "柏屹",
-      location: "A3-307",
+      location: "A3-200",
       tags: ["開源"],
       description: "在這堂課中，我們將探索開源的理念及其對於自身的影響。課程中將介紹不同的開源軟體，並透過展示一些案例和文章，來加深社員對於開源的見解。最後再玩一下 Kahoot！遊戲，帶社員輕鬆的複習一下當天所學到的東西，讓大家腦力激盪一下。",
       timeline: [
@@ -202,7 +202,7 @@ const lectureData = {
     },
     {
       date: "11/27",
-      name: "Discord Bot 入門",
+      name: "Discord Bot 入門指南",
       difficulty: 2.0,
       lecturer: "烤餅",
       location: "A3-200",
@@ -1350,6 +1350,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
