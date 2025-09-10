@@ -52,7 +52,7 @@ const members = {
       image: "",
       blurhash: "",
       name: "蔡詠竣",
-      title: "教學組長 x 資訊組長",
+      title: "教學 x 資訊",
       desc: "",
       tags: []
     },
@@ -79,6 +79,18 @@ const members = {
       ]
     },
     {
+      image: "trueURL("img/member/rain.jpg"),
+      blurhash: "",
+      name: "余萬崧",
+      title: "資訊組長",
+      ig: "rainyu_05_10"
+      desc: "",
+      tags: [
+        "音樂",
+        "遊戲",
+      ]
+    },
+    {
       image: trueURL("img/member/zhaoyu.png"),
       blurhash: "LLGtvX~A^*b^58?atR^%tlWC-Uae",
       name: "陳昭妤",
@@ -95,7 +107,7 @@ const members = {
       image: trueURL("img/member/star.jpg"),
       blurhash: "|SIOwq9Hnm%gOTM|i~xakotT%MspRjbvt7oMofkVIoxuX9nhxZtSjcWBoL.Tx]s;WBs+WVf8j?WAtRtRogV@V@WVoMWURjn~RPbHWAjYWCayofayt5ogfPRjRkWUn%j[ayxGbHj[V@RkWVoen*a|s;WAaeoeahayj?j]of",
       name: "張乃文",
-      title: "紀錄組長",
+      title: "紀錄組長 x 教學組",
       ig: "best_twisted_fate",
       desc: "資工系學生，喜歡睡覺，吃水餃不沾醬油，吃咖哩要拌。",
       tags: []
