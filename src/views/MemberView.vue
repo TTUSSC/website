@@ -69,13 +69,14 @@ const members = {
       ]
     },
     {
-      image: "",
+      image: trueURL("img/member/Jenny.jpg"),
       blurhash: "",
       name: "陳心妮",
       title: "編輯組長",
       desc: "",
       tags: [
         "狗派",
+        "小方派"
       ]
     },
     {
@@ -122,6 +123,8 @@ const members = {
       tags: [
         "唱歌",
         "香水",
+        "攝影",
+        "Jenny派"
       ]
     },
     {
