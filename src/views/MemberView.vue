@@ -83,7 +83,7 @@ const members = {
       blurhash: "",
       name: "余萬崧",
       title: "資訊組長",
-      ig: "rainyu_05_10"
+      ig: "rainyu_05_10",
       desc: "",
       tags: [
         "音樂",
