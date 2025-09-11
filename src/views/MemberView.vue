@@ -72,7 +72,7 @@ const members = {
       image: trueURL("img/member/Jenny.jpg"),
       blurhash: "",
       name: "陳心妮",
-      title: "編輯組長",
+      title: "編輯 x 紀錄",
       ig: "shinni.c",
       desc: "機材系學生，大家都叫我 Jenny。喜歡去咖啡廳，也喜歡 K-pop，目前在努力學習德文跟材料中。",
       tags: [
