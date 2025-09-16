@@ -58,10 +58,10 @@ const lectureData = {
     {
       date: "9/23",
       name: "競程基礎帶您（差點）破台CPE",
-      difficulty: 1.25,
+      difficulty: 2.5,
       lecturer: "烤餅",
       location: "A3-200",
-      tags: ["CPE", "C++"],
+      tags: ["競程", "算法", "C++"],
       description: "你聽過 CPE 或 ICPC 嗎？這些程式競賽不僅是檢驗程式設計實力的舞台，更是資訊領域學生的必經挑戰！「競程基礎帶您（差點）破台 CPE」將帶你快速認識程式競賽內容與形式，並介紹 C++ STL容器 與基礎演算法應用。課程中搭配簡單題目示範，幫助你從理論連結到實際解題。即使從未參加過比賽，也能找到入門方向，為未來挑戰做好準備！",
       timeline: [
         "18:30 ~ 18:50 介紹 程式競賽 / 比賽資訊",
@@ -226,7 +226,7 @@ const lectureData = {
     {
       date: "11/27",
       name: "Discord Bot 入門指南",
-      difficulty: 2.0,
+      difficulty: 2.5,
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["Python", "程式設計"],
@@ -1373,6 +1373,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
