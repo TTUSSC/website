@@ -56,6 +56,27 @@ const lectureData = {
       kktix: "",
     },
     {
+      date: "9/23",
+      name: "競程基礎帶您（差點）破台CPE",
+      difficulty: 1.25,
+      lecturer: "烤餅",
+      location: "A3-200",
+      tags: ["CPE", "C++"],
+      description: "你聽過 CPE 或 ICPC 嗎？這些程式競賽不僅是檢驗程式設計實力的舞台，更是資訊領域學生的必經挑戰！「競程基礎帶您（差點）破台 CPE」將帶你快速認識程式競賽內容與形式，並介紹 C++ STL容器 與基礎演算法應用。課程中搭配簡單題目示範，幫助你從理論連結到實際解題。即使從未參加過比賽，也能找到入門方向，為未來挑戰做好準備！",
+      timeline: [
+        "18:30 ~ 18:50 介紹 共筆文化",
+        "18:50 ~ 19:10 介紹 HackMD",
+        "19:10 ~ 19:40 介紹 Markdown 基礎文法與用法",
+        "19:40 ~ 20:00 實作時間",
+        "20:00 ~ 20:10 表單回饋"
+      ],
+      slide: "",
+      slido: "",
+      handout: "",
+      note: "",
+      kktix: "",
+    },
+    {
       date: "9/25",
       name: "協作筆記：HackMD x Markdown",
       difficulty: 1.25,
