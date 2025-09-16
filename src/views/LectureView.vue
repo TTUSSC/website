@@ -51,8 +51,8 @@ const lectureData = {
 	    ],
       slide: "",
       slido: "",
-      handout: "",
-      note: "",
+      handout: "https://www.canva.com/design/DAGy10R_ZBQ/uQsD9XxK_A4nuJNvxPU6tA/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0",
+      note: "https://hackmd.io/@ttussc/rkaYu8Iill",
       kktix: "",
     },
     {
@@ -74,8 +74,8 @@ const lectureData = {
       ],
       slide: "",
       slido: "",
-      handout: "https://www.canva.com/design/DAGy10R_ZBQ/uQsD9XxK_A4nuJNvxPU6tA/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0",
-      note: "https://hackmd.io/@ttussc/rkaYu8Iill",
+      handout: "",
+      note: "",
       kktix: "",
     },
     {
