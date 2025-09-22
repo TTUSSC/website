@@ -72,7 +72,7 @@ const lectureData = {
         "20:10 ~ 20:50 帶一點點\"簡單\"的算法",
         "20:50 ~ 21:00 表單回饋",
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubin/deck-1819e2",
       slido: "",
       handout: "",
       note: "",
