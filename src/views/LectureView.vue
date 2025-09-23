@@ -75,7 +75,7 @@ const lectureData = {
       slide: "https://slides.com/speedcubin/deck-1819e2",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/Byb74a12gx",
       kktix: "",
     },
     {
