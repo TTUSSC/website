@@ -81,7 +81,7 @@ const lectureData = {
     {
       date: "9/25",
       name: "協作筆記：HackMD x Markdown",
-      difficulty: 1.25,
+      difficulty: 1.5,
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["HackMD", "Markdown", "協作"],
@@ -93,16 +93,16 @@ const lectureData = {
         "19:40 ~ 20:00 實作時間",
         "20:00 ~ 20:10 表單回饋"
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubin/deck-8013f4/",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/r1Ni_Qbhgl",
       kktix: "",
     },
     {
       date: "10/02",
       name: "Shell I be the commander?",
-      difficulty: 2,
+      difficulty: 2.5,
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["Linux", "Shell"],
@@ -117,7 +117,7 @@ const lectureData = {
       slide: "",
       slido: "",
       handout: "",
-      note: "https://hackmd.io/@ttussc/ByHWTwlsee",
+      note: "",
       kktix: "",
     },
     {
