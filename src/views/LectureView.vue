@@ -114,10 +114,10 @@ const lectureData = {
         "20:20 ~ 20:50 介紹 + 操作 Vim",
         "20:50 ~ 21:00 表單回饋"
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubin/shell",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/SysYN2jhgl",
       kktix: "",
     },
     {
@@ -1373,6 +1373,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
