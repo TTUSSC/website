@@ -123,7 +123,7 @@ const lectureData = {
     {
       date: "10/09",
       name: "現在正是*駭客*的時刻",
-      difficulty: 1.0,
+      difficulty: 2.0,
       lecturer: "Yuto",
       location: "A3-200",
       tags: ["資訊安全"],
