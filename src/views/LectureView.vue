@@ -204,7 +204,7 @@ const lectureData = {
       slido: "",
       handout: "",
       note: "",   
-      kktix: "https://ttussc.kktix.cc/events/dennytalk?preview_token=3ac798ad52765197d892afff72c7ff71",
+      kktix: "https://ttussc.kktix.cc/events/dennytalk?preview_token=8ba30340cd54c41c4504b2f7a7eb01f5",
     },
     {
       date: "11/13",
