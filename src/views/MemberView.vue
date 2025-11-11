@@ -54,7 +54,7 @@ const members = {
       blurhash: "",
       name: "蔡詠竣",
       title: "教學 x 資訊",
-      ig:"speedcubing.top"
+      ig:"speedcubing.top",
       desc: "",
       tags: []
     },
