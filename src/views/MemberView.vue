@@ -41,11 +41,12 @@ const members = {
       tags: []
     },
     {
-      image: "",
+      image: trueURL("img/member/zp.jpg"),
       blurhash: "",
       name: "張登評",
       title: "器材組長",
-      desc: "",
+      ig: "zp.2006",
+      desc: "電機系學生，是個軍事迷，喜歡學習科技與應用相關的事物。",
       tags: []
     },
     {
@@ -53,6 +54,7 @@ const members = {
       blurhash: "",
       name: "蔡詠竣",
       title: "教學 x 資訊",
+      ig:"speedcubing.top"
       desc: "",
       tags: []
     },
@@ -87,7 +89,7 @@ const members = {
       name: "余萬崧",
       title: "資訊組長",
       ig: "rainyu_05_10",
-      desc: "",
+      desc: "喜歡嘗試跟程式有關的新事物，最近在積極學習網站跟人工智慧",
       tags: [
         "音樂",
         "遊戲",
