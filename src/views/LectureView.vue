@@ -114,16 +114,16 @@ const lectureData = {
         "20:20 ~ 20:50 介紹 + 操作 Vim",
         "20:50 ~ 21:00 表單回饋"
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubin/shell",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/SysYN2jhgl",
       kktix: "",
     },
     {
       date: "10/09",
       name: "現在正是*駭客*的時刻",
-      difficulty: 1.0,
+      difficulty: 2.0,
       lecturer: "Yuto",
       location: "A3-200",
       tags: ["資訊安全"],
@@ -135,12 +135,12 @@ const lectureData = {
         "18:50 ~ 19:10 CTF 競賽介紹與題型分類",
         "19:10 ~ 19:20 台灣資安競賽資源整理",
         "19:20 ~ 20:40 CVE-2024-4577 靶機實作與 CTF 解題體驗",
-        "20:40 ~ Kahoot! 回顧",  
+        "20:40 ~ Kahoot! 回顧",
 	  ],
       slide: "",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/114-its-hackers-time",
       kktix: "",
     },
     {
@@ -158,12 +158,12 @@ const lectureData = {
         "19:00 ~ 19:30 使用 Arduino 讀取卡片內容",
         "19:30 ~ 19:50 認識 CRYPTO-1 和其設計弱點",
         "19:50 ~ 20:40 MIFARE Classic 攻防體驗",
-        "20:40 ~ Kahoot! 回顧",  
+        "20:40 ~ Kahoot! 回顧",
 	  ],
       slide: "",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/114-rfid-security",
       kktix: "",
     },
     {
@@ -174,7 +174,7 @@ const lectureData = {
       location: "A3 8F 樂學空間",
       tags: ["工作坊", "讀書"],
       description: "期中考前夕，讓我們一起準備考試！社員們可以互相交流讀書心得，學長姐也會在現場協助解答問題。",
-      timeline: [
+       timeline: [
         "18:00 ~ 18:30 入座準備",
         "18:30 ~ 20:50 準備考試內容",
         "20:50 ~ 21:00 填寫回饋表單",
@@ -184,6 +184,27 @@ const lectureData = {
       handout: "",
       note: "",
       kktix: "",
+    },
+    {
+      date: "11/3",
+      name: "可複製的好課 : 教學的系統思考",
+      difficulty: 0.0,
+      lecturer: "Denny",
+      location: "A3-307",
+      tags: ["教學分享", "系統化教學"],
+      description: "教學不只是靈感，而是一套可以被複製的流程！在這堂課中，Denny 學長將以詼諧卻深刻的方式，帶領大家重新檢視「教學」的本質，從釐清目標、安排活動、設計挑戰，到追蹤學習成果。學員不僅能學到如何把艱深的內容說成人話，還能練習看懂現場反應、即時調整節奏。課程最後，大家將親手帶走一份可立即應用的教案骨架與改進清單，讓你的課更穩、更有效！",
+      timeline: [
+        "18:20 ~ 18:30 報到與入場",
+        "18:30 ~ 18:40 開場介紹",
+        "18:40 ~ 19:50 主講 : 可複製的好課(Denny 學長)",
+        "19:50 ~ 20:10 小組分享與回饋",
+        "20:10 ~ 20:30 Q&A 與活動總結",
+      ],
+      slide: "https://denny.one/good-class/",
+      slido: "",
+      handout: "",
+      note: "https://hackmd.io/@ttussc/114-good-class",   
+      kktix: "https://ttussc.kktix.cc/events/dennytalk?preview_token=8ba30340cd54c41c4504b2f7a7eb01f5",
     },
     {
       date: "11/13",
@@ -198,10 +219,10 @@ const lectureData = {
         "18:50 ~ 20:50 正式社課",
         "20:50 ~ 21:00 填寫回饋表單",
       ],
-      slide: "",
+      slide: "https://www.canva.com/design/DAGtahyoFKk/ZdjpwgqZnby0qlkjGDt53w/view?utm_content=DAGtahyoFKk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfc6c599da3",
       slido: "",
       handout: "",
-      note: "",
+      note: " https://hackmd.io/@ttussc/S1SYB286gx",
       kktix: "",
     },
     {
@@ -469,7 +490,7 @@ const lectureData = {
       timeline: [
         "17:30~18:00 場地佈置、進場",
         "18:00~18:30 介紹版本控制概念",
-        "18:30~19:00 安裝 git 與環境設定", 
+        "18:30~19:00 安裝 git 與環境設定",
         "19:00~20:00 git 基本指令教學",
       ],
       slide: "https://denny.one/git-slide/",
@@ -531,7 +552,7 @@ const lectureData = {
       timeline: [
         "17:30~18:00 課前準備",
         "18:00~18:20 環境準備",
-        "18:20~18:50 複習及整合前面課程所提及之各項內容", 
+        "18:20~18:50 複習及整合前面課程所提及之各項內容",
         "19:00~19:20 簡單提及網路概論及網頁架構",
         "19:20~19:40 申請 Github.io 域名，將域名指向個人 Github",
         "19:40~20:00 成果發表，瀏覽成員之網頁"
@@ -1373,6 +1394,7 @@ function handleSelectYear(year) {
     </div>
   </div>
 </template>
+
 
 
 
