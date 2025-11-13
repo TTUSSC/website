@@ -247,7 +247,7 @@ const lectureData = {
     {
       date: "11/25",
       name: "誰說純軟不會組電腦？ ",
-      difficulty: 0,
+      difficulty: 1,
       lecturer: "jacky",
       location: "A3-200",
       tags: ["硬體", "電腦組裝"],
