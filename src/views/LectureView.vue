@@ -240,8 +240,8 @@ const lectureData = {
       ],
       slide: "https://www.canva.com/design/DAGtagLSRcw/DuQNNKlCUxtzkRixzexUpQ/view?utm_content=DAGtagLSRcw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd6ba0f7166",
       slido: "",
-      handout: "https://hackmd.io/@ttussc/B1TOBHDg-e",
-      note: "",
+      handout: "",
+      note: "https://hackmd.io/@ttussc/B1TOBHDg-e",
       kktix: "",
     },
     {
