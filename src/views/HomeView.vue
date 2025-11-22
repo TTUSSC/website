@@ -89,6 +89,27 @@ import LazyImage from '@/components/LazyImage.vue';
         <div class="container-fluid py-2">
           <div class="row d-flex">
             <div class="col-md-9">
+              <p class="lead display-5">幹部召集令！</p>
+              <p class="col-md-10">
+                填寫這份籌備幹部表，告訴我們你想挑戰哪個角色！<br>
+                <strong>不論是想嘗試、新技能、或單純想幫忙，都超歡迎。</strong>
+              </p>
+            </div>
+            <a class="btn btn-lg btn-outline-success col-md-8 mx-auto mt-5" href="https://docs.google.com/forms/d/1f9isCxKi09PnOuQyEsX7YEvl9pXAAKm_bWPhLiMFxlk/edit">
+              一起成為社團小幫手
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-10 mx-auto">
+      <div class="p-5 bg-body-secondary rounded-3">
+        <div class="container-fluid py-2">
+          <div class="row d-flex">
+            <div class="col-md-9">
               <p class="lead display-5">加入我們！！</p>
               <p class="col-md-10">
                 學期末開始前都會有期初大會，向各位介紹社團，屆時也會請社員們填寫表單。<br>
