@@ -95,7 +95,7 @@ import LazyImage from '@/components/LazyImage.vue';
                 <strong>不論是想嘗試、新技能、或單純想幫忙，都超歡迎。</strong>
               </p>
             </div>
-            <a class="btn btn-lg btn-outline-success col-md-8 mx-auto mt-5" href="https://docs.google.com/forms/d/1f9isCxKi09PnOuQyEsX7YEvl9pXAAKm_bWPhLiMFxlk/edit">
+            <a class="btn btn-lg btn-outline-success col-md-8 mx-auto mt-5" href="https://forms.gle/nfnLuF2F2kBCH9AKA">
               一起成為社團小幫手
             </a>
           </div>
