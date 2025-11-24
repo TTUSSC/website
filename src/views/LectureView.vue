@@ -227,7 +227,7 @@ const lectureData = {
     },
     {
       date: "11/20",
-      name: "蛇年就來學 Python 吧！（下）",
+      name: "蛇年就來學 Python 吧！（下）", 
       difficulty: 2,
       lecturer: "阿文",
       location: "A3-200",
