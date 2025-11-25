@@ -261,7 +261,7 @@ const lectureData = {
       slide: "",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/BJtBWxm-Wx",
       kktix: "",
     },
     {
