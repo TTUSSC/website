@@ -305,15 +305,21 @@ const lectureData = {
       name: "TTUSSC：Take Turns Unwrap Secret Santa Christmas",
       difficulty: 0.0,
       lecturer: "柏屹",
-      location: "",
+      location: "A3-307",
       tags: ["期末大會"],
-      description: "",
-      timeline: [],
+      description: "嘿！期末將近，是時候該放鬆一下啦～🎄
+我們特別準備了一場 「聖誕回顧派對」，讓大家一邊吃零食，一邊回顧這學期的課程收穫。當然少不了最期待的 交換禮物，看看誰會抽到最驚喜的好東西吧！這是一場融合「學習回顧 + 聖誕歡樂」的活動，讓你帶著笑聲和回憶一起為這學期畫下完美句點。別錯過，因為聖誕的魔法只屬於當天晚上喔！✨",
+      timeline: [
+        "18:00~18:30 場地佈置與進場"
+        "18:30~19:10 社課回顧"
+        "19:10~20:10 聖誕派對"
+        "20:10~20:30 填寫問卷、收拾場地"
+      ],
       slide: "",
       slido: "",
       handout: "",
       note: "",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/ttussc",
     },
     {
       date: "12/15 ~ 12/19",
