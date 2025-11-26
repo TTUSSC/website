@@ -302,7 +302,7 @@ const lectureData = {
     },
     {
       date: "12/11",
-      name: "TTUSSC：Take Turns Unwrap Secret Santa Christmas",
+      name: "TTUSSC：Take Turns Unwrapping Secret Santa Christmas",
       difficulty: 0.0,
       lecturer: "柏屹",
       location: "A3-307",
