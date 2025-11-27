@@ -279,7 +279,7 @@ const lectureData = {
         "19:30 ~ 20:50 Events & Slash Commands",
         "20:50 ~ 21:00 填寫回饋表單"
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubing/discord/",
       slido: "",
       handout: "",
       note: "https://hackmd.io/@ttussc/20251127",
