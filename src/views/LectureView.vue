@@ -258,7 +258,7 @@ const lectureData = {
         "19:20~20:40 實操電腦的安裝",
         "20:40~21:00 作業系統＆驅動程式安裝",
       ],
-      slide: "",
+      slide: "https://slides.com/speedcubing/discord/",
       slido: "",
       handout: "",
       note: "https://hackmd.io/@ttussc/BJtBWxm-Wx",
@@ -282,7 +282,7 @@ const lectureData = {
       slide: "",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/@ttussc/20251127",
       kktix: "",
     },
     {
@@ -310,7 +310,7 @@ const lectureData = {
       description: `嘿！期末將近，是時候該放鬆一下啦～🎄
 我們特別準備了一場 「聖誕回顧派對」，讓大家一邊吃零食，一邊回顧這學期的課程收穫。當然少不了最期待的 交換禮物，看看誰會抽到最驚喜的好東西吧！這是一場融合「學習回顧 + 聖誕歡樂」的活動，讓你帶著笑聲和回憶一起為這學期畫下完美句點。別錯過，因為聖誕的魔法只屬於當天晚上喔！✨`,
       timeline: [
-        "18:00~18:30 場地佈置與進場",
+        "18:00~18:30 場地佈置與進場", 
         "18:30~19:10 社課回顧",
         "19:10~20:10 聖誕派對",
         "20:10~20:30 填寫問卷、收拾場地",
