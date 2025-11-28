@@ -301,6 +301,28 @@ const lectureData = {
       kktix: "",
     },
     {
+      date: "12/5",
+      name: "做孩子的啦啦隊!-志工培訓",
+      difficulty: 0,
+      lecturer: "湯幼竹老師",
+      location: "A3-307",
+      tags: ["志工學習", ""],
+      description: "用讚美和鼓勵陪伴孩子成長，教你如何成為孩子的啦啦隊。這堂課透過講師分享與互動練習，志工們可以學習理解孩子的想法、掌握情緒互動技巧，並在活動中自信地發揮影響力。一起來發現當志工的樂趣，讓服務變得更有意義！",
+      timeline: [
+        "17:30~18:00 工作人員們進場",
+        "18:00~18:35 愛與勇氣的能力",
+        "18:35~19:10 情緒與同理心",
+        "19:10~19:20 休息",
+        "19:20~19:55 莫忘初衷"
+        "19:55~20:00 表單填寫、大合照"
+      ],
+      slide: "",
+      slido: "",
+      handout: "",  
+      note: "https://hackmd.io/WR4w30G5TcCFUjf5E6j4vA",
+      kktix: "",
+    },
+    {
       date: "12/11",
       name: "TTUSSC：Take Turns Unwrapping Secret Santa Christmas",
       difficulty: 0.0,
