@@ -303,7 +303,7 @@ const lectureData = {
       slide: "https://slides.com/speedcubing/linux",
       slido: "",
       handout: "",
-      note: "",
+      note: "https://hackmd.io/WR4w30G5TcCFUjf5E6j4vA",
       kktix: "",
     },
     {
@@ -322,7 +322,7 @@ const lectureData = {
         "19:20~19:55 莫忘初衷",
         "19:55~20:00 表單填寫、大合照",
       ],
-      slide: "https://hackmd.io/JqdSugBbQYG_A6Y7nlZkdw?both",
+      slide: "https://slides.com/speedcubing/linux",
       slido: "",
       handout: "",  
       note: "https://hackmd.io/WR4w30G5TcCFUjf5E6j4vA",
