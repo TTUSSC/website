@@ -303,7 +303,7 @@ const lectureData = {
       slide: "https://slides.com/speedcubing/linux",
       slido: "",
       handout: "",
-      note: "https://hackmd.io/WR4w30G5TcCFUjf5E6j4vA",
+      note: "https://hackmd.io/@ttussc/20251204",
       kktix: "",
     },
     {
@@ -325,7 +325,7 @@ const lectureData = {
       slide: "",
       slido: "",
       handout: "",  
-      note: "",
+      note: "https://hackmd.io/@ttussc/Bkfiw28Zbg",
       kktix: "https://ttussc.kktix.cc/events/ttussc",
     },
     {
