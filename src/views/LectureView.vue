@@ -3,7 +3,7 @@ import LectureTable from '@/components/LectureTable.vue';
 import { ref } from 'vue';
 
 const years = [
-  { name: '114 下學期', value: '2025-spring' },
+  { name: '114 下學期', value: '2026-spring' },
   { name: '114 上學期', value: '2025-fall' },
   { name: '113 下學期', value: '2025-spring' },
   { name: '113 上學期', value: '2024-fall' },
@@ -14,7 +14,7 @@ const years = [
 ];
 
 const lectureData = {
-  '2025-spring': [
+  '2026-spring': [
     {
       date: "2/23",
       name: "期初大會",
