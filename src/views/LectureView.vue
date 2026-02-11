@@ -16,7 +16,7 @@ const years = [
 const lectureData = {
   '2026-spring': [
     {
-      date: "2/23",
+      date: "2/26",
       name: "期初大會",
       difficulty: 0.0,
       lecturer: "柏屹",
