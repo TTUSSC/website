@@ -39,7 +39,7 @@ const lectureData = {
       slido: "",
       handout: "",
       note: "",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/final-gathering",
     },
     {
     date: "3/5",
