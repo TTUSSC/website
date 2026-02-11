@@ -22,6 +22,7 @@ const lectureData = {
       lecturer: "柏屹",
       location: "A3-307",
       tags: ["期初大會"],
+      type: "主線",
       description: `📢 新學期開始啦！ 你是不是也很好奇這學期的社課和活動安排呢？想知道有哪些有趣的企劃等著大家一起參與嗎？那這場 期初茶會 你絕對不能錯過！✨
 
 這次的活動不僅會帶你深入了解 新學期的社團規劃，還能和幹部、社員們輕鬆聊聊，提出你的想法，甚至發現志同道合的夥伴！不論你是剛加入的新朋友，還是已經參加過活動的老朋友，我們都 熱情歡迎 你的到來～ 🎉
@@ -47,6 +48,7 @@ const lectureData = {
       lecturer: "肉鬆",
       location: "A3-200",
       tags: ["AI"],
+      type: "主線",
       description: "想讓 AI 幫你自動完成任務嗎？本課程將帶你認識 n8n 自動化平台與 AI Agent 的概念，從建立第一個工作流程開始，學習如何整合 AI 與日常工具，打造專屬於自己的自動化系統。透過實作，你將完成一個能協助處理資訊、整理資料或自動通知的 AI 工具，體驗 AI 真正的應用方式。",
       timeline: [
         "18:30 ~ 19:00 2026雙北黑客松競賽宣傳",
@@ -69,6 +71,7 @@ const lectureData = {
       lecturer: "Denny",
       location: "A3-200",
       tags: ["Git", "版本控制"],
+      type: "主線",
       description: "大家有沒有那種「昨天程式明明是好的，今天改兩行就報銷，然後還忘記昨天改了啥」的經驗？恭喜你，你需要的不是乖乖，而是 Git！這次社課我們再次請到最強的 Denny 學長，帶大家從零開始玩轉這套開發者的「後悔藥」。這一場我們「不插網線」，專注在你自己電腦裡的檔案管理。我們會用最直白的方式，教你怎麼幫程式碼拍快照、怎麼搭乘時光機回到過去。別再讓你的硬碟塞滿垃圾備份檔了，來學 Git，讓你寫 Code 從此變得優雅又強大！",
       timeline: [
         "18:30 ~ 19:00 介紹版本控制概念",
@@ -89,6 +92,7 @@ const lectureData = {
       lecturer: "Denny",
       location: "A3-200",
       tags: ["Git", "版本控制"],
+      type: "主線",
       description: "大家上禮拜學會 Git 本地端操作後，是不是覺得自己已經是版本控制大師了？先別急著關機，因為沒上 GitHub，你的程式碼就只是在自言自語！這次 Denny 學長要帶大家衝上雲端，教你怎麼在 GitHub 這個「程式開發者的社群媒體」上發光發熱。我們會模擬社團專案開發，讓你體驗什麼叫「我改你的、你推我的，大家吵成一團（誤）」。這是一堂關於「交流」的課，我們會學會怎麼 Fork 偶像的專案、怎麼優雅地發 PR 讓別人接納你的程式碼。想讓你的 GitHub 牆滿滿都是綠格子嗎？這堂課就是你的綠點加速器！",
       timeline: [
         "18:30 ~ 19:00 介紹 GitHub 與建立帳號",
@@ -109,6 +113,7 @@ const lectureData = {
       lecturer: "肉鬆",
       location: "A3-200",
       tags: ["網頁前端", "HTML",  "CSS"],
+      type: "主線",
       description: "想學做網站卻不知道怎麼開始？本課程將帶你從 HTML 結構開始，理解網頁是如何被建構出來，再透過 Tailwind CSS 快速打造具有現代感的版面設計。透過大量實作，你將在短時間內完成屬於自己的網頁作品，理解現代前端開發的基本流程與思維。",
       timeline: [
         "18:30 ~ 18:50 設置環境",
@@ -131,6 +136,7 @@ const lectureData = {
       lecturer: "老高",
       location: "A3-200",
       tags: ["網頁前端", "JavaScript"],
+      type: "主線",
       description: "本次課程將介紹 JavaScript 的基礎語法與應用，並透過實作方式，引導學員製作屬於自己的記帳系統。在課程中，除了教導程式撰寫技巧，也會說明程式背後的運作原理與思考方式，最後結合先前學過的 HTML 與 CSS，讓作品不僅能運作，也更具美觀與實用性。",
       timeline: [
         "18:00 ~ 18:30 場佈與課程準備",
@@ -151,6 +157,7 @@ const lectureData = {
       lecturer: "芋泥",
       location: "A3 8F 樂學空間",
       tags: ["工作坊", "讀書"],
+      type: "主線",
       description: "期中考前夕，讓我們一起準備考試！社員們可以互相交流讀書心得，學長姐也會在現場協助解答問題。",
       timeline: [
         "18:00 ~ 18:30 入座準備",
@@ -170,6 +177,7 @@ const lectureData = {
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["網頁後端"],
+      type: "主線",
       description: "",
       timeline: [
         "18:30 ~ 20:50 正式社課",
@@ -188,6 +196,7 @@ const lectureData = {
       lecturer: "烤餅",
       location: "A3-200",
       tags: ["網頁後端","Docker"],
+      type: "主線",
       description: "",
       timeline: [
         "18:30 ~ 20:50 正式社課",
@@ -206,6 +215,7 @@ const lectureData = {
       lecturer: "登評",
       location: "A3-200",
       tags: ["樹莓派", "微控制器"],
+      type: "主線",
       description: "玩膩 Arduino 了嗎？換個開發板來試試看吧！這次活動將以 Raspberry Pi Pico 2 WH 代替Arduino，帶領成員嘗試不同於以往的開發體驗。延續先前社團所學的 Python 基礎，進一步應用 Python 於實際硬體操作中，了解微控制器與外部元件進行互動。透過實作示範與操作體驗，拓展對不同開發板與系統架構的認識，作為後續進階學習的起點。",
       timeline: [
         "18:30 ~ 18:50 介紹程式開發環境：MicroPython、Thonny",
@@ -225,6 +235,7 @@ const lectureData = {
       lecturer: "哲薰",
       location: "A3-200",
       tags: ["3D列印"],
+      type: "主線",
       description: "",
       timeline: [
         "18:30 ~ 20:50 正式社課",
@@ -243,6 +254,7 @@ const lectureData = {
       lecturer: "柏屹",
       location: "A3-307",
       tags: ["期末大會"],
+      type: "主線",
       description: "一個學期過得飛快，是時候來場期末大會好好回顧一下啦！從活動成果分享、社員交流，到幹部交接，我們把所有重要時刻一次整理給你。這不只是回顧過去，更是一起討論未來的好機會，不管你是想聽、想聊，還是單純想看看社團接下來會怎麼走，都非常適合來參加。期末大會就像社團的中繼站，讓我們在這裡停一下、充個電，再一起出發迎接下一學期的挑戰！",
       timeline: [
         "18:00 ~ 18:30 場佈、活動準備",
@@ -264,6 +276,7 @@ const lectureData = {
       lecturer: "芋泥",
       location: "A3 8F 樂學空間",
       tags: ["工作坊", "讀書"],
+      type: "主線",
       description: "期末考前夕，讓我們一起準備考試！社員們可以互相交流讀書心得，學長姐也會在現場協助解答問題。",
       timeline: [
         "18:00 ~ 18:30 入座準備",
