@@ -2041,11 +2041,11 @@ const lectureData = {
 };
 
 const selectedYear = ref(years[0]);
-const selectedFilter = ref('全部'); // 新增：預設顯示全部
+const selectedFilter = ref('主線'); // 新增：預設顯示全部
 
 function handleSelectYear(year) {
   selectedYear.value = year;
-  selectedFilter.value = '全部'; // 切換學期時重置為「全部」
+  selectedFilter.value = '主線'; // 切換學期時重置為「全部」
 }
 
 function handleSelectFilter(filter) {
@@ -2111,12 +2111,6 @@ const filteredLectureData = computed(() => {
       <div class="my-3">
         <ul class="nav nav-pills">
           <li class="nav-item me-2">
-            <a class="nav-link" :class="{ active: selectedFilter === '全部' }" href="#"
-              @click.prevent="handleSelectFilter('全部')">
-              全部
-            </a>
-          </li>
-          <li class="nav-item me-2">
             <a class="nav-link" :class="{ active: selectedFilter === '主線' }" href="#"
               @click.prevent="handleSelectFilter('主線')">
               主線
@@ -2126,6 +2120,12 @@ const filteredLectureData = computed(() => {
             <a class="nav-link" :class="{ active: selectedFilter === '支線' }" href="#"
               @click.prevent="handleSelectFilter('支線')">
               支線
+            </a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link" :class="{ active: selectedFilter === '全部' }" href="#"
+              @click.prevent="handleSelectFilter('全部')">
+              全部
             </a>
           </li>
         </ul>
