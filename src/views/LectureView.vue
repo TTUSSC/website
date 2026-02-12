@@ -128,10 +128,10 @@ const lectureData = {
       slido: "",
       handout: "",
       note: "",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/git-1",
     },
     {
-      date: "3/19",
+      date: "3/17",
       name: "開源小廚房2：奶酪篇",
       difficulty: 0.0,
       lecturer: "黃瓜、Jessie",
@@ -177,7 +177,7 @@ const lectureData = {
       slido: "",
       handout: "",
       note: "",
-      kktix: "",
+      kktix: "https://ttussc.kktix.cc/events/git2",
     },
     {
       date: "3/23",
