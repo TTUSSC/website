@@ -58,9 +58,58 @@ function parseTimelineItem(itemStr) {
       >Lectures</span
     >
     <h1 class="font-display text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">社課</h1>
-    <p class="text-clay mb-4 max-w-2xl text-[15px]">
-      課程難度從 🌑🌑🌑🌑🌑（一般活動）到 🌕🌕🌕🌕🌕（進階），我們的社課適合各種學習者。
+    <p class="text-[15px] text-clay leading-relaxed max-w-3xl mb-4">
+      學長姐手把手教學，搭配業界前輩實戰分享。在這裡，你可以學程式、做專案，也能輕鬆交友。無論你的目標是什麼，這裡都有適合你的位置，帶你踏入開源世界的無限可能！
     </p>
+
+    <!-- Difficulty Explanation with Hover Tooltip -->
+    <div class="relative group inline-block z-20 mb-6">
+      <div class="flex items-center gap-1.5 text-clay cursor-help hover:text-ink transition-colors">
+        <svg
+          class="w-4 h-4 text-moss"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+          />
+        </svg>
+        <span class="text-[14px] border-b border-dashed border-clay/50">了解課程難度分級</span>
+      </div>
+
+      <!-- Tooltip Content -->
+      <div
+        class="absolute left-0 top-full mt-2 w-[320px] sm:w-[480px] p-5 bg-paper backdrop-blur-xl border border-chalk/80 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 origin-top-left pointer-events-none group-hover:pointer-events-auto"
+      >
+        <p class="text-[13px] text-ink/90 leading-relaxed mb-4">
+          為了方便大家選擇感興趣的活動，我們的課程難度一共分為六個等級：
+        </p>
+        <ul class="space-y-2 text-[13px] text-ink/80 font-medium">
+          <li class="flex items-start gap-2">
+            <span class="shrink-0">🌑🌑🌑🌑🌑</span>：一般性質活動，任何人都可以一同參與。
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="shrink-0">🌕🌑🌑🌑🌑</span>：非常簡單，適合完全新手，無需任何背景知識。
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="shrink-0">🌕🌕🌑🌑🌑</span>：簡單，需具備基本概念或基礎能力。
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="shrink-0">🌕🌕🌕🌑🌑</span>：中等，內容稍具挑戰性，適合已有相關經驗的人。
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="shrink-0">🌕🌕🌕🌕🌑</span>：困難，需要較多背景知識或具備一定專業技能。
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="shrink-0">🌕🌕🌕🌕🌕</span>：非常困難，適合高水準的學習者或專業人士。
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Semester Tabs -->
     <div class="flex flex-wrap gap-2 mb-6">
