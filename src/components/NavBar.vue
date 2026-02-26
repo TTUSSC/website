@@ -125,7 +125,10 @@ const navLinks = [
       leave-from-class="opacity-100"
       leave-to-class="opacity-0 -translate-y-1"
     >
-      <div v-if="isMenuOpen" class="md:hidden border-t border-chalk bg-paper">
+      <div
+        v-if="isMenuOpen"
+        class="md:hidden absolute top-full left-0 right-0 border-t border-chalk bg-paper shadow-xl"
+      >
         <div class="px-6 py-3 space-y-0.5">
           <RouterLink
             v-for="link in navLinks"

@@ -1,24 +1,26 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="relative overflow-hidden noise-bg">
-      <div class="relative z-10 max-w-5xl mx-auto px-6 pt-24 pb-20 md:pt-32 md:pb-28">
+    <section
+      class="relative overflow-hidden noise-bg min-h-[calc(100vh-3.5rem)] flex items-center py-16 md:py-0"
+    >
+      <div class="relative z-10 max-w-5xl mx-auto px-6 w-full md:-mt-8">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div class="md:col-span-7">
+          <div class="md:col-span-8">
             <div class="reveal">
               <span
-                class="inline-block px-2.5 py-1 text-[11px] font-display font-semibold uppercase tracking-[0.2em] text-rust border border-rust/30 rounded-sm mb-6"
+                class="inline-block px-2.5 py-1 text-[11px] font-display font-semibold uppercase tracking-[0.2em] text-rust border border-rust/30 rounded-sm mb-4 md:mb-6"
               >
                 Open Source Club
               </span>
             </div>
             <h1
-              class="reveal reveal-d1 font-display text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold text-ink leading-[1.05] tracking-tight"
+              class="reveal reveal-d1 font-display text-[clamp(2.45rem,7.5vw,4.5rem)] font-extrabold text-ink leading-tight tracking-tight whitespace-nowrap"
             >
-              科學開源<br />服務社
+              科學開源服務社
             </h1>
             <p
-              class="reveal reveal-d2 mt-6 text-base md:text-lg text-clay leading-relaxed max-w-md"
+              class="reveal reveal-d2 mt-4 md:mt-8 text-sm md:text-lg text-clay leading-relaxed max-w-md"
             >
               致力於推廣開源文化、技術學習與志工服務。透過社課與講座學習開源工具，專案實作累積經驗，並參與資訊營隊與研討會志工。
             </p>
@@ -48,8 +50,8 @@
               </a>
             </div>
           </div>
-          <div class="reveal reveal-d4 md:col-span-5 flex justify-center">
-            <div class="relative">
+          <div class="reveal reveal-d4 md:col-span-4 flex justify-center">
+            <div class="relative translate-y-4 md:translate-y-6">
               <div class="absolute -inset-8 bg-rust/5 rounded-full blur-3xl"></div>
               <img
                 src="/logo.png"
@@ -61,7 +63,9 @@
         </div>
       </div>
       <!-- Decorative border -->
-      <div class="h-px bg-gradient-to-r from-transparent via-chalk to-transparent"></div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-chalk to-transparent"
+      ></div>
     </section>
 
     <!-- What We Do -->
