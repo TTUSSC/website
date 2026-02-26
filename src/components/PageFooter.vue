@@ -12,16 +12,37 @@
 
         <!-- Center: Links -->
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-clay">
-          <a href="https://instagram.com/ttussc_/" target="_blank" class="hover:text-ink transition-colors">Instagram</a>
-          <a href="https://www.facebook.com/ttussc/" target="_blank" class="hover:text-ink transition-colors">Facebook</a>
-          <a href="https://discord.com/invite/29PsKfe45h" target="_blank" class="hover:text-ink transition-colors">Discord</a>
-          <a href="https://ocf.tw/" target="_blank" class="hover:text-ink transition-colors">開放文化基金會</a>
-          <a href="https://coscup.org/" target="_blank" class="hover:text-ink transition-colors">COSCUP</a>
-          <a href="https://sitcon.org/" target="_blank" class="hover:text-ink transition-colors">SITCON</a>
+          <a
+            href="https://instagram.com/ttussc_/"
+            target="_blank"
+            class="hover:text-ink transition-colors"
+            >Instagram</a
+          >
+          <a
+            href="https://www.facebook.com/ttussc/"
+            target="_blank"
+            class="hover:text-ink transition-colors"
+            >Facebook</a
+          >
+          <a
+            href="https://discord.com/invite/29PsKfe45h"
+            target="_blank"
+            class="hover:text-ink transition-colors"
+            >Discord</a
+          >
+          <a href="https://ocf.tw/" target="_blank" class="hover:text-ink transition-colors"
+            >開放文化基金會</a
+          >
+          <a href="https://coscup.org/" target="_blank" class="hover:text-ink transition-colors"
+            >COSCUP</a
+          >
+          <a href="https://sitcon.org/" target="_blank" class="hover:text-ink transition-colors"
+            >SITCON</a
+          >
         </div>
 
         <!-- Right: Copyright -->
-        <p class="text-[11px] text-sand tracking-wide">© 2025 TTUSSC</p>
+        <p class="text-[11px] text-sand tracking-wide">© 2026 TTUSSC</p>
       </div>
     </div>
   </footer>
