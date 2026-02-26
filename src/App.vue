@@ -2,6 +2,7 @@
 import { ref, watch } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 
+import GlobalBackground from '@/components/GlobalBackground.vue'
 import NavBar from '@/components/NavBar.vue'
 import PageFooter from '@/components/PageFooter.vue'
 
@@ -16,7 +17,7 @@ const usePageTitle = () => {
       pageTitle.value = newTitle ? `${baseTitle}｜${newTitle}` : baseTitle
       document.title = pageTitle.value
     },
-    { immediate: true }
+    { immediate: true },
   )
 
   return pageTitle
@@ -26,7 +27,8 @@ usePageTitle()
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col relative">
+    <GlobalBackground />
     <NavBar />
     <main class="flex-1">
       <router-view v-slot="{ Component }">

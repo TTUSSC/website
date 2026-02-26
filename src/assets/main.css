@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Design tokens */
 @theme {
@@ -15,8 +15,8 @@
   --color-chalk: #e5e7eb;
   --color-fog: #f3f4f6;
 
-  --font-display: "Bricolage Grotesque", "Noto Sans TC", sans-serif;
-  --font-body: "DM Sans", "Noto Sans TC", sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Noto Sans TC', sans-serif;
+  --font-body: 'DM Sans', 'Noto Sans TC', sans-serif;
 }
 
 /* Base */
@@ -56,7 +56,7 @@
 }
 
 .noise-bg::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   opacity: 0.02;
@@ -72,10 +72,42 @@
   background-size: 24px 24px;
 }
 
+/* Background Drift Animation */
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 24px 24px;
+  }
+}
+
+.animate-drift {
+  animation: drift 15s linear infinite;
+}
+
+/* Base button and interactive elements styles */
+a,
+button {
+  transition:
+    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+a:active:not(.navbar-brand),
+button:active {
+  transform: scale(0.97);
+}
+
 /* Page transitions */
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .page-enter-from {
@@ -124,12 +156,18 @@
 
 /* Hover lift */
 .hover-lift {
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px -8px rgba(26, 26, 46, 0.1);
+}
+
+.hover-lift:active {
+  transform: translateY(-2px) scale(0.98);
 }
 
 /* Scrollbar */
@@ -152,5 +190,11 @@
 
 /* Stripe accent */
 .stripe-accent {
-  background: repeating-linear-gradient(-45deg, transparent, transparent 4px, var(--color-rust) 4px, var(--color-rust) 5px);
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    var(--color-rust) 4px,
+    var(--color-rust) 5px
+  );
 }
