@@ -1,6 +1,4 @@
 import './assets/main.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -15,7 +13,6 @@ app.use(router)
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')
