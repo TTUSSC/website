@@ -3,14 +3,14 @@ import { ref, computed } from 'vue'
 import { lectureData } from '@/data/lectureData.js'
 
 const years = [
-  { name: '114 下學期', value: '2026-spring' },
-  { name: '114 上學期', value: '2025-fall' },
-  { name: '113 下學期', value: '2025-spring' },
-  { name: '113 上學期', value: '2024-fall' },
-  { name: '112 下學期', value: '2024-spring' },
-  { name: '112 上學期', value: '2023-fall' },
-  { name: '111 下學期', value: '2023-spring' },
-  { name: '111 上學期', value: '2022-fall' },
+  { name: '114 下學期', value: '114-2' },
+  { name: '114 上學期', value: '114-1' },
+  { name: '113 下學期', value: '113-2' },
+  { name: '113 上學期', value: '113-1' },
+  { name: '112 下學期', value: '112-2' },
+  { name: '112 上學期', value: '112-1' },
+  { name: '111 下學期', value: '111-2' },
+  { name: '111 上學期', value: '111-1' },
 ]
 
 const selectedYear = ref(years[0])
