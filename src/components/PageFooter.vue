@@ -1,62 +1,49 @@
-<script setup>
-/* import icons */
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
-library.add(faFacebook, faInstagram)
-</script>
-
 <template>
-  <footer class="bg-body-tertiary text-center text-lg-start">
-    <div class="container p-5">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">聯絡我們</h5>
-          <p>
-            10491 台北市中山區中山北路三段 40 號<br>
-            Email：ttussc@ms.ttu.edu.tw<br>
-          </p>
+  <footer class="border-t border-chalk">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <!-- Left: Brand -->
+        <div class="flex items-center gap-2.5">
+          <img src="/logo.png" alt="TTUSSC" class="h-5 w-5 opacity-60" />
+          <span class="font-display font-semibold text-ink text-sm">TTUSSC</span>
+          <span class="text-chalk mx-1">|</span>
+          <span class="text-xs text-sand">科學開源服務社</span>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">社群媒體</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="https://instagram.com/ttussc_/" target="_blank" rel="noopener noreferrer" class="text-dark">
-                <font-awesome-icon :icon="['fab', 'instagram']" />
-                @ttussc_
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/ttussc/" target="_blank" rel="noopener noreferrer" class="text-dark">
-                <font-awesome-icon :icon="['fab', 'facebook']" />
-                @ttussc
-              </a>
-            </li>
-          </ul>
+
+        <!-- Center: Links -->
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-clay">
+          <a
+            href="https://instagram.com/ttussc_/"
+            target="_blank"
+            class="hover:text-ink transition-colors"
+            >Instagram</a
+          >
+          <a
+            href="https://www.facebook.com/ttussc/"
+            target="_blank"
+            class="hover:text-ink transition-colors"
+            >Facebook</a
+          >
+          <a
+            href="https://discord.com/invite/29PsKfe45h"
+            target="_blank"
+            class="hover:text-ink transition-colors"
+            >Discord</a
+          >
+          <a href="https://ocf.tw/" target="_blank" class="hover:text-ink transition-colors"
+            >開放文化基金會</a
+          >
+          <a href="https://coscup.org/" target="_blank" class="hover:text-ink transition-colors"
+            >COSCUP</a
+          >
+          <a href="https://sitcon.org/" target="_blank" class="hover:text-ink transition-colors"
+            >SITCON</a
+          >
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="https://ocf.tw/" target="_blank" rel="noopener noreferrer" class="text-dark">
-                開放文化基金會
-              </a>
-            </li>
-            <li>
-              <a href="https://coscup.org/" target="_blank" rel="noopener noreferrer" class="text-dark">
-                COSCUP 開源人年會
-              </a>
-            </li>
-            <li>
-              <a href="https://sitcon.org/" target="_blank" rel="noopener noreferrer" class="text-dark">
-                SITCON 學生計算機年會
-              </a>
-            </li>
-          </ul>
-        </div>
+
+        <!-- Right: Copyright -->
+        <p class="text-[11px] text-sand tracking-wide">© 2026 TTUSSC</p>
       </div>
-    </div>
-    <div class="text-center p-3">
-      © 2025 TTUSSC
     </div>
   </footer>
 </template>

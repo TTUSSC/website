@@ -1,1 +1,279 @@
-@import './base.css';
+@import 'tailwindcss';
+
+/* Design tokens */
+@theme {
+  --color-ink: #1a1a2e;
+  --color-ink-soft: #2d2d44;
+  --color-paper: #f8f8fa;
+  --color-paper-warm: #ffffff;
+  --color-rust: #e8a838;
+  --color-rust-light: #f0be5e;
+  --color-moss: #4a90d9;
+  --color-moss-light: #6ba6e3;
+  --color-clay: #4b5563;
+  --color-sand: #6b7280;
+  --color-chalk: #e5e7eb;
+  --color-fog: #f3f4f6;
+
+  --font-display: 'Noto Serif TC', 'Lora', serif;
+  --font-body: 'Noto Serif TC', 'Lora', serif;
+}
+
+/* Base */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-rust);
+    color: white;
+  }
+}
+
+/* Noise texture overlay */
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, var(--color-chalk) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Background Drift Animation */
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 24px 24px;
+  }
+}
+
+.animate-drift {
+  animation: drift 15s linear infinite;
+}
+
+/* Base button and interactive elements styles */
+a,
+button {
+  transition:
+    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+a:active:not(.navbar-brand),
+button:active {
+  transform: scale(0.97);
+}
+
+/* Page transitions */
+.page-enter-active,
+.page-leave-active {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* Reveal animation */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-d1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-d2 {
+  animation-delay: 0.2s;
+}
+
+.reveal-d3 {
+  animation-delay: 0.3s;
+}
+
+.reveal-d4 {
+  animation-delay: 0.4s;
+}
+
+/* Hover lift */
+.hover-lift {
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -8px rgba(26, 26, 46, 0.1);
+}
+
+.hover-lift:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-chalk);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sand);
+}
+
+/* Stripe accent */
+.stripe-accent {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    var(--color-rust) 4px,
+    var(--color-rust) 5px
+  );
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.scroll-reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.scroll-reveal-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.scroll-reveal-delay-4 {
+  transition-delay: 0.32s;
+}
+
+.scroll-reveal-delay-5 {
+  transition-delay: 0.4s;
+}
+
+/* Accordion transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-up-enter-active {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.15s;
+}
+
+.fade-up-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.fade-up-leave-to {
+  opacity: 0;
+}
+
+/* Carousel fade transition */
+.carousel-fade-enter-active {
+  transition: opacity 0.6s ease;
+}
+
+.carousel-fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.carousel-fade-enter-from,
+.carousel-fade-leave-to {
+  opacity: 0;
+}
