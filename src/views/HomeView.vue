@@ -339,13 +339,35 @@
                   class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"
                 />
                 <!-- Caption -->
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <span class="text-white font-display font-bold text-xl md:text-2xl drop-shadow">{{
-                    activityPhotos[currentPhoto].alt
-                  }}</span>
-                  <p class="mt-1 text-white/75 text-sm leading-relaxed max-w-sm">
-                    {{ activityPhotos[currentPhoto].desc }}
-                  </p>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex items-end justify-between gap-4"
+                >
+                  <div>
+                    <span
+                      class="text-white font-display font-bold text-xl md:text-2xl drop-shadow"
+                      >{{ activityPhotos[currentPhoto].alt }}</span
+                    >
+                    <p class="mt-1 text-white/75 text-sm leading-relaxed max-w-sm">
+                      {{ activityPhotos[currentPhoto].desc }}
+                    </p>
+                  </div>
+                  <!-- View more link -->
+                  <a
+                    href="https://instagram.com/ttussc_/"
+                    target="_blank"
+                    class="shrink-0 flex items-center gap-1 text-white/70 hover:text-white text-xs transition-colors duration-200 group"
+                  >
+                    查看更多活動照片
+                    <svg
+                      class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </Transition>
@@ -373,21 +395,13 @@ const recentLectures = semesterData
 
 // ── 活動照片輪播 ──
 const activityPhotos = [
+  { src: '/img/20260226期初大會.jpg', alt: '最近社課', desc: '20260226 期初大會' },
   {
-    src: '/img/other-activities.jpg',
-    alt: '志工服務',
-    desc: '寒暑假舉辦資訊相關營隊，將所學回饋社區，實現服務與學習的結合。',
+    src: '/img/2026 winter_vacation_camp.png',
+    alt: '營隊活動',
+    desc: '2026 小小創客大冒險 - ARDUINO冬日創客營',
   },
-  {
-    src: '/img/open-source.jpg',
-    alt: '開源文化',
-    desc: '參與 COSCUP 等開源活動，與各方志同道合的發燒者互動，感受開源社群的魅力。',
-  },
-  {
-    src: '/img/tech-learning.jpg',
-    alt: '技術學習',
-    desc: '舉辦社課與講座，學習 HackMD、Linux、Git 等實用技術，從實作中建立實力。',
-  },
+  { src: '/img/202508COSCUP.jpg', alt: '開源社群', desc: '20250810 COSCUP' },
 ]
 const currentPhoto = ref(0)
 let carouselTimer = null

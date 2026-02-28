@@ -19,7 +19,7 @@ const selectedYear = ref(years[0])
       >Members</span
     >
     <h1 class="font-display text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">社團成員</h1>
-    <p class="text-clay mb-10 max-w-2xl text-[15px]">
+    <p class="text-clay mb-10 max-w-2xl text-base md:text-lg leading-relaxed">
       來自電機系、資工系、工設系等不同科系，每個人都帶著獨特的專長和興趣，共同為推廣開源文化而努力。
     </p>
 
@@ -41,14 +41,14 @@ const selectedYear = ref(years[0])
     </div>
 
     <!-- Member Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div
         v-for="member in members[selectedYear.value]"
         :key="member.name + member.title"
-        class="hover-lift bg-paper-warm rounded-xl p-5 border border-chalk/60"
+        class="hover-lift bg-paper-warm rounded-2xl p-6 md:p-7 border border-chalk/60"
       >
-        <div class="flex gap-4">
-          <div class="shrink-0 w-14 h-14 rounded-md overflow-hidden bg-fog">
+        <div class="flex gap-5">
+          <div class="shrink-0 w-20 h-20 rounded-xl overflow-hidden bg-fog">
             <img
               v-if="member.image"
               :src="member.image"
@@ -56,28 +56,30 @@ const selectedYear = ref(years[0])
               class="w-full h-full object-cover"
               loading="lazy"
             />
-            <div v-else class="w-full h-full flex items-center justify-center text-xl">🐧</div>
+            <div v-else class="w-full h-full flex items-center justify-center text-3xl">🐧</div>
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex items-baseline gap-2 flex-wrap">
-              <h3 class="font-display font-semibold text-ink text-[15px]">{{ member.name }}</h3>
-              <span class="text-[11px] text-sand">{{ member.title }}</span>
+              <h3 class="font-display font-semibold text-ink text-base md:text-lg">
+                {{ member.name }}
+              </h3>
+              <span class="text-xs md:text-sm text-sand">{{ member.title }}</span>
             </div>
             <a
               v-if="member.ig"
               :href="'https://www.instagram.com/' + member.ig"
               target="_blank"
-              class="text-[11px] text-rust hover:underline"
+              class="text-xs text-rust hover:underline"
               >@{{ member.ig }}</a
             >
-            <p v-if="member.desc" class="mt-1.5 text-[13px] text-clay leading-relaxed line-clamp-2">
+            <p v-if="member.desc" class="mt-2 text-sm md:text-[15px] text-clay leading-relaxed">
               {{ member.desc }}
             </p>
-            <div v-if="member.tags.length" class="mt-1.5 flex flex-wrap gap-1">
+            <div v-if="member.tags.length" class="mt-2 flex flex-wrap gap-1.5">
               <span
                 v-for="tag in member.tags"
                 :key="tag"
-                class="px-1.5 py-0.5 text-[10px] bg-fog text-clay rounded-sm"
+                class="px-2 py-0.5 text-xs bg-fog text-clay rounded-sm"
                 >#{{ tag }}</span
               >
             </div>

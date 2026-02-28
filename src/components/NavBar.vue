@@ -37,7 +37,7 @@ const navLinks = [
   { to: '/about', label: '關於' },
   { to: '/member', label: '成員' },
   { to: '/lecture', label: '社課' },
-  { to: '/project', label: '專案' },
+  { to: '/project', label: '活動' },
 ]
 </script>
 
