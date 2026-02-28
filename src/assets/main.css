@@ -15,8 +15,8 @@
   --color-chalk: #e5e7eb;
   --color-fog: #f3f4f6;
 
-  --font-display: 'Bricolage Grotesque', 'Noto Sans TC', sans-serif;
-  --font-body: 'DM Sans', 'Noto Sans TC', sans-serif;
+  --font-display: 'Noto Serif TC', 'Lora', serif;
+  --font-body: 'Noto Serif TC', 'Lora', serif;
 }
 
 /* Base */
@@ -197,4 +197,83 @@ button:active {
     var(--color-rust) 4px,
     var(--color-rust) 5px
   );
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.scroll-reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.scroll-reveal-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.scroll-reveal-delay-4 {
+  transition-delay: 0.32s;
+}
+
+.scroll-reveal-delay-5 {
+  transition-delay: 0.4s;
+}
+
+/* Accordion transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-up-enter-active {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.15s;
+}
+
+.fade-up-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.fade-up-leave-to {
+  opacity: 0;
+}
+
+/* Carousel fade transition */
+.carousel-fade-enter-active {
+  transition: opacity 0.6s ease;
+}
+
+.carousel-fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.carousel-fade-enter-from,
+.carousel-fade-leave-to {
+  opacity: 0;
 }

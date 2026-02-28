@@ -43,10 +43,8 @@ const navLinks = [
 
 <template>
   <header
-    class="sticky top-0 z-50 transition-all duration-500"
-    :class="
-      isScrolled ? 'bg-paper/90 backdrop-blur-xl shadow-[0_1px_0_var(--color-chalk)]' : 'bg-paper'
-    "
+    class="sticky top-0 z-50 border-b transition-all duration-500"
+    :class="isScrolled ? 'bg-paper/90 backdrop-blur-xl border-chalk/80' : 'bg-paper border-chalk'"
   >
     <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
       <RouterLink
@@ -55,7 +53,7 @@ const navLinks = [
         @click="handleIconClick"
       >
         <img src="/logo.png" alt="TTUSSC" class="h-6 w-6" />
-        <span class="text-sm">TTUSSC</span>
+        <span class="text-base">TTUSSC</span>
       </RouterLink>
 
       <!-- Desktop -->
@@ -63,7 +61,7 @@ const navLinks = [
         <li v-for="link in navLinks" :key="link.to">
           <RouterLink
             :to="link.to"
-            class="px-3 py-1.5 text-[13px] font-medium text-clay rounded-md hover:text-ink hover:bg-fog transition-all duration-200"
+            class="px-3 py-1.5 text-[15px] font-medium text-clay rounded-md hover:text-ink hover:bg-fog transition-all duration-200"
             active-class="!text-ink !bg-fog"
             >{{ link.label }}</RouterLink
           >
