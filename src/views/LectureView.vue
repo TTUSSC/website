@@ -58,7 +58,7 @@ function parseTimelineItem(itemStr) {
       >Lectures</span
     >
     <h1 class="font-display text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">社課</h1>
-    <p class="text-[15px] text-clay leading-relaxed max-w-3xl mb-4">
+    <p class="text-base md:text-lg text-clay leading-relaxed max-w-3xl mb-4">
       學長姐手把手教學，搭配業界前輩實戰分享。在這裡，你可以學程式、做專案，也能輕鬆交友。無論你的目標是什麼，這裡都有適合你的位置，帶你踏入開源世界的無限可能！
     </p>
 
@@ -78,7 +78,7 @@ function parseTimelineItem(itemStr) {
             d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
           />
         </svg>
-        <span class="text-[14px] border-b border-dashed border-clay/50">了解課程難度分級</span>
+        <span class="text-sm border-b border-dashed border-clay/50">了解課程難度分級</span>
       </div>
 
       <!-- Tooltip Content -->
@@ -146,21 +146,23 @@ function parseTimelineItem(itemStr) {
       <div
         v-for="(lecture, i) in filteredData"
         :key="i"
-        class="bg-paper-warm rounded-xl border border-chalk/60 overflow-hidden transition-all duration-300"
+        class="bg-paper-warm rounded-2xl border border-chalk/60 overflow-hidden transition-all duration-300"
         :class="{ 'shadow-md border-rust/30': expandedIndex === i }"
       >
-        <button @click="toggleExpand(i)" class="w-full text-left px-5 py-4 flex items-center gap-4">
+        <button @click="toggleExpand(i)" class="w-full text-left px-6 py-5 flex items-center gap-4">
           <div class="shrink-0 w-14 text-center">
-            <span class="text-[11px] font-mono text-sand">{{ lecture.date }}</span>
+            <span class="text-xs font-mono text-sand">{{ lecture.date }}</span>
           </div>
           <div class="flex-1 min-w-0">
-            <h3 class="font-display font-semibold text-ink text-sm truncate">{{ lecture.name }}</h3>
+            <h3 class="font-display font-semibold text-ink text-base leading-snug">
+              {{ lecture.name }}
+            </h3>
             <div class="flex items-center gap-2 mt-1 flex-wrap">
-              <span class="text-[11px]">{{ difficultyStars(lecture.difficulty) }}</span>
-              <span class="text-[11px] text-sand">{{ lecture.lecturer }}</span>
+              <span class="text-xs">{{ difficultyStars(lecture.difficulty) }}</span>
+              <span class="text-xs text-sand">{{ lecture.lecturer }}</span>
               <span
                 v-if="lecture.type"
-                class="px-1.5 py-0.5 text-[10px] rounded-sm"
+                class="px-2 py-0.5 text-xs rounded-sm"
                 :class="lecture.type === '主線' ? 'bg-moss/10 text-moss' : 'bg-rust/10 text-rust'"
               >
                 {{ lecture.type }}
@@ -208,7 +210,7 @@ function parseTimelineItem(itemStr) {
 
               <p
                 v-if="lecture.description"
-                class="text-[14px] text-ink/90 font-medium leading-relaxed whitespace-pre-line"
+                class="text-sm md:text-base text-ink/90 font-medium leading-relaxed whitespace-pre-line"
               >
                 {{ lecture.description }}
               </p>
@@ -220,7 +222,7 @@ function parseTimelineItem(itemStr) {
                 <span
                   v-for="tag in lecture.tags"
                   :key="tag"
-                  class="px-2 py-0.5 text-xs bg-fog text-clay rounded-sm"
+                  class="px-2.5 py-0.5 text-xs md:text-sm bg-fog text-clay rounded-sm"
                   >#{{ tag }}</span
                 >
               </div>
@@ -261,7 +263,7 @@ function parseTimelineItem(itemStr) {
                   v-if="lecture.slide"
                   :href="lecture.slide"
                   target="_blank"
-                  class="text-[13px] px-3 py-1.5 border border-chalk rounded-md text-rust hover:bg-rust/5 transition-colors"
+                  class="text-sm px-3.5 py-2 border border-chalk rounded-md text-rust hover:bg-rust/5 transition-colors"
                   >簡報 →</a
                 >
                 <a
