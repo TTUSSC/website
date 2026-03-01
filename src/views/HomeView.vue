@@ -295,82 +295,92 @@
         </div>
 
         <!-- Folder tabs layout -->
-        <div
-          class="scroll-reveal flex h-[360px] md:h-[460px]"
-          ref="addRevealRef"
-          @mouseenter="pauseCarousel"
-          @mouseleave="resumeCarousel"
-        >
-          <!-- Left: folder tabs – full height -->
-          <div class="flex flex-col shrink-0 w-32 md:w-40 h-full">
-            <button
-              v-for="(photo, i) in activityPhotos"
-              :key="i"
-              @click="goToPhoto(i)"
-              class="flex-1 relative text-left px-4 md:px-5 rounded-l-xl transition-all duration-300 select-none flex items-center"
-              :class="
-                currentPhoto === i
-                  ? 'bg-ink text-paper z-10'
-                  : 'bg-[#e8e4dc] text-clay hover:bg-chalk'
-              "
-            >
-              <span class="text-sm md:text-[15px] font-display font-semibold leading-tight">{{
-                photo.alt
-              }}</span>
-              <!-- Divider (except last) -->
-              <span
-                v-if="i < activityPhotos.length - 1 && currentPhoto !== i && currentPhoto !== i + 1"
-                class="absolute bottom-0 left-4 right-0 h-px bg-chalk/70"
-              />
-            </button>
+        <div class="relative">
+          <div
+            class="scroll-reveal flex h-[360px] md:h-[460px]"
+            ref="addRevealRef"
+            @mouseenter="pauseCarousel"
+            @mouseleave="resumeCarousel"
+          >
+            <!-- Left: folder tabs – full height -->
+            <div class="flex flex-col shrink-0 w-32 md:w-40 h-full">
+              <button
+                v-for="(photo, i) in activityPhotos"
+                :key="i"
+                @click="goToPhoto(i)"
+                class="flex-1 relative text-left px-4 md:px-5 rounded-l-xl transition-all duration-300 select-none flex items-center"
+                :class="
+                  currentPhoto === i
+                    ? 'bg-ink text-paper z-10'
+                    : 'bg-[#e8e4dc] text-clay hover:bg-chalk'
+                "
+              >
+                <span class="text-sm md:text-[15px] font-display font-semibold leading-tight">{{
+                  photo.alt
+                }}</span>
+                <!-- Divider (except last) -->
+                <span
+                  v-if="
+                    i < activityPhotos.length - 1 && currentPhoto !== i && currentPhoto !== i + 1
+                  "
+                  class="absolute bottom-0 left-4 right-0 h-px bg-chalk/70"
+                />
+              </button>
+            </div>
+
+            <!-- Right: photo – directly adjacent, no gap -->
+            <div class="flex-1 relative overflow-hidden rounded-r-2xl bg-fog">
+              <Transition name="carousel-fade" mode="out-in">
+                <div :key="currentPhoto" class="absolute inset-0">
+                  <img
+                    :src="activityPhotos[currentPhoto].src"
+                    :alt="activityPhotos[currentPhoto].alt"
+                    class="w-full h-full object-cover"
+                  />
+                  <!-- Gradient overlay -->
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"
+                  />
+                  <!-- Caption -->
+                  <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <div>
+                      <span
+                        class="text-white font-display font-bold text-xl md:text-2xl drop-shadow"
+                        >{{ activityPhotos[currentPhoto].alt }}</span
+                      >
+                      <p class="mt-1 text-white/75 text-sm leading-relaxed max-w-sm">
+                        {{ activityPhotos[currentPhoto].desc }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Transition>
+            </div>
           </div>
 
-          <!-- Right: photo – directly adjacent, no gap -->
-          <div class="flex-1 relative overflow-hidden rounded-r-2xl bg-fog">
-            <Transition name="carousel-fade" mode="out-in">
-              <div :key="currentPhoto" class="absolute inset-0">
-                <img
-                  :src="activityPhotos[currentPhoto].src"
-                  :alt="activityPhotos[currentPhoto].alt"
-                  class="w-full h-full object-cover"
-                />
-                <!-- Gradient overlay -->
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"
-                />
-                <!-- Caption -->
-                <div
-                  class="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex items-end justify-between gap-4"
-                >
-                  <div>
-                    <span
-                      class="text-white font-display font-bold text-xl md:text-2xl drop-shadow"
-                      >{{ activityPhotos[currentPhoto].alt }}</span
-                    >
-                    <p class="mt-1 text-white/75 text-sm leading-relaxed max-w-sm">
-                      {{ activityPhotos[currentPhoto].desc }}
-                    </p>
-                  </div>
-                  <!-- View more link -->
-                  <a
-                    href="https://instagram.com/ttussc_/"
-                    target="_blank"
-                    class="shrink-0 flex items-center gap-1 text-white/70 hover:text-white text-xs transition-colors duration-200 group"
-                  >
-                    查看更多活動照片
-                    <svg
-                      class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </Transition>
+          <!-- Bottom-right decoration: link + wave side by side -->
+          <div class="absolute bottom-0 -right-4 md:-right-6 flex items-end gap-3">
+            <a
+              href="https://instagram.com/ttussc_/"
+              target="_blank"
+              class="flex items-center gap-1 text-white/70 hover:text-white text-xs transition-colors duration-200 group mb-3 whitespace-nowrap drop-shadow"
+            >
+              查看更多活動照片
+              <svg
+                class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4" />
+              </svg>
+            </a>
+            <img
+              src="/img/wave.png"
+              alt="wave"
+              class="w-16 md:w-20 select-none pointer-events-none drop-shadow-sm shrink-0 -mb-2"
+            />
           </div>
         </div>
       </div>

@@ -33,13 +33,24 @@ function toggleExpand(i) {
   expandedIndex.value = expandedIndex.value === i ? -1 : i
 }
 
-function difficultyStars(d) {
-  if (d === 0) return '🌑🌑🌑🌑🌑'
-  const full = Math.floor(d)
-  const half = d % 1 >= 0.25 ? 1 : 0
-  const empty = 5 - full - half
-  return '🌕'.repeat(full) + (half ? '🌗' : '') + '🌑'.repeat(Math.max(0, empty))
+// 回傳 5 個 0~1 填充值，精確到 0.25
+function getStarFills(d) {
+  if (!d && d !== 0) return [0, 0, 0, 0, 0]
+  return Array.from({ length: 5 }, (_, i) => {
+    const raw = Math.min(Math.max(d - i, 0), 1)
+    return Math.round(raw * 4) / 4 // 四捨五入到 0.25
+  })
 }
+
+// Tooltip 範例
+const exampleRatings = [
+  { d: 0, label: '一般性質活動，任何人都可以一同參與。' },
+  { d: 1, label: '非常簡單，適合完全新手，無需任何背景知識。' },
+  { d: 2, label: '簡單，需具備基本概念或基礎能力。' },
+  { d: 3, label: '中等，內容稍具挑戰性，適合已有相關經驗的人。' },
+  { d: 4, label: '困難，需要較多背景知識或具備一定專業技能。' },
+  { d: 5, label: '非常困難，適合高水準的學習者或專業人士。' },
+]
 
 function parseTimelineItem(itemStr) {
   // Extract time span (e.g., "18:00 ~ 18:30") and the remaining event description
@@ -83,29 +94,48 @@ function parseTimelineItem(itemStr) {
 
       <!-- Tooltip Content -->
       <div
-        class="absolute left-0 top-full mt-2 w-[320px] sm:w-[480px] p-5 bg-paper backdrop-blur-xl border border-chalk/80 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 origin-top-left pointer-events-none group-hover:pointer-events-auto"
+        class="absolute left-0 top-full mt-2 w-[320px] sm:w-[500px] p-5 bg-paper backdrop-blur-xl border border-chalk/80 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 origin-top-left pointer-events-none group-hover:pointer-events-auto"
       >
         <p class="text-[13px] text-ink/90 leading-relaxed mb-4">
           為了方便大家選擇感興趣的活動，我們的課程難度一共分為六個等級：
         </p>
-        <ul class="space-y-2 text-[13px] text-ink/80 font-medium">
-          <li class="flex items-start gap-2">
-            <span class="shrink-0">🌑🌑🌑🌑🌑</span>：一般性質活動，任何人都可以一同參與。
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="shrink-0">🌕🌑🌑🌑🌑</span>：非常簡單，適合完全新手，無需任何背景知識。
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="shrink-0">🌕🌕🌑🌑🌑</span>：簡單，需具備基本概念或基礎能力。
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="shrink-0">🌕🌕🌕🌑🌑</span>：中等，內容稍具挑戰性，適合已有相關經驗的人。
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="shrink-0">🌕🌕🌕🌕🌑</span>：困難，需要較多背景知識或具備一定專業技能。
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="shrink-0">🌕🌕🌕🌕🌕</span>：非常困難，適合高水準的學習者或專業人士。
+        <ul class="space-y-2.5 text-[13px] text-ink/80 font-medium">
+          <li v-for="ex in exampleRatings" :key="ex.d" class="flex items-center gap-3">
+            <!-- SVG star row for each example -->
+            <span class="shrink-0 inline-flex items-center gap-0.5">
+              <svg
+                v-for="(fill, si) in getStarFills(ex.d)"
+                :key="si"
+                viewBox="0 0 24 24"
+                class="w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                overflow="visible"
+              >
+                <defs>
+                  <clipPath :id="`tip-${ex.d}-${si}`">
+                    <rect x="0" y="0" :width="fill * 24" height="24" />
+                  </clipPath>
+                </defs>
+                <!-- Empty star: amber outline when partially filled -->
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  fill="#e8e3d8"
+                  :stroke="fill > 0 ? '#f59e0b' : '#d4cbbf'"
+                  stroke-width="1"
+                  stroke-linejoin="round"
+                />
+                <!-- Filled star (clipped) -->
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="0.8"
+                  stroke-linejoin="round"
+                  :clip-path="`url(#tip-${ex.d}-${si})`"
+                />
+              </svg>
+            </span>
+            <span>：{{ ex.label }}</span>
           </li>
         </ul>
       </div>
@@ -158,7 +188,39 @@ function parseTimelineItem(itemStr) {
               {{ lecture.name }}
             </h3>
             <div class="flex items-center gap-2 mt-1 flex-wrap">
-              <span class="text-xs">{{ difficultyStars(lecture.difficulty) }}</span>
+              <!-- SVG 星星難度顯示 -->
+              <span class="inline-flex items-center gap-0.5">
+                <svg
+                  v-for="(fill, si) in getStarFills(lecture.difficulty)"
+                  :key="si"
+                  viewBox="0 0 24 24"
+                  class="w-3.5 h-3.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <clipPath :id="`sc-${i}-${si}`">
+                      <rect x="0" y="0" :width="fill * 24" height="24" />
+                    </clipPath>
+                  </defs>
+                  <!-- 空星底層：有填充時顯示金色外框 -->
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#e8e3d8"
+                    :stroke="fill > 0 ? '#f59e0b' : '#d4cbbf'"
+                    stroke-width="1"
+                    stroke-linejoin="round"
+                  />
+                  <!-- 填滿星星（裁切） -->
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#f59e0b"
+                    stroke="#f59e0b"
+                    stroke-width="0.8"
+                    stroke-linejoin="round"
+                    :clip-path="`url(#sc-${i}-${si})`"
+                  />
+                </svg>
+              </span>
               <span class="text-xs text-sand">{{ lecture.lecturer }}</span>
               <span
                 v-if="lecture.type"
