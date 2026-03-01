@@ -135,7 +135,11 @@ import { ref, onMounted } from 'vue'
 
 // ── 最近社課 ──
 const recentActivities = [
-  { title: '20260226 期初大會', desc: '114-2 學期社課正式開跑', img: '/img/20260226期初大會.jpg' },
+  {
+    title: '20260226 期初大會',
+    desc: '114-2 學期社課正式開跑',
+    img: '/img/20260226期初大會.jpg',
+  },
   {
     title: '20251211 期末大會',
     desc: 'TakeTurnsUnwarppingSecretSantaChristmas',
@@ -156,7 +160,11 @@ const campActivities = [
     img: '/img/2026 winter_vacation_camp.png',
   },
   { title: '20250811-0813 電資創客營', desc: '暑假營隊', img: '/img/20250811電資創客營.jpg' },
-  { title: '', desc: '', img: '' },
+  {
+    title: '20250716 夏季攝影手作營',
+    desc: '與攝影社合辦營隊',
+    img: '/img/20250716_夏季攝影手作營.jpg',
+  },
 ]
 
 // ── 開源社群 ──
