@@ -16,8 +16,8 @@ export const memberData = {
       name: '游凱崴',
       title: '副社長 x 文書組長',
       ig: 'kwy_1019',
-      desc: '電機系學生，對於電資相關領域感到興趣，平時喜歡看科技相關的酷東東以及探索各種沒接觸過的東西😆',
-      tags: ['通訊', '電機人'],
+      desc: '電機系學生，鑽研網路與通訊技術，熱愛科技並勇於探索。',
+      tags: ['網路', '電機人'],
     },
     {
       image: trueURL('img/member/hyijeee.jpg'),
@@ -47,7 +47,7 @@ export const memberData = {
     {
       image: trueURL('img/member/Jenny.jpg'),
       name: '陳心妮',
-      title: '編輯 x 紀錄',
+      title: '前編輯 x 紀錄',
       ig: 'shinni.c',
       desc: '機材系學生，大家都叫我 Jenny。喜歡去咖啡廳，也喜歡 K-pop，目前在努力學習德文跟材料中。',
       tags: ['狗派', '貓派', '小方派'],

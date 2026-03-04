@@ -67,10 +67,10 @@ export const semesterData = [
       "20:20 ~ 20:50 AI 工具實作",
       "20:50 ~ 21:00 填寫回饋表單"
     ],
-    "slide": "",
+    "slide": "https://www.canva.com/design/DAHBN4bZRBk/xGuBybvBApGCZeHKJWEIOA/edit?utm_content=DAHBN4bZRBk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
     "slido": "",
     "handout": "",
-    "note": "",
+    "note": "https://hackmd.io/@ttussc/ByqbfObYZe",
     "kktix": ""
   },
   {
