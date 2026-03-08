@@ -1,5 +1,6 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, nextTick } from 'vue'
+import { useRoute } from 'vue-router'
 import { lectureData } from '@/data/lectureData.js'
 
 const years = [
@@ -61,6 +62,23 @@ function parseTimelineItem(itemStr) {
   const [, time, event] = match
   return { time: time.trim(), event: event.trim() }
 }
+
+// ── Deep link: ?open=<lecture.name>&type=<lecture.type> ──
+const route = useRoute()
+onMounted(() => {
+  const openName = route.query.open
+  if (!openName) return
+  const filterType = route.query.type || '全部'
+  selectedFilter.value = filterType
+  nextTick(() => {
+    const idx = filteredData.value.findIndex((l) => l.name === openName)
+    if (idx === -1) return
+    expandedIndex.value = idx
+    nextTick(() => {
+      document.getElementById(`lc-${idx}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    })
+  })
+})
 </script>
 
 <template>
@@ -176,10 +194,14 @@ function parseTimelineItem(itemStr) {
       <div
         v-for="(lecture, i) in filteredData"
         :key="i"
+        :id="'lc-' + i"
         class="bg-paper-warm rounded-2xl border border-chalk/60 overflow-hidden transition-all duration-300"
         :class="{ 'shadow-md border-rust/30': expandedIndex === i }"
       >
-        <button @click="toggleExpand(i)" class="w-full text-left px-6 py-5 flex items-center gap-4">
+        <div
+          @click="toggleExpand(i)"
+          class="w-full text-left px-6 py-5 flex items-center gap-4 cursor-pointer"
+        >
           <div class="shrink-0 w-14 text-center">
             <span class="text-xs font-mono text-sand">{{ lecture.date }}</span>
           </div>
@@ -241,7 +263,7 @@ function parseTimelineItem(itemStr) {
           >
             <path stroke-linecap="round" d="M19 9l-7 7-7-7" />
           </svg>
-        </button>
+        </div>
 
         <transition
           enter-active-class="transition-all duration-200 ease-out"

@@ -37,6 +37,12 @@ const router = createRouter({
       meta: { title: '活動' },
     },
     {
+      path: '/sponsor',
+      name: 'sponsor',
+      component: () => import('@/views/SponsorView.vue'),
+      meta: { title: '贊助我們' },
+    },
+    {
       path: '/qrcode',
       redirect: '/',
     },

@@ -77,13 +77,12 @@ const navLinks = [
           <font-awesome-icon :icon="faDiscord" class="text-ink text-sm" />
           Discord
         </a>
-        <a
-          href="https://buymeacoffee.com/ttussc"
-          target="_blank"
+        <RouterLink
+          to="/sponsor"
           class="px-3.5 py-1.5 text-[13px] font-medium bg-ink text-paper rounded-md hover:bg-ink-soft transition-all duration-200"
         >
           贊助我們
-        </a>
+        </RouterLink>
       </div>
 
       <!-- Mobile -->
@@ -147,12 +146,11 @@ const navLinks = [
               <font-awesome-icon :icon="faDiscord" />
               Discord
             </a>
-            <a
-              href="https://buymeacoffee.com/ttussc"
-              target="_blank"
+            <RouterLink
+              to="/sponsor"
               class="flex-1 text-center px-3 py-2 text-sm bg-ink text-paper rounded-md"
               @click="closeMenu"
-              >贊助</a
+              >贊助</RouterLink
             >
           </div>
         </div>

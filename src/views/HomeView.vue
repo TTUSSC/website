@@ -172,7 +172,7 @@
                 class="absolute inset-0 flex items-center justify-center"
               >
                 <span
-                  class="font-display font-bold text-white text-base md:text-lg [writing-mode:vertical-rl] tracking-[0.2em] drop-shadow"
+                  class="font-display font-bold text-white text-base md:text-lg [writing-mode:vertical-rl] [text-orientation:upright] tracking-[0.2em] drop-shadow"
                   >{{ item.title }}</span
                 >
               </div>
@@ -207,7 +207,7 @@
               <RouterLink
                 v-for="(lecture, i) in recentLectures"
                 :key="lecture.name"
-                to="/lecture"
+                :to="{ path: '/lecture', query: { open: lecture.name, type: lecture.type } }"
                 class="scroll-reveal group flex items-center gap-4 md:gap-8 py-4 px-3 -mx-3 rounded-lg hover:bg-white/50 transition-colors duration-200 cursor-pointer"
                 :class="`scroll-reveal-delay-${i + 1}`"
                 ref="addRevealRef"
@@ -397,21 +397,44 @@ import { semesterData } from '@/data/lectures/114-2.js'
 // ── 我們在做什麼 — 活躍索引 ──
 const activeIndex = ref(0)
 
-// ── 最近社課 資料（取前6筆主線/支線，跳過空描述的重複課）──
+// ── 最近社課：取今天起最近5堂，依日期升序，自動隨時間更新 ──
+function parseSemDate(dateStr) {
+  const start = (dateStr || '').split('~')[0].trim()
+  const parts = start.split('/')
+  const m = Number(parts[0])
+  const d = Number(parts[1])
+  if (!m || !d) return null
+  return new Date(2026, m - 1, d)
+}
+
+const _today = new Date()
 const recentLectures = semesterData
   .filter((l) => l.name && l.type)
   .filter((l) => !['cpe(1)', 'cpe(2)', 'cpe(3)', 'cpe(4)', 'cpe(5)'].includes(l.name.trim()))
+  .filter((l) => {
+    const d = parseSemDate(l.date)
+    return d && d >= _today
+  })
+  .sort((a, b) => parseSemDate(a.date) - parseSemDate(b.date))
   .slice(0, 5)
 
 // ── 活動照片輪播 ──
 const activityPhotos = [
-  { src: '/img/20260226期初大會.jpg', alt: '最近社課', desc: '20260226 期初大會' },
+  {
+    src: '/img/20260305_AI.jpg',
+    alt: '最近社課',
+    desc: '20260305 AI不只有聊天 ? 做出屬於自己的AI Agent吧 !',
+  },
   {
     src: '/img/2026 winter_vacation_camp.png',
     alt: '營隊活動',
     desc: '2026 小小創客大冒險 - ARDUINO冬日創客營',
   },
-  { src: '/img/202508COSCUP.jpg', alt: '開源社群', desc: '20250810 COSCUP' },
+  {
+    src: '/img/202508COSCUP.jpg',
+    alt: '開源社群',
+    desc: '20250810 COSCUP',
+  },
 ]
 const currentPhoto = ref(0)
 let carouselTimer = null
