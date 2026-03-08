@@ -172,7 +172,7 @@
                 class="absolute inset-0 flex items-center justify-center"
               >
                 <span
-                  class="font-display font-bold text-white text-base md:text-lg [writing-mode:vertical-rl] [text-orientation:upright] tracking-[0.2em] drop-shadow"
+                  class="font-display font-bold text-white text-base md:text-lg [[writing-mode:vertical-lr]] [text-orientation:upright] tracking-[0.2em] drop-shadow"
                   >{{ item.title }}</span
                 >
               </div>
