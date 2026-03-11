@@ -27,7 +27,7 @@ export const semesterData = [
     name: '開源小廚房：鬆餅篇',
     difficulty: 0,
     lecturer: '黃瓜、Jessie',
-    location: 'A3-307',
+    location: 'A3-B1社辦',
     tags: ['開源小廚房'],
     type: '支線',
     description:
@@ -76,7 +76,7 @@ export const semesterData = [
     name: 'cpe(1)',
     difficulty: 3,
     lecturer: '柏屹、烤餅',
-    location: 'A3 8F 樂學空間',
+    location: 'A3-B1社辦',
     tags: ['程式設計', '競程', 'C++'],
     type: '支線',
     description:
@@ -166,7 +166,7 @@ export const semesterData = [
     name: 'cpe(2)',
     difficulty: 3,
     lecturer: '柏屹、烤餅',
-    location: 'A3 8F 樂學空間',
+    location: 'A3-B1社辦',
     tags: ['程式設計', '競程', 'C++'],
     type: '支線',
     description:
@@ -341,7 +341,7 @@ export const semesterData = [
     name: 'cpe(3)',
     difficulty: 3,
     lecturer: '柏屹、烤餅',
-    location: 'A3 8F 樂學空間',
+    location: 'A3-B1社辦',
     tags: ['程式設計', '競程', 'C++'],
     type: '支線',
     description:
@@ -429,7 +429,7 @@ export const semesterData = [
     name: 'cpe(4)',
     difficulty: 3,
     lecturer: '柏屹、烤餅',
-    location: 'A3 8F 樂學空間',
+    location: 'A3-B1社辦',
     tags: ['程式設計', '競程', 'C++'],
     type: '支線',
     description:
@@ -512,7 +512,7 @@ export const semesterData = [
     name: 'cpe(5)',
     difficulty: 3,
     lecturer: '柏屹、烤餅',
-    location: 'A3 8F 樂學空間',
+    location: 'A3-B1社辦',
     tags: ['程式設計', '競程', 'C++'],
     type: '支線',
     description:
