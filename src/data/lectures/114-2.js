@@ -113,7 +113,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/r1Tr_RkcWx',
     kktix: 'https://ttussc.kktix.cc/events/git-1',
   },
   {
