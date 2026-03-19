@@ -270,7 +270,7 @@
 
           <!-- Thinking penguin at bottom-right of card -->
           <img
-            src="/img/thinking.png"
+            src="/img/stickers/thinking.png"
             alt="思考中的企鵝"
             class="absolute -bottom-2 -right-4 md:-right-6 w-16 md:w-20 select-none pointer-events-none drop-shadow-sm"
           />
@@ -377,7 +377,7 @@
               </svg>
             </a>
             <img
-              src="/img/wave.png"
+              src="/img/stickers/wave.png"
               alt="wave"
               class="w-16 md:w-20 select-none pointer-events-none drop-shadow-sm shrink-0 -mb-2"
             />
@@ -421,17 +421,17 @@ const recentLectures = semesterData
 // ── 活動照片輪播 ──
 const activityPhotos = [
   {
-    src: '/img/20260305_AI.jpg',
+    src: '/img/lectures/20260312_Git 起來！ Denny 學長帶你本地實踐.jpg',
     alt: '最近社課',
-    desc: '20260305 AI不只有聊天 ? 做出屬於自己的AI Agent吧 !',
+    desc: '20260312 Git 起來！ Denny 學長帶你本地實踐.jpg',
   },
   {
-    src: '/img/2026 winter_vacation_camp.png',
+    src: '/img/camps/2026 winter_vacation_camp.png',
     alt: '營隊活動',
     desc: '2026 小小創客大冒險 - ARDUINO冬日創客營',
   },
   {
-    src: '/img/202508COSCUP.jpg',
+    src: '/img/Open-Source-Activity/202508COSCUP.jpg',
     alt: '開源社群',
     desc: '20250810 COSCUP',
   },
@@ -458,17 +458,17 @@ const whatWeDoItems = [
   {
     title: '課程',
     desc: '舉辦社課、講座與工作坊，帶領社員學習 HackMD、Linux、Git 等技術，培養實力並融入開源社群。',
-    img: '/img/202510_lecture.jpg',
+    img: '/img/what-we-do/202510_lecture.jpg',
   },
   {
     title: '社群',
     desc: '認識志同道合的朋友，隨時揪團探討技術或參與社群活動，感受協作的魅力。',
-    img: '/img/202508COSCUP.jpg',
+    img: '/img/Open-Source-Activity/202508COSCUP.jpg',
   },
   {
     title: '服務',
     desc: '寒暑假舉辦資訊相關營隊，將所學回饋社群，實現服務與學習的結合。',
-    img: '/img/202601_camp.JPG',
+    img: '/img/camps/2026 winter_vacation_camp.png',
   },
 ]
 

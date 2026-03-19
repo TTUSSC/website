@@ -321,24 +321,29 @@ const socialReviewScrollEl = ref(null)
 
 const recentActivities = [
   {
+    title: '20260312 Git 起來！ Denny 學長帶你本地實踐',
+    desc: 'Git 基礎實作',
+    img: '/img/lectures/20260312_Git 起來！ Denny 學長帶你本地實踐.jpg',
+  },
+  {
     title: '20260305 AI不只有聊天 ? 做出屬於自己的AI Agent吧 !',
     desc: '社團第一堂AI課程',
-    img: '/img/20260305_AI.jpg',
+    img: '/img/lectures/20260305_AI.jpg',
   },
   {
     title: '20260226 期初大會',
     desc: '114-2 學期社課正式開跑',
-    img: '/img/20260226期初大會.jpg',
+    img: '/img/lectures/20260226期初大會.jpg',
   },
   {
     title: '20251211 期末大會',
     desc: 'TakeTurnsUnwarppingSecretSantaChristmas',
-    img: '/img/20251211_TakeTurnsUnwarppingSecretSantaChristmas.jpg',
+    img: '/img/camps/20251211_TakeTurnsUnwarppingSecretSantaChristmas.jpg',
   },
   {
     title: '20251205 做孩子的啦啦隊！',
     desc: '志工培訓',
-    img: '/img/20251205_做孩子的啦啦隊！—志工培訓_260228_1.jpg',
+    img: '/img/camps/20251205_做孩子的啦啦隊！—志工培訓_260228_1.jpg',
   },
 ]
 
@@ -347,17 +352,17 @@ const campActivities = [
   {
     title: '20260125-0130 小小創客大冒險',
     desc: 'ARDUINO冬日創客營',
-    img: '/img/2026 winter_vacation_camp.png',
+    img: '/img/camps/2026 winter_vacation_camp.png',
   },
   {
     title: '20250811-0813 電資創客營',
     desc: '暑假營隊',
-    img: '/img/20250811電資創客營.jpg',
+    img: '/img/camps/20250811電資創客營.jpg',
   },
   {
     title: '20250716 夏季攝影手作營',
     desc: '與攝影社合辦營隊',
-    img: '/img/20250716_夏季攝影手作營.jpg',
+    img: '/img/camps/20250716_夏季攝影手作營.jpg',
   },
 ]
 
@@ -366,17 +371,17 @@ const communityActivities = [
   {
     title: '20250810 COSCUP',
     desc: '開源人年會',
-    img: '/img/202508COSCUP.jpg',
+    img: '/img/Open-Source-Activity/202508COSCUP.jpg',
   },
   {
     title: '20250308 SITCON',
     desc: '開源人年會',
-    img: '/img/20250308_SITCON.jpg',
+    img: '/img/Open-Source-Activity/20250308_SITCON.jpg',
   },
   {
     title: '20240803 COSCUP',
     desc: '開源人年會',
-    img: '/img/20240803_COSCUP.jpg',
+    img: '/img/Open-Source-Activity/20240803_COSCUP.jpg',
   },
 ]
 
@@ -385,7 +390,7 @@ const socialReviewActivities = [
   {
     title: '20250329-30 全社評',
     desc: '全國社團評鑑',
-    img: '/img/20250329-30_全社評.jpg',
+    img: '/img/National-Clubs/20250329-30_全社評.jpg',
   },
 ]
 
