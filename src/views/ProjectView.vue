@@ -321,6 +321,11 @@ const socialReviewScrollEl = ref(null)
 
 const recentActivities = [
   {
+    title: '20260319 Git 起來！Denny 學長帶你雲端協作',
+    desc: 'Git 進階實作 !',
+    img: '/img/lectures/20260319_Git 起來！Denny 學長帶你雲端協作.jpg',
+  },
+  {
     title: '20260312 Git 起來！ Denny 學長帶你本地實踐',
     desc: 'Git 基礎實作',
     img: '/img/lectures/20260312_Git 起來！ Denny 學長帶你本地實踐.jpg',

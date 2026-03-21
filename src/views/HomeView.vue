@@ -421,9 +421,9 @@ const recentLectures = semesterData
 // ── 活動照片輪播 ──
 const activityPhotos = [
   {
-    src: '/img/lectures/20260312_Git 起來！ Denny 學長帶你本地實踐.jpg',
+    src: '/img/lectures/20260319_Git 起來！Denny 學長帶你雲端協作.jpg',
     alt: '最近社課',
-    desc: '20260312 Git 起來！ Denny 學長帶你本地實踐.jpg',
+    desc: '20260319 Git 起來！Denny 學長帶你雲端協作',
   },
   {
     src: '/img/camps/2026 winter_vacation_camp.png',
