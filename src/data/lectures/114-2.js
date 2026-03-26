@@ -205,7 +205,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/Hyf9Ne-qbe',
     kktix: '',
   },
   {
