@@ -272,7 +272,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/rJVDaGBj-g',
     kktix: '',
   },
   {
