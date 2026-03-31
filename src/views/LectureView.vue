@@ -15,7 +15,7 @@ const years = [
 ]
 
 const selectedYear = ref(years[0])
-const selectedFilter = ref('主線')
+const selectedFilter = ref('全部')
 const expandedIndex = ref(-1)
 
 const filteredData = computed(() => {
@@ -179,7 +179,7 @@ onMounted(() => {
     <!-- Filter -->
     <div class="flex gap-2 mb-8">
       <button
-        v-for="f in ['主線', '支線', '全部']"
+        v-for="f in ['全部', '主線', '支線']"
         :key="f"
         @click="selectedFilter = f"
         class="px-3 py-1 text-xs font-display font-medium rounded-sm transition-all"
