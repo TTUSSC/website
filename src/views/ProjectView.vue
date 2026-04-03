@@ -321,18 +321,28 @@ const socialReviewScrollEl = ref(null)
 
 const recentActivities = [
   {
+    title: '20260402 從 0 開始的前端實作：JavaScript 記帳系統',
+    desc: '和網頁有互動了 !',
+    img: '/img/lectures/20260402_從 0 開始的前端實作：JavaScript 記帳系統.jpg',
+  },
+  {
+    title: '20260326 零基礎打造自己的網站  HTML × Tailwind CSS 網頁前端入門',
+    desc: '打造酷酷的網頁 !',
+    img: '/img/lectures/20260326_零基礎打造自己的網站  HTML × Tailwind CSS 網頁前端入門.jpg',
+  },
+  {
     title: '20260319 Git 起來！Denny 學長帶你雲端協作',
     desc: 'Git 進階實作 !',
     img: '/img/lectures/20260319_Git 起來！Denny 學長帶你雲端協作.jpg',
   },
   {
     title: '20260312 Git 起來！ Denny 學長帶你本地實踐',
-    desc: 'Git 基礎實作',
+    desc: 'Git 基礎實作 !',
     img: '/img/lectures/20260312_Git 起來！ Denny 學長帶你本地實踐.jpg',
   },
   {
     title: '20260305 AI不只有聊天 ? 做出屬於自己的AI Agent吧 !',
-    desc: '社團第一堂AI課程',
+    desc: '萬崧的第一堂社課 ~',
     img: '/img/lectures/20260305_AI.jpg',
   },
   {
@@ -343,12 +353,12 @@ const recentActivities = [
   {
     title: '20251211 期末大會',
     desc: 'TakeTurnsUnwarppingSecretSantaChristmas',
-    img: '/img/camps/20251211_TakeTurnsUnwarppingSecretSantaChristmas.jpg',
+    img: '/img/lectures/20251211_TakeTurnsUnwarppingSecretSantaChristmas.jpg',
   },
   {
     title: '20251205 做孩子的啦啦隊！',
     desc: '志工培訓',
-    img: '/img/camps/20251205_做孩子的啦啦隊！—志工培訓_260228_1.jpg',
+    img: '/img/lectures/20251205_做孩子的啦啦隊！—志工培訓_260228_1.jpg',
   },
 ]
 
@@ -374,8 +384,13 @@ const campActivities = [
 // ── 開源社群 ──
 const communityActivities = [
   {
+    title: '20260328 SITCON',
+    desc: '開源社今年又來啦~',
+    img: '/img/Open-Source-Activity/20260328_SITCON.jpg',
+  },
+  {
     title: '20250810 COSCUP',
-    desc: '開源人年會',
+    desc: '開源人開源魂',
     img: '/img/Open-Source-Activity/202508COSCUP.jpg',
   },
   {
@@ -394,8 +409,13 @@ const communityActivities = [
 const socialReviewActivities = [
   {
     title: '20250329-30 全社評',
-    desc: '全國社團評鑑',
+    desc: '希望每年都來 ~',
     img: '/img/National-Clubs/20250329-30_全社評.jpg',
+  },
+  {
+    title: '20260328-29 全社評',
+    desc: '認識到很多社團哦 ~',
+    img: '/img/National-Clubs/20260328-29_全社評.jpg',
   },
 ]
 

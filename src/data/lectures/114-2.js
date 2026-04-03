@@ -110,7 +110,7 @@ export const semesterData = [
       '19:30 ~ 20:20 Git 基本指令教學',
       '20:20 ~ 20:30 Q&A、填寫回饋表單',
     ],
-    slide: '',
+    slide: 'https://denny.one/git-g0v-sch001/',
     slido: '',
     handout: '',
     note: 'https://hackmd.io/@ttussc/r1Tr_RkcWx',
@@ -155,10 +155,10 @@ export const semesterData = [
       '19:30 ~ 20:20 練習將 Git 與 GitHub 結合',
       '20:20 ~ 20:30 Q&A、填寫回饋表單',
     ],
-    slide: '',
+    slide: 'https://denny.one/git-slide/#1',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/rk74QeW5We',
     kktix: 'https://ttussc.kktix.cc/events/git2',
   },
   {
@@ -181,7 +181,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/rJEMRgZ5We',
     kktix: '',
   },
   {
@@ -202,7 +202,8 @@ export const semesterData = [
       '20:10 ~ 20:50 實作個人網頁',
       '20:50 ~ 21:00 Q&A、填寫回饋表單',
     ],
-    slide: '',
+    slide:
+      'https://www.canva.com/design/DAHDWEG7Jok/lrFhsPpKe2GWZDAEVKuvsA/view?utm_content=DAHDWEG7Jok&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5caeda125a',
     slido: '',
     handout: '',
     note: 'https://hackmd.io/@ttussc/Hyf9Ne-qbe',
@@ -250,7 +251,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/rJWFkZZqWe',
     kktix: '',
   },
   {
@@ -269,7 +270,8 @@ export const semesterData = [
       '19:30 ~ 20:45 記帳系統實作',
       '20:45 ~ 21:00 回饋表單填寫',
     ],
-    slide: '',
+    slide:
+      'https://www.canva.com/design/DAHFLMunkbE/UqLBaaj8llRhc-t0UtP8zQ/view?utm_content=DAHFLMunkbE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6f2fe028bc',
     slido: '',
     handout: '',
     note: 'https://hackmd.io/@ttussc/rJVDaGBj-g',
@@ -356,7 +358,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/BkfEb-bq-g',
     kktix: '',
   },
   {
@@ -381,7 +383,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/ryQkjSpsbx',
     kktix: '',
   },
   {
@@ -421,7 +423,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/BJ-dPeZ9We',
     kktix: '',
   },
   {
@@ -444,7 +446,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/S1z2QWWq-l',
     kktix: '',
   },
   {
@@ -465,7 +467,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/HJdOOeZ9Zg',
     kktix: '',
   },
   {
@@ -504,7 +506,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/HkWBFgW9We',
     kktix: '',
   },
   {
@@ -527,7 +529,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/rytC-Z-c-e',
     kktix: '',
   },
   {
@@ -547,7 +549,7 @@ export const semesterData = [
     slide: '',
     slido: '',
     handout: '',
-    note: '',
+    note: 'https://hackmd.io/@ttussc/HkpbfZZ5-e',
     kktix: '',
   },
   {
