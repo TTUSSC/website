@@ -421,9 +421,9 @@ const recentLectures = semesterData
 // ── 活動照片輪播 ──
 const activityPhotos = [
   {
-    src: '/img/lectures/20260319_Git 起來！Denny 學長帶你雲端協作.jpg',
+    src: '/img/lectures/20260402_從 0 開始的前端實作：JavaScript 記帳系統.jpg',
     alt: '最近社課',
-    desc: '20260319 Git 起來！Denny 學長帶你雲端協作',
+    desc: '20260402 從 0 開始的前端實作:JavaScript 記帳系統',
   },
   {
     src: '/img/camps/2026 winter_vacation_camp.png',
@@ -431,9 +431,9 @@ const activityPhotos = [
     desc: '2026 小小創客大冒險 - ARDUINO冬日創客營',
   },
   {
-    src: '/img/Open-Source-Activity/202508COSCUP.jpg',
+    src: '/img/Open-Source-Activity/20260328_SITCON.jpg',
     alt: '開源社群',
-    desc: '20250810 COSCUP',
+    desc: '20260328 SITCON',
   },
 ]
 const currentPhoto = ref(0)

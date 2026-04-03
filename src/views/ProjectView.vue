@@ -408,14 +408,14 @@ const communityActivities = [
 // ── 全社評 ──
 const socialReviewActivities = [
   {
-    title: '20250329-30 全社評',
-    desc: '希望每年都來 ~',
-    img: '/img/National-Clubs/20250329-30_全社評.jpg',
-  },
-  {
     title: '20260328-29 全社評',
     desc: '認識到很多社團哦 ~',
     img: '/img/National-Clubs/20260328-29_全社評.jpg',
+  },
+  {
+    title: '20250329-30 全社評',
+    desc: '希望每年都來 ~',
+    img: '/img/National-Clubs/20250329-30_全社評.jpg',
   },
 ]
 
