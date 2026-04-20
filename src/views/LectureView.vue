@@ -26,7 +26,7 @@ const filteredData = computed(() => {
 
 function selectYear(year) {
   selectedYear.value = year
-  selectedFilter.value = '主線'
+  selectedFilter.value = '全部'
   expandedIndex.value = -1
 }
 
