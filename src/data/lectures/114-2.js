@@ -409,22 +409,14 @@ export const semesterData = [
   },
   {
     date: '5/5',
-    name: '開源小廚房：溫泉蛋熱力學篇',
+    name: '開源小廚房：代定',
     difficulty: 0,
     lecturer: '黃瓜、Jessie',
     location: 'A3-B1社辦',
     tags: ['開源小廚房'],
     type: '支線',
-    description:
-      '【開源小廚房:溫泉蛋熱力學篇】Debug 你的蛋白質！\n\n熱力學只能存在於課本裡?溫泉蛋正是熱力學與蛋白質變性溫度的完美交集！蛋白與蛋黃就像是兩套不同的 Script，卻要在同一台舒肥機 Compiler 中跑出截然不同的絕佳質地。本次社課將帶領大家透過精準的溫度控制、冷熱補償 Logic 與 A/B Testing，實作專屬你的完美溫泉蛋。不懂程式也沒關係，懂吃懂玩最重要！快來報名，用駭客精神破解雞蛋的美味密碼！',
-    timeline: [
-      '18:30 ~ 19:00 場佈與準備 (Environment Setup)：設備預熱、雞蛋編號',
-      '19:00 ~ 19:20 社課教學 (Theoretical Framework)：蛋白質變性曲線分析',
-      '19:20 ~ 19:40 流程演示 (Demo Run)：標準 SOP 與冷藏蛋熱傳導補償說明',
-      '19:40 ~ 20:30 實作時間 (Main Loop)：恆溫實驗與水溫監控（標準時長 45 分鐘與 Ice_Bath 處理）',
-      '20:30 ~ 20:45 交流時間 (Shell-breaking Test)：破殼驗收與 Debug 討論',
-      '20:45 ~ 21:00 表單回饋與撤收 (System Cleanup)：器材撤收與實驗紀錄表數據填寫',
-    ],
+    description: '代定',
+    timeline: [''],
     slide: '',
     slido: '',
     handout: '',
@@ -561,7 +553,8 @@ export const semesterData = [
     location: 'A3-200',
     tags: ['程式設計', 'Java'],
     type: '支線',
-    description: '',
+    description:
+      'Java 作為一種廣泛應用的程式語言，在後端開發、行動應用與企業級系統等等領域占有重要地位。\n物件導向是一種靈活，強調「物件」與「類別」關係的程式設計模式，能夠提升程式的擴展性、可讀性。\n本次課程將介紹物件導向的核心概念，如類別、實例、繼承等。並透過各種物件導向相關的關鍵字，幫助學員學習在Java中使用物件導向設計程式。',
     timeline: [
       '18:00 ~ 18:20 複習上次社課的內容',
       '18:20 ~ 20:00 正式社課',
