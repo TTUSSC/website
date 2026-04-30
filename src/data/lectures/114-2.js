@@ -401,7 +401,7 @@ export const semesterData = [
       '20:35 ~ 20:50 Remote Registry 與 Image push',
       '20:50 ~ 21:00 回饋表單',
     ],
-    slide: '',
+    slide: 'https://slides.com/speedcubing/docker',
     slido: '',
     handout: '',
     note: 'https://hackmd.io/@ttussc/ryQkjSpsbx',
