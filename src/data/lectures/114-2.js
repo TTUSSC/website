@@ -413,7 +413,7 @@ export const semesterData = [
     type: '主線',
     description: '',
     timeline: [''],
-    slide: '',
+    slide: 'https://slides.com/speedcubing/be',
     slido: '',
     handout: '',
     note: 'https://hackmd.io/@ttussc/BJ-dPeZ9We',
