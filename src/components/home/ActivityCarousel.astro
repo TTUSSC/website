@@ -4,6 +4,7 @@ import { getLang } from '../../i18n/ui';
 import activity1 from '../../assets/home/activity-1.jpg';
 import activity2 from '../../assets/home/activity-2.jpg';
 import activity3 from '../../assets/home/activity-3.jpg';
+import activityWave from '../../assets/home/activity-wave.png';
 
 const images = [activity1, activity2, activity3];
 
@@ -104,6 +105,11 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 						<path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4"></path>
 					</svg>
 				</a>
+				<Image
+					src={activityWave}
+					alt="wave"
+					class="w-16 md:w-20 select-none pointer-events-none drop-shadow-sm shrink-0 -mb-2"
+				/>
 			</div>
 		</div>
 	</div>
