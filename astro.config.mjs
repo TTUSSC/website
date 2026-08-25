@@ -11,7 +11,7 @@ export default defineConfig({
 		locales: ['zh-tw', 'en'],
 		routing: {
 			prefixDefaultLocale: false,
-			fallbackType: 'redirect',
+			fallbackType: 'rewrite',
 		},
 		fallback: {
 			en: 'zh-tw',
