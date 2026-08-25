@@ -2,6 +2,7 @@
 import Head from '../components/Head.astro';
 import NavBar from '../components/NavBar.astro';
 import PageFooter from '../components/PageFooter.astro';
+import { getLang } from '../i18n/ui';
 import '../styles/global.css';
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
 }
 
 const { title, description, ogImage } = Astro.props;
-const lang = Astro.currentLocale ?? 'zh-tw';
+const lang = getLang(Astro.currentLocale);
 ---
 
 <html lang={lang}>

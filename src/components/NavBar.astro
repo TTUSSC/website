@@ -1,8 +1,8 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { useTranslations, type Lang } from '../i18n/ui';
+import { useTranslations, getLang } from '../i18n/ui';
 
-const lang = (Astro.currentLocale ?? 'zh-tw') as Lang;
+const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
 const pathname = Astro.url.pathname;
 

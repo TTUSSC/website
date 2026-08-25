@@ -21,6 +21,10 @@ export const ui = {
 
 export type Lang = keyof typeof ui;
 
+export function getLang(locale: string | undefined): Lang {
+	return (locale ?? 'zh-tw') as Lang;
+}
+
 export function useTranslations(lang: Lang) {
 	return (key: keyof (typeof ui)['zh-tw']) => ui[lang][key] ?? ui['zh-tw'][key];
 }
