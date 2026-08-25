@@ -1,0 +1,115 @@
+---
+import { Image } from 'astro:assets';
+import { getLang } from '../../i18n/ui';
+import lectureImg from '../../assets/home/what-we-do-lecture.jpg';
+import communityImg from '../../assets/home/what-we-do-community.jpg';
+import serviceImg from '../../assets/home/what-we-do-service.jpg';
+
+const images = [lectureImg, communityImg, serviceImg];
+
+const content = {
+	'zh-tw': {
+		heading: '我們在做什麼？',
+		items: [
+			{
+				title: '課程',
+				desc: '舉辦社課、講座與工作坊，帶領社員學習 HackMD、Linux、Git 等技術，培養實力並融入開源社群。',
+			},
+			{
+				title: '社群',
+				desc: '認識志同道合的朋友，隨時揪團探討技術或參與社群活動，感受協作的魅力。',
+			},
+			{
+				title: '服務',
+				desc: '寒暑假舉辦資訊相關營隊，將所學回饋社群，實現服務與學習的結合。',
+			},
+		],
+	},
+} as const;
+
+const lang = getLang(Astro.currentLocale);
+const t = content[lang as keyof typeof content] ?? content['zh-tw'];
+const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
+---
+
+<section class="py-20 md:py-28">
+	<div class="max-w-5xl mx-auto px-6">
+		<div class="mb-10 scroll-reveal">
+			<h2 class="text-3xl md:text-4xl font-bold text-ink">{t.heading}</h2>
+		</div>
+
+		<div class="accordion scroll-reveal flex gap-3 h-75 md:h-90">
+			{
+				items.map((item, i) => (
+					<div class="accordion-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[100px] md:w-[120px] shrink-0">
+						<Image
+							src={item.img}
+							alt={item.title}
+							class="accordion-photo absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 scale-110"
+						/>
+						<div class="accordion-overlay absolute inset-0 transition-all duration-500 bg-[#0d2a4a]/65" />
+						<div class="accordion-caption absolute inset-0 flex items-end p-7 md:p-10">
+							<div class="text-white">
+								<span class="font-mono text-[11px] text-white/50 tracking-[0.2em]">
+									{String(i + 1).padStart(2, '0')}
+								</span>
+								<h3 class="mt-1 font-display font-bold text-2xl md:text-3xl">
+									{item.title}
+								</h3>
+								<p class="mt-2 text-sm text-white/75 leading-relaxed max-w-xs">
+									{item.desc}
+								</p>
+							</div>
+						</div>
+						<div class="accordion-label is-inactive absolute inset-0 flex items-center justify-center">
+							<span class="font-display font-bold text-white text-base md:text-lg [writing-mode:vertical-lr] [text-orientation:upright] tracking-[0.2em] drop-shadow">
+								{item.title}
+							</span>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<script>
+	const accordion = document.querySelector<HTMLDivElement>('.accordion')!;
+	const items = Array.from(
+		accordion.querySelectorAll<HTMLDivElement>('.accordion-item'),
+	);
+
+	const setActive = (activeIndex: number) => {
+		items.forEach((item, i) => {
+			const isActive = i === activeIndex;
+
+			item.classList.toggle('flex-[5]', isActive);
+			item.classList.toggle('w-[100px]', !isActive);
+			item.classList.toggle('md:w-[120px]', !isActive);
+			item.classList.toggle('shrink-0', !isActive);
+
+			const photo = item.querySelector<HTMLElement>('.accordion-photo')!;
+			photo.classList.toggle('scale-100', isActive);
+			photo.classList.toggle('scale-110', !isActive);
+
+			const overlay = item.querySelector<HTMLElement>('.accordion-overlay')!;
+			overlay.classList.toggle('bg-linear-to-t', isActive);
+			overlay.classList.toggle('from-ink/80', isActive);
+			overlay.classList.toggle('via-ink/25', isActive);
+			overlay.classList.toggle('to-ink/10', isActive);
+			overlay.classList.toggle('bg-[#0d2a4a]/65', !isActive);
+
+			item
+				.querySelector<HTMLElement>('.accordion-caption')!
+				.classList.toggle('is-active', isActive);
+			item
+				.querySelector<HTMLElement>('.accordion-label')!
+				.classList.toggle('is-inactive', !isActive);
+		});
+	};
+
+	items.forEach((item, i) =>
+		item.addEventListener('click', () => setActive(i)),
+	);
+	setActive(0);
+</script>
