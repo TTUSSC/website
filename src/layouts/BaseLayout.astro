@@ -1,0 +1,28 @@
+---
+import Head from '../components/Head.astro';
+import NavBar from '../components/NavBar.astro';
+import PageFooter from '../components/PageFooter.astro';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+	ogImage?: string;
+}
+
+const { title, description, ogImage } = Astro.props;
+const lang = Astro.currentLocale ?? 'zh-tw';
+---
+
+<html lang={lang}>
+	<head>
+		<Head title={title} description={description} ogImage={ogImage} />
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<NavBar />
+		<main class="flex-1">
+			<slot />
+		</main>
+		<PageFooter />
+	</body>
+</html>

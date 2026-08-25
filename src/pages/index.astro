@@ -1,19 +1,16 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const enUrl = getRelativeLocaleUrl('en', '');
 ---
 
-<html lang="zh-TW">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
+<BaseLayout
+	title="科學開源服務社"
+	description="科學開源服務社致力於推廣開源文化、技術學習與志工服務。加入我們，讓開源點亮你的生活！"
+>
+	<div class="max-w-5xl mx-auto px-6 py-24">
+		<h1 class="text-3xl font-display font-bold">首頁（內容於階段二補上）</h1>
 		<a href={enUrl}>English</a>
-	</body>
-</html>
+	</div>
+</BaseLayout>
