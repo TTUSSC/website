@@ -16,7 +16,11 @@ const navLinks = [
 
 const isActive = (path: string) => {
 	const href = getRelativeLocaleUrl(lang, path);
-	return pathname === href || pathname === `${href}/`;
+	const here = pathname.replace(/\/$/, '') || '/';
+	const target = href.replace(/\/$/, '') || '/';
+	return path === ''
+		? here === target
+		: here === target || here.startsWith(`${target}/`);
 };
 ---
 
