@@ -170,7 +170,10 @@ const isActive = (path: string) => {
 
 	let clickCount = 0;
 	let lastClickTime = 0;
-	brand.addEventListener('click', () => {
+	brand.addEventListener('click', (event) => {
+		// Already on the brand's target page: block the reload so repeated
+		// clicks can accumulate toward the easter egg below.
+		if (brand.pathname === location.pathname) event.preventDefault();
 		const now = Date.now();
 		if (now - lastClickTime > 10000) clickCount = 0;
 		clickCount++;
