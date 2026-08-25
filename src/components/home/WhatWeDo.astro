@@ -41,7 +41,7 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 		<div class="accordion scroll-reveal flex gap-3 h-75 md:h-90">
 			{
 				items.map((item, i) => (
-					<div class="accordion-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[100px] md:w-[120px] shrink-0">
+					<div class="accordion-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-25 md:w-30 shrink-0">
 						<Image
 							src={item.img}
 							alt={item.title}
