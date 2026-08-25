@@ -2,6 +2,7 @@
 
 - Less is more: prefer the smallest, most direct change that solves the problem. Fewer files, fewer abstractions, fewer words, in code, commits, and docs alike.
 - Prefer Astro's native mechanisms over hand-rolled code; keep custom code minimal, and refactor existing code when it genuinely helps future maintenance.
+- In anything meant to stand on its own (a reference doc, reusable config, generic comment), cut sentences that only make sense in the current conversation's context, even when topically related.
 
 ## Development
 
