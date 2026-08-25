@@ -71,7 +71,7 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 									alt={photo.alt}
 									class="w-full h-full object-cover"
 								/>
-								<div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
+								<div class="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/10 to-transparent" />
 								<div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
 									<span class="text-white font-display font-bold text-xl md:text-2xl drop-shadow">
 										{photo.alt}
