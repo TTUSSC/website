@@ -1,1 +1,80 @@
 @import 'tailwindcss';
+
+@theme {
+	--color-ink: #1a1a2e;
+	--color-ink-soft: #2d2d44;
+	--color-paper: #f8f8fa;
+	--color-paper-warm: #ffffff;
+	--color-rust: #e8a838;
+	--color-rust-light: #f0be5e;
+	--color-moss: #4a90d9;
+	--color-moss-light: #6ba6e3;
+	--color-clay: #4b5563;
+	--color-sand: #6b7280;
+	--color-chalk: #e5e7eb;
+	--color-fog: #f3f4f6;
+
+	--font-display: 'Noto Serif TC', 'Lora', serif;
+	--font-body: 'Noto Serif TC', 'Lora', serif;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-body);
+		color: var(--color-ink);
+		background-color: var(--color-paper);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		overflow-x: hidden;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-display);
+		letter-spacing: -0.02em;
+	}
+
+	::selection {
+		background-color: var(--color-rust);
+		color: white;
+	}
+}
+
+a,
+button {
+	transition:
+		transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease;
+}
+
+a:active:not(.navbar-brand),
+button:active {
+	transform: scale(0.97);
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-paper);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-chalk);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-sand);
+}
