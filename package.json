@@ -15,6 +15,7 @@
 		"@astrojs/sitemap": "^3.7.3",
 		"@tailwindcss/vite": "^4.3.3",
 		"astro": "^7.2.6",
+		"sharp": "^0.35.3",
 		"tailwindcss": "^4.3.3"
 	},
 	"allowScripts": {
@@ -24,7 +25,6 @@
 		"@astrojs/check": "^0.9.10",
 		"prettier": "^3.9.6",
 		"prettier-plugin-astro": "^0.14.1",
-		"sharp": "^0.35.3",
 		"typescript": "^6.0.3"
 	}
 }

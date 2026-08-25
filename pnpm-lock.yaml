@@ -17,6 +17,9 @@ importers:
       astro:
         specifier: ^7.2.6
         version: 7.2.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0)
+      sharp:
+        specifier: ^0.35.3
+        version: 0.35.3(@types/node@24.13.3)
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -30,9 +33,6 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
-      sharp:
-        specifier: ^0.35.3
-        version: 0.35.3(@types/node@24.13.3)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
