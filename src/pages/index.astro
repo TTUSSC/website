@@ -1,16 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import Hero from '../components/home/Hero.astro';
+import WhatWeDo from '../components/home/WhatWeDo.astro';
+import ActivityCarousel from '../components/home/ActivityCarousel.astro';
+import { getLang } from '../i18n/ui';
 
-const enUrl = getRelativeLocaleUrl('en', '');
+const content = {
+	'zh-tw': {
+		title: '科學開源服務社',
+		description:
+			'科學開源服務社致力於推廣開源文化、技術學習與志工服務。加入我們，讓開源點亮你的生活！',
+	},
+} as const;
+
+const lang = getLang(Astro.currentLocale);
+const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 ---
 
-<BaseLayout
-	title="科學開源服務社"
-	description="科學開源服務社致力於推廣開源文化、技術學習與志工服務。加入我們，讓開源點亮你的生活！"
->
-	<div class="max-w-5xl mx-auto px-6 py-24">
-		<h1 class="text-3xl font-display font-bold">首頁（內容於階段二補上）</h1>
-		<a href={enUrl}>English</a>
+<BaseLayout title={t.title} description={t.description}>
+	<Hero />
+	<WhatWeDo />
+	<div class="max-w-5xl mx-auto px-6">
+		<div
+			class="h-px bg-gradient-to-r from-transparent via-chalk to-transparent"
+		>
+		</div>
 	</div>
+	<ActivityCarousel />
 </BaseLayout>
