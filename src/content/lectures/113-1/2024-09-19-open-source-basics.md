@@ -9,10 +9,10 @@ tags: ['開源']
 type: '主線'
 timeline:
   [
-    { 'event': '17:30~18:00：場地佈置、進場' },
-    { 'event': '18:00~19:30：介紹開源的基本概念與重要性' },
-    { 'event': '19:30~19:50：Kahoot！時間' },
-    { 'event': '19:50~20:00：填寫問卷、收拾場地' },
+    { 'time': '17:30~18:00', 'event': '場地佈置、進場' },
+    { 'time': '18:00~19:30', 'event': '介紹開源的基本概念與重要性' },
+    { 'time': '19:30~19:50', 'event': 'Kahoot！時間' },
+    { 'time': '19:50~20:00', 'event': '填寫問卷、收拾場地' },
   ]
 slide: 'https://www.canva.com/design/DAGQ5_ONUM4/8bSIXCfQ4ihhEAWvy0Aobg/view?utm_content=DAGQ5_ONUM4&utm_campaign=designshare&utm_medium=link&utm_source=editor'
 slido: 'https://app.sli.do/event/3x9JxEntqCz1dXFiZ8KvzB'
