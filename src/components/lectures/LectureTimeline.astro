@@ -1,0 +1,43 @@
+---
+import { getLang } from '../../i18n/ui';
+
+interface Props {
+	items: { time?: string; event: string }[];
+}
+
+const { items } = Astro.props;
+
+const content = {
+	'zh-tw': { heading: '時程' },
+} as const;
+const lang = getLang(Astro.currentLocale);
+const t = content[lang as keyof typeof content] ?? content['zh-tw'];
+---
+
+<div>
+	<h4
+		class="text-[11px] font-display font-semibold text-sand uppercase tracking-[0.1em] mb-4"
+	>
+		{t.heading}
+	</h4>
+	<div class="relative pl-4 border-l-2 border-chalk/50 ml-1 space-y-3.5">
+		{
+			items.map((item, idx) => (
+				<div class="relative">
+					<div
+						class="absolute -left-[21px] top-[5px] w-2 h-2 rounded-full bg-paper border-[1.5px] border-chalk/80"
+						class:list={{
+							'bg-paper-warm border-rust/70': idx === items.length - 1,
+						}}
+					/>
+					{item.time && (
+						<div class="text-[10px] text-sand/70 font-mono mb-0.5 tracking-wide">
+							{item.time}
+						</div>
+					)}
+					<div class="text-[13px] text-clay leading-snug">{item.event}</div>
+				</div>
+			))
+		}
+	</div>
+</div>
