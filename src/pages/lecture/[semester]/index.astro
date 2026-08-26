@@ -1,8 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import DifficultyStars from '../../../components/lectures/DifficultyStars.astro';
+import LectureTimeline from '../../../components/lectures/LectureTimeline.astro';
 import { getLang } from '../../../i18n/ui';
 
 function semesterLabel(semester: string): string {
@@ -59,9 +60,21 @@ const content = {
 		],
 		filters: { all: '全部', main: '主線', side: '支線' },
 		empty: '這學期目前還沒有社課資料。',
+		close: '關閉',
+		slide: '簡報',
+		cowrite: '共筆',
+		slido: 'Slido',
+		kktix: 'KKTIX',
 	},
 } as const;
 const t = content[lang as keyof typeof content] ?? content['zh-tw'];
+
+const entriesWithContent = await Promise.all(
+	entries.map(async (entry) => ({
+		entry,
+		Content: (await render(entry)).Content,
+	})),
+);
 ---
 
 <BaseLayout
@@ -167,47 +180,159 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 
 		<div class="space-y-2">
 			{
-				entries.map((entry) => (
-					<a
-						href={getRelativeLocaleUrl(
-							lang,
-							`lecture/${semester}/${entry.data.slug}`,
-						)}
-						class="lecture-card flex items-center gap-4 bg-paper-warm rounded-2xl border border-chalk/60 px-6 py-5 transition-all duration-300 hover:border-rust/30 hover:shadow-md"
-						data-type={entry.data.type}
-					>
-						<div class="shrink-0 w-14 text-center">
-							<span class="text-xs font-mono text-sand">
-								{entry.data.date.toLocaleDateString('zh-TW', {
-									month: 'numeric',
-									day: 'numeric',
-								})}
-							</span>
-						</div>
-						<div class="flex-1 min-w-0">
-							<h3 class="font-display font-semibold text-ink text-base leading-snug">
-								{entry.data.name}
-							</h3>
-							<div class="flex items-center gap-2 mt-1 flex-wrap">
-								<DifficultyStars
-									difficulty={entry.data.difficulty}
-									idPrefix={`card-${entry.data.slug}`}
-								/>
-								<span class="text-xs text-sand">{entry.data.lecturer}</span>
-								<span
-									class:list={[
-										'px-2 py-0.5 text-xs rounded-sm',
-										entry.data.type === '主線'
-											? 'bg-moss/10 text-moss'
-											: 'bg-rust/10 text-rust',
-									]}
-								>
-									{entry.data.type}
-								</span>
-							</div>
-						</div>
-					</a>
-				))
+				entriesWithContent.map(({ entry, Content }) => {
+					const { data } = entry;
+					const links = (
+						[
+							{ label: t.slide, href: data.slide },
+							{ label: t.cowrite, href: data.cowrite },
+							{ label: t.slido, href: data.slido },
+							{ label: t.kktix, href: data.kktix },
+						] as { label: string; href: string | undefined }[]
+					).filter((link): link is { label: string; href: string } =>
+						Boolean(link.href),
+					);
+
+					return (
+						<>
+							<button
+								type="button"
+								data-open-modal={`modal-${data.slug}`}
+								class="lecture-card w-full text-left flex items-center gap-4 bg-paper-warm rounded-2xl border border-chalk/60 px-6 py-5 transition-all duration-300 hover:border-rust/30 hover:shadow-md"
+								data-type={data.type}
+							>
+								<div class="shrink-0 w-14 text-center">
+									<span class="text-xs font-mono text-sand">
+										{data.date.toLocaleDateString('zh-TW', {
+											month: 'numeric',
+											day: 'numeric',
+										})}
+									</span>
+								</div>
+								<div class="flex-1 min-w-0">
+									<h3 class="font-display font-semibold text-ink text-base leading-snug">
+										{data.name}
+									</h3>
+									<div class="flex items-center gap-2 mt-1 flex-wrap">
+										<DifficultyStars
+											difficulty={data.difficulty}
+											idPrefix={`card-${data.slug}`}
+										/>
+										<span class="text-xs text-sand">{data.lecturer}</span>
+										<span
+											class:list={[
+												'px-2 py-0.5 text-xs rounded-sm',
+												data.type === '主線'
+													? 'bg-moss/10 text-moss'
+													: 'bg-rust/10 text-rust',
+											]}
+										>
+											{data.type}
+										</span>
+									</div>
+								</div>
+							</button>
+
+							<dialog
+								id={`modal-${data.slug}`}
+								class="lecture-modal"
+								data-slug={data.slug}
+							>
+								<div class="lecture-modal-content">
+									<button
+										type="button"
+										class="modal-close"
+										aria-label={t.close}
+									>
+										✕
+									</button>
+
+									<span class="text-[11px] font-display font-semibold uppercase tracking-[0.2em] text-moss">
+										{data.date.toLocaleDateString('zh-TW', {
+											month: 'long',
+											day: 'numeric',
+										})}
+									</span>
+									<h2 class="font-display text-2xl md:text-3xl font-bold text-ink mt-2 mb-4">
+										{data.name}
+									</h2>
+
+									<div class="flex items-center gap-3 flex-wrap mb-6">
+										<DifficultyStars
+											difficulty={data.difficulty}
+											idPrefix={`modal-${data.slug}`}
+											size="md"
+										/>
+										<span class="text-sm text-sand">{data.lecturer}</span>
+										<span
+											class:list={[
+												'px-2 py-0.5 text-xs rounded-sm',
+												data.type === '主線'
+													? 'bg-moss/10 text-moss'
+													: 'bg-rust/10 text-rust',
+											]}
+										>
+											{data.type}
+										</span>
+									</div>
+
+									{data.location && (
+										<div class="flex items-center gap-2 text-[14px] text-clay mb-4">
+											<svg
+												class="w-4 h-4"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="1.5"
+												viewBox="0 0 24 24"
+											>
+												<path
+													stroke-linecap="round"
+													d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+												/>
+												<path
+													stroke-linecap="round"
+													d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+												/>
+											</svg>
+											{data.location}
+										</div>
+									)}
+
+									<div class="prose prose-sm md:prose-base max-w-none text-ink/90 mb-6">
+										<Content />
+									</div>
+
+									{data.tags.length > 0 && (
+										<div class="flex flex-wrap gap-1.5 mb-8">
+											{data.tags.map((tag) => (
+												<span class="px-2.5 py-0.5 text-xs md:text-sm bg-fog text-clay rounded-sm">
+													#{tag}
+												</span>
+											))}
+										</div>
+									)}
+
+									{data.timeline && <LectureTimeline items={data.timeline} />}
+
+									{links.length > 0 && (
+										<div class="flex flex-wrap gap-2 pt-6">
+											{links.map((link) => (
+												<a
+													href={link.href}
+													target="_blank"
+													rel="noopener noreferrer"
+													class="text-sm px-3.5 py-2 border border-chalk rounded-md text-rust hover:bg-rust/5 transition-colors"
+												>
+													{link.label} →
+												</a>
+											))}
+										</div>
+									)}
+								</div>
+							</dialog>
+						</>
+					);
+				})
 			}
 		</div>
 
@@ -217,12 +342,41 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 	</div>
 </BaseLayout>
 
+<style>
+	dialog.lecture-modal {
+		padding: 0;
+		border: none;
+		background: transparent;
+		max-height: 90vh;
+	}
+
+	dialog.lecture-modal::backdrop {
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	.lecture-modal-content {
+		position: relative;
+		max-width: 48rem;
+		max-height: 90vh;
+		overflow-y: auto;
+		padding: 2rem;
+		background: var(--color-paper, #fdfbf7);
+		border-radius: 1rem;
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+</style>
+
 <script>
 	const filterButtons = Array.from(
 		document.querySelectorAll<HTMLButtonElement>('.lecture-filter-btn'),
 	);
 	const cards = Array.from(
-		document.querySelectorAll<HTMLAnchorElement>('.lecture-card'),
+		document.querySelectorAll<HTMLButtonElement>('.lecture-card'),
 	);
 	const emptyMessage = document.getElementById('lecture-empty')!;
 
@@ -248,4 +402,51 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 			applyFilter(button.dataset.filter!);
 		});
 	});
+</script>
+
+<script>
+	const openButtons = Array.from(
+		document.querySelectorAll<HTMLButtonElement>('[data-open-modal]'),
+	);
+	const modals = Array.from(
+		document.querySelectorAll<HTMLDialogElement>('.lecture-modal'),
+	);
+
+	openButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const targetId = button.dataset.openModal;
+			if (!targetId) return;
+			const dialog = document.getElementById(
+				targetId,
+			) as HTMLDialogElement | null;
+			if (!dialog) return;
+			dialog.showModal();
+			const slug = dialog.dataset.slug;
+			if (slug) history.replaceState(null, '', '#' + slug);
+		});
+	});
+
+	modals.forEach((dialog) => {
+		const closeButton = dialog.querySelector<HTMLButtonElement>('.modal-close');
+		closeButton?.addEventListener('click', () => dialog.close());
+
+		dialog.addEventListener('click', (event) => {
+			if (event.target === dialog) dialog.close();
+		});
+
+		dialog.addEventListener('close', () => {
+			const slug = dialog.dataset.slug;
+			if (slug && location.hash === '#' + slug) {
+				history.replaceState(null, '', location.pathname + location.search);
+			}
+		});
+	});
+
+	const initialSlug = location.hash.slice(1);
+	if (initialSlug) {
+		const target = document.querySelector<HTMLDialogElement>(
+			`.lecture-modal[data-slug="${CSS.escape(initialSlug)}"]`,
+		);
+		target?.showModal();
+	}
 </script>
