@@ -29,7 +29,8 @@ const [rocYear, term] = semester.split('-').map(Number);
 const calendarYear = term === 1 ? rocYear + 1911 : rocYear + 1912;
 
 function toISODate(mmdd) {
-	const [month, day] = mmdd.split('/').map(Number);
+	const [startDate] = mmdd.split('~');
+	const [month, day] = startDate.trim().split('/').map(Number);
 	return `${calendarYear}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 }
 
