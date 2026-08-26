@@ -195,7 +195,7 @@
           <span class="text-[11px] uppercase tracking-[0.2em] text-moss font-semibold"
             >本學期社課</span
           >
-          <h2 class="mt-2 text-3xl md:text-4xl font-bold text-ink">114-2 課程預覽</h2>
+          <h2 class="mt-2 text-3xl md:text-4xl font-bold text-ink">115-1 課程預覽</h2>
         </div>
 
         <!-- Card with warm background + penguin -->
