@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getLang } from '../../i18n/ui';
+
+const lectures = await getCollection('lectures');
+const semesters = [
+	...new Set(lectures.map((entry) => entry.id.split('/')[0])),
+].sort();
+const latestSemester = semesters.at(-1);
+
+if (!latestSemester) {
+	throw new Error(
+		'No lecture semesters found — src/content/lectures/ must have at least one semester folder before this page can build.',
+	);
+}
+
+const lang = getLang(Astro.currentLocale);
+const target = getRelativeLocaleUrl(lang, `lecture/${latestSemester}`);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content={`0; url=${target}`} />
+		<link rel="canonical" href={target} />
+		<title>社課</title>
+	</head>
+	<body>
+		<p>正在前往最新學期的社課列表…… <a href={target}>點此繼續</a></p>
+	</body>
+</html>
