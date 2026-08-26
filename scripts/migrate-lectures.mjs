@@ -4,7 +4,7 @@
 // per-lecture Markdown files under src/content/lectures/<semester>/.
 // Usage: node scripts/migrate-lectures.mjs <semester>   (e.g. 114-2)
 //
-// `slug` is written as a placeholder — a human/AI pass must replace it with
+// `slug` is written as a placeholder. A human/AI pass must replace it with
 // a real hand-picked English slug before the migrated files are committed.
 // This script is deleted once all semesters are migrated (see Task 10).
 
