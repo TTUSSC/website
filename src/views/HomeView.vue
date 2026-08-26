@@ -421,9 +421,9 @@ const recentLectures = semesterData
 // ── 活動照片輪播 ──
 const activityPhotos = [
   {
-    src: '/img/lectures/20260402_從 0 開始的前端實作：JavaScript 記帳系統.jpg',
+    src: '/img/lectures/20260528_期末大會.jpg',
     alt: '最近社課',
-    desc: '20260402 從 0 開始的前端實作:JavaScript 記帳系統',
+    desc: '20260528_期末大會',
   },
   {
     src: '/img/camps/2026 winter_vacation_camp.png',

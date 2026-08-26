@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { lectureData } from '@/data/lectureData.js'
 
 const years = [
+  { name: '115 上學期', value: '115-1' },
   { name: '114 下學期', value: '114-2' },
   { name: '114 上學期', value: '114-1' },
   { name: '113 下學期', value: '113-2' },

@@ -4,6 +4,7 @@ import { ref } from 'vue'
 import { memberData as members } from '@/data/memberData'
 
 const years = [
+  { name: '第拾肆屆', value: '14' },
   { name: '第拾參屆', value: '13' },
   { name: '第拾貳屆', value: '12' },
   { name: '第拾壹屆', value: '11' },
