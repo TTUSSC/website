@@ -1,3 +1,4 @@
+import { semesterData as s115_1 } from './lectures/115-1.js';
 import { semesterData as s114_2 } from './lectures/114-2.js';
 import { semesterData as s114_1 } from './lectures/114-1.js';
 import { semesterData as s113_2 } from './lectures/113-2.js';
@@ -8,6 +9,7 @@ import { semesterData as s111_2 } from './lectures/111-2.js';
 import { semesterData as s111_1 } from './lectures/111-1.js';
 
 export const lectureData = {
+  '115-1': s115_1,
   '114-2': s114_2,
   '114-1': s114_1,
   '113-2': s113_2,

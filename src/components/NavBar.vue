@@ -77,12 +77,7 @@ const navLinks = [
           <font-awesome-icon :icon="faDiscord" class="text-ink text-sm" />
           Discord
         </a>
-        <RouterLink
-          to="/sponsor"
-          class="px-3.5 py-1.5 text-[13px] font-medium bg-ink text-paper rounded-md hover:bg-ink-soft transition-all duration-200"
-        >
-          贊助我們
-        </RouterLink>
+        
       </div>
 
       <!-- Mobile -->
