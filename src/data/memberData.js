@@ -17,7 +17,7 @@ export const memberData = {
       title: '副社長 x 編輯組長',
       ig: 'lin.lai0125',
       desc: '資工系學生，想學習當一個好的人類',
-      tags: [''],
+      tags: ['唱歌','桌遊','蕭京零'],
     },
     {
       image: trueURL('img/member/sinny.jpg'),
@@ -25,7 +25,7 @@ export const memberData = {
       title: '副社長 x 活動組長',
       ig: '',
       desc: '純正電機系大二生，說是要成為一隻快樂的小米蟲，但是卻在把自己忙死的道路上一去不復返',
-      tags: [],
+      tags: ['羽球','排球','小米蟲','睡覺'],
     },
     {
       image: trueURL('img/member/saotang.jpg'),
@@ -43,13 +43,12 @@ export const memberData = {
       desc: '目標去鳳梨田讀碩，對資訊方面的事物都蠻有興趣的',
       tags: ['lol','單機遊戲'] 
     },
-    {
-      image: trueURL(''),
+    { image: '',
       name: '蔡詠竣',
       title: '資訊',
-      ig: '@speedcubing.top',
-      desc: '',
-      tags: [''],
+      ig: 'speedcubing.top',
+      desc: '', 
+      tags: [] 
     },
     {
       image: trueURL('img/member/junjie.jpg'),
@@ -57,7 +56,7 @@ export const memberData = {
       title: '資訊 x 文書組長',
       ig: 'jeff950725',
       desc: '資工系學生，目前正在學習資安',
-      tags: [''],
+      tags: [],
     },
     {
       image: trueURL('img/member/changfeng.jpg'),
@@ -65,14 +64,14 @@ export const memberData = {
       title: '資訊 x 文書',
       ig: '',
       desc: '資工系學生，正在學習AI和資安，努力做專題中',
-      tags: [''],
+      tags: [],
     },
     {
       image: trueURL('img/member/hyijeee.jpg'),
       name: '洪苡倢',
       title: '財務',
       ig: 'hyijeee',
-      desc: '化工系學生，喜歡摸索新事物，在努力學英文（底子太爛國小生都不如，吃咖哩要攪派，讚',
+      desc: '化工系學生，喜歡摸索新事物，在努力學英文（底子太爛國小生都不如，吃咖哩要攪派，讚)',
       tags: [],
     },
     {
@@ -81,7 +80,7 @@ export const memberData = {
       title: '財務組長',
       ig: '',
       desc: '大同大學開源社總務組組員，男，吃素，無宗教信仰，還沒測mbti。',
-      tags: [''],
+      tags: [],
     },
     {
       image: trueURL('img/member/fang.jpg'),
@@ -116,7 +115,7 @@ export const memberData = {
       tags: ['ENFJ','旅遊'],
     },
     {
-      image: trueURL('img/member/binze.jpg'),
+      image: trueURL('img/member/binze.png'),
       name: '吳秉澤',
       title: '紀律組長',
       ig: '',

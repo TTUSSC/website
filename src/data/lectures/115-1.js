@@ -137,13 +137,13 @@ export const semesterData = [
     kktix: '',
   },
   {
-    date: '10/19~10/23',
+    date: '10/19 ~ 10/23',
     name: '期中考前讀書會',
     difficulty: 0,
     lecturer: '',
     location: '挺生大樓 307 教室',
     tags: ['讀書會'],
-    type: '支線',
+    type: '主線',
     description:
       '期中考後出去玩。跟社員混熟',
     timeline: [
@@ -297,7 +297,7 @@ export const semesterData = [
     kktix: '',
   },
   {
-    date: '12/14~12/18',
+    date: '12/14 ~ 12/18',
     name: '期末考前讀書會',
     difficulty: 0,
     lecturer: '',
