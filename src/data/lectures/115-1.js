@@ -50,7 +50,7 @@ export const semesterData = [
     date: '9/22',
     name: '微軟大戰代碼 ! 你的第一把開發武器',
     difficulty: 0,
-    lecturer: '肉鬆',
+    lecturer: '萬崧',
     location: '挺生大樓 307 教室',
     tags: ['Vibe Coding'],
     type: '主線',
@@ -92,7 +92,7 @@ export const semesterData = [
     kktix: '',
   },
   {
-    date: '10/6',
+    date: '10/7',
     name: '2026 的新魔法 ! Vibe Coding 靈魂寫碼術',
     difficulty: 0,
     lecturer: '萬崧',
@@ -143,7 +143,7 @@ export const semesterData = [
     lecturer: '',
     location: '挺生大樓 307 教室',
     tags: ['讀書會'],
-    type: '主線',
+    type: '支線',
     description:
       '期中考後出去玩。跟社員混熟',
     timeline: [
@@ -274,7 +274,7 @@ export const semesterData = [
     kktix: '',
   },
   {
-    date: '12/8',
+    date: '12/9',
     name: '期末大會 - 聖誕節交換禮物 🎁',
     difficulty: 0,
     lecturer: '萬崧',
@@ -303,7 +303,7 @@ export const semesterData = [
     lecturer: '',
     location: '挺生大樓 307 教室',
     tags: ['讀書會'],
-    type: '主線',
+    type: '支線',
     description:
       '',
     timeline: [

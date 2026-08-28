@@ -6,7 +6,7 @@ export const memberData = {
     {
       image: trueURL('img/member/rain.jpg'),
       name: '余萬崧',
-      title: '社長',
+      title: '社長 x 教學組長',
       ig: 'rainyu_05_10',
       desc: '資工系學生，喜歡嘗試跟程式有關的新事物，最近在積極學習網站跟人工智慧',
       tags: ['音樂', '遊戲'],
@@ -23,7 +23,7 @@ export const memberData = {
       image: trueURL('img/member/sinny.jpg'),
       name: '林昕妮',
       title: '副社長 x 活動組長',
-      ig: '',
+      ig: 'sinny4444_1.0',
       desc: '純正電機系大二生，說是要成為一隻快樂的小米蟲，但是卻在把自己忙死的道路上一去不復返',
       tags: ['羽球','排球','小米蟲','睡覺'],
     },
@@ -38,17 +38,10 @@ export const memberData = {
     { 
       image: trueURL('img/member/shouchang.jpg'),
       name: '許守呈', 
-      title: ' 資訊組長',
+      title: '資訊組長',
       ig: 'xsc_0812',
       desc: '目標去鳳梨田讀碩，對資訊方面的事物都蠻有興趣的',
       tags: ['lol','單機遊戲'] 
-    },
-    { image: '',
-      name: '蔡詠竣',
-      title: '資訊',
-      ig: 'speedcubing.top',
-      desc: '', 
-      tags: [] 
     },
     {
       image: trueURL('img/member/junjie.jpg'),
@@ -77,7 +70,7 @@ export const memberData = {
     {
       image: trueURL('img/member/jiamin.jpg'),
       name: '劉家銘',
-      title: '財務組長',
+      title: '財務',
       ig: '',
       desc: '大同大學開源社總務組組員，男，吃素，無宗教信仰，還沒測mbti。',
       tags: [],
@@ -117,7 +110,7 @@ export const memberData = {
     {
       image: trueURL('img/member/binze.png'),
       name: '吳秉澤',
-      title: '紀律組長',
+      title: '紀錄組長',
       ig: '',
       desc: '暱稱鮭魚，資工系大四，廣泛嘗試各種類型的 AI 模型，目標是大六前畢業 ',
       tags: ['鮭魚 '],
