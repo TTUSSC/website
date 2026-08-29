@@ -42,6 +42,45 @@ const content = {
 		slido: 'Slido',
 		kktix: 'KKTIX',
 	},
+	en: {
+		eyebrow: 'Lectures',
+		heading: 'Lectures',
+		intro:
+			"Hands-on teaching from senior members, paired with real-world sharing from industry mentors. Here you can learn to code, build projects, and make friends along the way. Whatever your goal, there's a place for you here — step into the endless possibilities of the open-source world!",
+		difficultyLabel: 'About the difficulty levels',
+		difficultyIntro:
+			'To help everyone pick the sessions that interest them, our lectures are rated across six difficulty levels:',
+		difficultyLevels: [
+			{ d: 0, label: 'A general activity open to everyone.' },
+			{
+				d: 1,
+				label:
+					'Very easy — perfect for complete beginners, no background needed.',
+			},
+			{ d: 2, label: 'Easy — requires basic concepts or foundational skills.' },
+			{
+				d: 3,
+				label:
+					'Intermediate — somewhat challenging, suited to those with related experience.',
+			},
+			{
+				d: 4,
+				label:
+					'Hard — requires more background knowledge or some specialized skill.',
+			},
+			{
+				d: 5,
+				label: 'Very hard — suited to advanced learners or professionals.',
+			},
+		],
+		filters: { all: 'All', main: 'Main', side: 'Side' },
+		empty: 'No lectures for this semester yet.',
+		close: 'Close',
+		slide: 'Slides',
+		cowrite: 'Notes',
+		slido: 'Slido',
+		kktix: 'KKTIX',
+	},
 } as const;
 const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 

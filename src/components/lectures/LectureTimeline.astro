@@ -9,6 +9,7 @@ const { items } = Astro.props;
 
 const content = {
 	'zh-tw': { heading: '時程' },
+	en: { heading: 'Timeline' },
 } as const;
 const lang = getLang(Astro.currentLocale);
 const t = content[lang as keyof typeof content] ?? content['zh-tw'];
