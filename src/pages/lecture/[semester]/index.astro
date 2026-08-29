@@ -30,6 +30,11 @@ const content = {
 		titlePrefix: '社課',
 		description: '學長姐手把手教學，搭配業界前輩實戰分享。',
 	},
+	en: {
+		titlePrefix: 'Lectures',
+		description:
+			'Hands-on teaching from senior members, paired with real-world sharing from industry mentors.',
+	},
 } as const;
 const lang = getLang(Astro.currentLocale);
 const t = content[lang as keyof typeof content] ?? content['zh-tw'];

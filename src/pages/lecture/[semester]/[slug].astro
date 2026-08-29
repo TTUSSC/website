@@ -30,6 +30,9 @@ const content = {
 	'zh-tw': {
 		fallbackDescription: (name: string) => `TTUSSC 社課：${name}`,
 	},
+	en: {
+		fallbackDescription: (name: string) => `TTUSSC Lecture: ${name}`,
+	},
 } as const;
 const lang = getLang(Astro.currentLocale);
 const t = content[lang as keyof typeof content] ?? content['zh-tw'];
