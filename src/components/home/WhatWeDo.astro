@@ -55,7 +55,9 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 			<h2 class="text-3xl md:text-4xl font-bold text-ink">{t.heading}</h2>
 		</div>
 
-		<div class="accordion scroll-reveal flex gap-3 h-[300px] md:h-[360px]">
+		<div
+			class="accordion scroll-reveal hidden md:flex gap-3 h-[300px] md:h-[360px]"
+		>
 			{
 				items.map((item, i) => (
 					<div class="accordion-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[100px] md:w-[120px] shrink-0">
@@ -82,6 +84,31 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 							<span class="font-display font-bold text-white text-base md:text-lg [writing-mode:vertical-lr] [text-orientation:upright] tracking-[0.2em] drop-shadow">
 								{item.title}
 							</span>
+						</div>
+					</div>
+				))
+			}
+		</div>
+
+		<div class="md:hidden space-y-4 scroll-reveal">
+			{
+				items.map((item, i) => (
+					<div class="rounded-2xl overflow-hidden bg-paper-warm border border-chalk/60">
+						<div class="relative aspect-[16/9]">
+							<Image
+								src={item.img}
+								alt={item.title}
+								class="w-full h-full object-cover"
+							/>
+						</div>
+						<div class="p-5">
+							<span class="font-mono text-[11px] text-sand tracking-[0.2em]">
+								{String(i + 1).padStart(2, '0')}
+							</span>
+							<h3 class="mt-1 font-display font-bold text-xl text-ink">
+								{item.title}
+							</h3>
+							<p class="mt-2 text-sm text-clay leading-relaxed">{item.desc}</p>
 						</div>
 					</div>
 				))
