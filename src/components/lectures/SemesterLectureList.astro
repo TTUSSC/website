@@ -5,6 +5,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 import DifficultyStars from './DifficultyStars.astro';
 import LectureTimeline from './LectureTimeline.astro';
 import { getLang } from '../../i18n/ui';
+import { semesterLabel } from '../../lib/lectures';
 
 interface Props {
 	semester: string;
@@ -15,11 +16,6 @@ interface Props {
 
 const { semester, entries, allSemesters, openSlug } = Astro.props;
 const lang = getLang(Astro.currentLocale);
-
-function semesterLabel(semester: string): string {
-	const [year, term] = semester.split('-');
-	return `${year} ${term === '1' ? '上' : '下'}學期`;
-}
 
 const content = {
 	'zh-tw': {
@@ -77,6 +73,7 @@ const entriesWithContent = await Promise.all(
 
 	<div class="relative group inline-block z-20 mb-6">
 		<div
+			tabindex="0"
 			class="flex items-center gap-1.5 text-clay cursor-help hover:text-ink transition-colors"
 		>
 			<svg
@@ -97,7 +94,7 @@ const entriesWithContent = await Promise.all(
 			>
 		</div>
 		<div
-			class="absolute left-0 top-full mt-2 w-[320px] sm:w-[500px] p-5 bg-paper backdrop-blur-xl border border-chalk/80 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 origin-top-left pointer-events-none group-hover:pointer-events-auto"
+			class="absolute left-0 top-full mt-2 w-[320px] sm:w-[500px] p-5 bg-paper backdrop-blur-xl border border-chalk/80 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto transition-all duration-300 translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 origin-top-left pointer-events-none group-hover:pointer-events-auto"
 		>
 			<p class="text-[13px] text-ink/90 leading-relaxed mb-4">
 				{t.difficultyIntro}
@@ -177,8 +174,8 @@ const entriesWithContent = await Promise.all(
 
 				return (
 					<>
-						<button
-							type="button"
+						<a
+							href={`${semesterBaseUrl}${semesterBaseUrl.endsWith('/') ? '' : '/'}${data.slug}/`}
 							data-open-modal={`modal-${data.slug}`}
 							class="lecture-card w-full text-left flex items-center gap-4 bg-paper-warm rounded-2xl border border-chalk/60 px-6 py-5 transition-all duration-300 hover:border-rust/30 hover:shadow-md"
 							data-type={data.type}
@@ -188,6 +185,7 @@ const entriesWithContent = await Promise.all(
 									{data.date.toLocaleDateString('zh-TW', {
 										month: 'numeric',
 										day: 'numeric',
+										timeZone: 'UTC',
 									})}
 								</span>
 							</div>
@@ -213,12 +211,13 @@ const entriesWithContent = await Promise.all(
 									</span>
 								</div>
 							</div>
-						</button>
+						</a>
 
 						<dialog
 							id={`modal-${data.slug}`}
 							class="lecture-modal"
 							data-slug={data.slug}
+							aria-labelledby={`modal-title-${data.slug}`}
 						>
 							<div class="lecture-modal-content">
 								<button type="button" class="modal-close" aria-label={t.close}>
@@ -229,9 +228,13 @@ const entriesWithContent = await Promise.all(
 									{data.date.toLocaleDateString('zh-TW', {
 										month: 'long',
 										day: 'numeric',
+										timeZone: 'UTC',
 									})}
 								</span>
-								<h2 class="font-display text-2xl md:text-3xl font-bold text-ink mt-2 mb-4">
+								<h2
+									id={`modal-title-${data.slug}`}
+									class="font-display text-2xl md:text-3xl font-bold text-ink mt-2 mb-4"
+								>
 									{data.name}
 								</h2>
 
@@ -342,23 +345,10 @@ const entriesWithContent = await Promise.all(
 		max-height: 90vh;
 		overflow-y: auto;
 		padding: 2rem;
-		background: var(--color-paper, #fdfbf7);
+		background: var(--color-paper);
 		border-radius: 1rem;
 		scrollbar-width: thin;
-		scrollbar-color: var(--color-chalk, #e5e7eb) transparent;
-	}
-
-	.lecture-modal-content::-webkit-scrollbar {
-		width: 8px;
-	}
-
-	.lecture-modal-content::-webkit-scrollbar-track {
-		background: transparent;
-	}
-
-	.lecture-modal-content::-webkit-scrollbar-thumb {
-		background-color: var(--color-chalk, #e5e7eb);
-		border-radius: 9999px;
+		scrollbar-color: var(--color-chalk) transparent;
 	}
 
 	.modal-close {
@@ -411,21 +401,33 @@ const entriesWithContent = await Promise.all(
 	// semesterBaseUrl (from getRelativeLocaleUrl) already ends in "/".
 	const lectureUrl = (slug: string) => `${semesterBaseUrl}${slug}/`;
 
-	const openButtons = Array.from(
-		document.querySelectorAll<HTMLButtonElement>('[data-open-modal]'),
+	const openLinks = Array.from(
+		document.querySelectorAll<HTMLAnchorElement>('[data-open-modal]'),
 	);
 	const modals = Array.from(
 		document.querySelectorAll<HTMLDialogElement>('.lecture-modal'),
 	);
 
-	openButtons.forEach((button) => {
-		button.addEventListener('click', () => {
-			const targetId = button.dataset.openModal;
+	openLinks.forEach((link) => {
+		link.addEventListener('click', (event) => {
+			// Let middle-click / cmd-click / ctrl-click / shift-click fall
+			// through to a real navigation (new tab, new window, etc.).
+			if (
+				event.button !== 0 ||
+				event.metaKey ||
+				event.ctrlKey ||
+				event.shiftKey ||
+				event.altKey
+			) {
+				return;
+			}
+			const targetId = link.dataset.openModal;
 			if (!targetId) return;
 			const dialog = document.getElementById(
 				targetId,
 			) as HTMLDialogElement | null;
 			if (!dialog) return;
+			event.preventDefault();
 			dialog.showModal();
 			const slug = dialog.dataset.slug;
 			if (slug) history.pushState(null, '', lectureUrl(slug));
