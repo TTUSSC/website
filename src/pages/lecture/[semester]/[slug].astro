@@ -3,11 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SemesterLectureList from '../../../components/lectures/SemesterLectureList.astro';
 
-function semesterLabel(semester: string): string {
-	const [year, term] = semester.split('-');
-	return `${year} ${term === '1' ? '上' : '下'}學期`;
-}
-
 export async function getStaticPaths() {
 	const lectures = await getCollection('lectures');
 	const bySemester = new Map<string, typeof lectures>();
@@ -18,33 +13,36 @@ export async function getStaticPaths() {
 	}
 	const allSemesters = [...bySemester.keys()].sort().reverse();
 
-	return allSemesters.map((semester) => ({
-		params: { semester },
-		props: {
-			entries: bySemester
-				.get(semester)!
-				.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
-			allSemesters,
-		},
-	}));
+	return [...bySemester.entries()].flatMap(([semester, semesterEntries]) => {
+		const entries = semesterEntries.sort(
+			(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+		);
+		return entries.map((entry) => ({
+			params: { semester, slug: entry.data.slug },
+			props: { entries, allSemesters, slug: entry.data.slug },
+		}));
+	});
 }
 
 interface Props {
 	entries: Awaited<ReturnType<typeof getCollection<'lectures'>>>;
 	allSemesters: string[];
+	slug: string;
 }
 
 const { semester } = Astro.params as { semester: string };
-const { entries, allSemesters } = Astro.props as Props;
+const { entries, allSemesters, slug } = Astro.props as Props;
+const entry = entries.find((e) => e.data.slug === slug)!;
 ---
 
 <BaseLayout
-	title={`社課｜${semesterLabel(semester)}`}
-	description="學長姐手把手教學，搭配業界前輩實戰分享。"
+	title={entry.data.name}
+	description={`TTUSSC 社課：${entry.data.name}`}
 >
 	<SemesterLectureList
 		semester={semester}
 		entries={entries}
 		allSemesters={allSemesters}
+		openSlug={slug}
 	/>
 </BaseLayout>
