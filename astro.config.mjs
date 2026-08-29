@@ -26,6 +26,9 @@ export default defineConfig({
 					en: 'en',
 				},
 			},
+			// Exclude the /lecture/ and /en/lecture/ meta-refresh redirect
+			// stubs, which just bounce to the newest semester's page.
+			filter: (page) => !/\/lecture\/$/.test(page),
 		}),
 	],
 	vite: {
