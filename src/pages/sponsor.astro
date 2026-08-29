@@ -92,6 +92,95 @@ const content = {
 			},
 		],
 	},
+	en: {
+		title: 'Sponsor Us | TTUSSC',
+		description:
+			'Sponsorships are made in units of NT$100. Every bit of support you give keeps the club moving forward.',
+		eyebrow: 'Sponsor Us',
+		heading: 'Individual Sponsorship Tiers',
+		subtitle:
+			'Sponsorships are made in units of NT$100. Every bit of support you give keeps the club moving forward.',
+		benefitsLabel: '🎁 Perks',
+		forLabel: 'Best for: ',
+		contactIntro:
+			'If you have any questions about sponsorship, feel free to reach us via',
+		contactOr: 'or',
+		contactOutro: '.',
+		tiers: [
+			{
+				name: 'Supporter',
+				range: 'NT$100 – 400',
+				quote:
+					"Your strength may be small, but it's enough to light the first flame in the dark.",
+				for: 'Anyone who wants to give a small amount and see the club keep growing',
+				benefits: [
+					'Thank-you list at the year-end assembly (digital)',
+					'Discord supporter role (Basic Supporter)',
+					"Invitation to the club's opening and closing assemblies",
+				],
+			},
+			{
+				name: 'Bronze Supporter',
+				range: 'NT$500 – 900',
+				quote:
+					'Your aid is a bronze shield, warding off the first winds and rains for us.',
+				for: "Anyone who wants to truly take part in the club's culture",
+				benefits: [
+					'All previous perks',
+					'Discount on club merchandise',
+					'Digital certificate of appreciation',
+				],
+			},
+			{
+				name: 'Silver Supporter',
+				range: 'NT$1,000 – 4,900',
+				quote:
+					'The silver light you grant lets us see further through the fog of knowledge.',
+				for: 'Anyone who wants to help concretely improve our equipment and materials',
+				benefits: [
+					'All previous perks',
+					'Priority access to new club merchandise',
+					'Priority registration for club events',
+				],
+			},
+			{
+				name: 'Gold Supporter',
+				range: 'NT$5,000 – 9,900',
+				quote:
+					'Your golden blessing turns the gears of our plans more precisely than fate itself.',
+				for: 'Core sponsors of the club interested in deep involvement in our activities',
+				benefits: [
+					'All previous perks',
+					'Physical certificate of appreciation (presented at the opening and closing assemblies)',
+					'Ability to designate a sponsorship focus (over half of your contribution will go toward the project you choose)',
+				],
+			},
+			{
+				name: 'Platinum Supporter',
+				range: 'NT$10,000 – 19,900',
+				quote:
+					'You are our platinum wings, carrying us over the barriers of technology to greater heights.',
+				for: "Anyone who wants to support the club's educational vision long-term",
+				benefits: [
+					'All previous perks',
+					'Your name listed in the special thanks section of our website (anonymity available)',
+					"Invitation to speak at the club's opening and closing assemblies",
+				],
+			},
+			{
+				name: 'Diamond Supporter',
+				range: 'NT$20,000+',
+				quote:
+					'Your resolve is as unyielding as diamond — a force from another realm strong enough to reshape the future.',
+				for: 'Anyone with a deep passion for education, open source, and passing on technology',
+				benefits: [
+					'All previous perks',
+					"Ability to choose the theme of one club event, within the club's means",
+					'A thank-you video from the entire club leadership team',
+				],
+			},
+		],
+	},
 } as const;
 
 const lang = getLang(Astro.currentLocale);
