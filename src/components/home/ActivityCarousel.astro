@@ -52,78 +52,85 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 			<h2 class="mt-2 text-3xl md:text-4xl font-bold text-ink">{t.heading}</h2>
 		</div>
 
-		<div class="relative">
-			<div class="carousel scroll-reveal flex h-[360px] md:h-[460px]">
-				<div class="flex flex-col shrink-0 w-32 md:w-40 h-full">
-					{
-						photos.map((photo) => (
-							<button
-								type="button"
-								class="carousel-tab flex-1 relative text-left px-4 md:px-5 rounded-l-xl transition-all duration-300 select-none flex items-center bg-[#e8e4dc] text-clay hover:bg-chalk"
-								aria-label={photo.alt}
-							>
-								<span class="text-sm md:text-[15px] font-display font-semibold leading-tight">
-									{photo.alt}
-								</span>
-							</button>
-						))
-					}
-				</div>
-
-				<div
-					class="carousel-viewport flex-1 relative overflow-hidden rounded-r-2xl bg-fog"
-				>
-					{
-						photos.map((photo, i) => (
-							<div
-								class="carousel-slide absolute inset-0"
-								class:list={{ 'is-current': i === 0 }}
-							>
-								<Image
-									src={photo.img}
-									alt={photo.alt}
-									class="w-full h-full object-cover"
-								/>
-								<div class="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/10 to-transparent" />
-								<div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-									<span class="text-white font-display font-bold text-xl md:text-2xl drop-shadow">
-										{photo.alt}
-									</span>
-									<p class="mt-1 text-white/75 text-sm leading-relaxed max-w-sm">
-										{photo.desc}
-									</p>
-								</div>
-							</div>
-						))
-					}
-				</div>
+		<div class="carousel scroll-reveal">
+			<div class="flex flex-wrap gap-2 mb-4">
+				{
+					photos.map((photo, i) => (
+						<button
+							type="button"
+							class:list={[
+								'carousel-tab px-3 py-1.5 text-xs font-display font-medium rounded-md transition-all duration-200',
+								i === 0
+									? 'bg-ink text-paper'
+									: 'text-clay border border-chalk hover:border-ink hover:text-ink',
+							]}
+							data-alt={photo.alt}
+							data-desc={photo.desc}
+							aria-label={photo.alt}
+						>
+							{photo.alt}
+						</button>
+					))
+				}
 			</div>
 
-			<div class="absolute bottom-0 -right-4 md:-right-6 flex items-end gap-3">
-				<a
-					href="https://instagram.com/ttussc_/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="flex items-center gap-1 text-white/70 hover:text-white text-xs transition-colors duration-200 group mb-3 whitespace-nowrap drop-shadow"
-				>
-					{t.moreLink}
-					<svg
-						class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						viewBox="0 0 24 24"
-						aria-hidden="true"
+			<div class="relative rounded-2xl overflow-hidden bg-fog aspect-[16/9]">
+				{
+					photos.map((photo, i) => (
+						<div
+							class="carousel-slide absolute inset-0"
+							class:list={{ 'is-current': i === 0 }}
+						>
+							<Image
+								src={photo.img}
+								alt={photo.alt}
+								class="w-full h-full object-cover"
+							/>
+						</div>
+					))
+				}
+			</div>
+
+			<div class="mt-6 flex items-end justify-between gap-4 flex-wrap">
+				<div>
+					<p
+						class="carousel-caption-title font-display font-bold text-lg md:text-xl text-ink"
 					>
-						<path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4"></path>
-					</svg>
-				</a>
-				<Image
-					src={activityWave}
-					alt=""
-					width={160}
-					class="w-16 md:w-20 select-none pointer-events-none drop-shadow-sm shrink-0 -mb-2"
-				/>
+						{photos[0].alt}
+					</p>
+					<p
+						class="carousel-caption-desc mt-1 text-sm text-clay leading-relaxed"
+					>
+						{photos[0].desc}
+					</p>
+				</div>
+
+				<div class="flex items-end gap-3">
+					<a
+						href="https://instagram.com/ttussc_/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center gap-1 text-clay hover:text-ink text-xs transition-colors duration-200 group whitespace-nowrap"
+					>
+						{t.moreLink}
+						<svg
+							class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+						>
+							<path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4"></path>
+						</svg>
+					</a>
+					<Image
+						src={activityWave}
+						alt=""
+						width={160}
+						class="w-14 md:w-16 select-none pointer-events-none drop-shadow-sm shrink-0"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -137,6 +144,12 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 	const slides = Array.from(
 		carousel.querySelectorAll<HTMLDivElement>('.carousel-slide'),
 	);
+	const captionTitle = carousel.querySelector<HTMLParagraphElement>(
+		'.carousel-caption-title',
+	)!;
+	const captionDesc = carousel.querySelector<HTMLParagraphElement>(
+		'.carousel-caption-desc',
+	)!;
 	const INTERVAL_MS = 4000;
 
 	let current = 0;
@@ -148,13 +161,15 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 			const isCurrent = i === current;
 			tab.classList.toggle('bg-ink', isCurrent);
 			tab.classList.toggle('text-paper', isCurrent);
-			tab.classList.toggle('z-10', isCurrent);
-			tab.classList.toggle('bg-[#e8e4dc]', !isCurrent);
+			tab.classList.toggle('border', !isCurrent);
+			tab.classList.toggle('border-chalk', !isCurrent);
 			tab.classList.toggle('text-clay', !isCurrent);
 		});
 		slides.forEach((slide, i) =>
 			slide.classList.toggle('is-current', i === current),
 		);
+		captionTitle.textContent = tabs[current].dataset.alt ?? '';
+		captionDesc.textContent = tabs[current].dataset.desc ?? '';
 	};
 
 	const next = () => goTo((current + 1) % slides.length);
