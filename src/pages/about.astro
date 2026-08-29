@@ -92,7 +92,7 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 ---
 
 <BaseLayout title={t.title} description={t.description}>
-	<div class="max-w-2xl mx-auto px-6 py-20 md:py-24">
+	<div class="max-w-5xl mx-auto px-6 py-20 md:py-24">
 		<span
 			class="text-[11px] font-display font-semibold uppercase tracking-[0.2em] text-moss reveal"
 		>
@@ -105,12 +105,12 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 		</h1>
 
 		<div
-			class="reveal reveal-d2 space-y-5 text-clay leading-[1.85] text-[15px]"
+			class="reveal reveal-d2 space-y-5 text-clay leading-[1.85] text-[15px] max-w-2xl"
 		>
 			{t.intro.map((paragraph) => <p>{paragraph}</p>)}
 		</div>
 
-		<div class="mt-14 space-y-10 reveal reveal-d3">
+		<div class="mt-14 space-y-10 reveal reveal-d3 max-w-2xl">
 			{
 				t.sections.map((section) => (
 					<div>
