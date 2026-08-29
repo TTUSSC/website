@@ -3,6 +3,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 import { useTranslations, getLang } from '../i18n/ui';
 import { groupLecturesBySemester } from '../lib/lectures';
 import { groupMembersByYear } from '../lib/members';
+import LangSwitch from './LangSwitch.astro';
 
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
@@ -75,6 +76,7 @@ const isActive = (path: string) => {
 		</ul>
 
 		<div class="hidden md:flex items-center gap-2">
+			<LangSwitch />
 			<a
 				href="https://discord.com/invite/29PsKfe45h"
 				target="_blank"
@@ -143,6 +145,9 @@ const isActive = (path: string) => {
 					</a>
 				))
 			}
+			<div class="pt-3">
+				<LangSwitch />
+			</div>
 			<div class="pt-3 flex gap-2">
 				<a
 					href="https://discord.com/invite/29PsKfe45h"
