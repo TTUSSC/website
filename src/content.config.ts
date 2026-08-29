@@ -62,9 +62,10 @@ const events = defineCollection({
 	loader: glob({
 		pattern: '**/*.md',
 		base: 'src/content/events',
-		// Use the file path (unique by construction) as the entry id, matching
-		// the lectures/members collections' generateId override.
-		generateId: ({ entry }) => entry,
+		// Each entry is its own directory (`<slug>/index.md` + a colocated
+		// photo) rather than a flat file, so the default id (the directory
+		// name) is already unique and readable — no generateId override
+		// needed, unlike lectures/members which reuse slugs across folders.
 	}),
 	schema: ({ image }) =>
 		z.object({

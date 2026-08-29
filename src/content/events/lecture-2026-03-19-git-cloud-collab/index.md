@@ -3,5 +3,5 @@ date: '2026-03-19'
 name: 'Git 起來！Denny 學長帶你雲端協作'
 desc: 'Git 進階實作 !'
 type: lecture
-image: ../../assets/events/lecture-2026-03-19.jpg
+image: ./photo.jpg
 ---

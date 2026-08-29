@@ -3,5 +3,5 @@ date: '2025-08-11'
 name: '電資創客營'
 desc: '暑假營隊'
 type: camp
-image: ../../assets/events/camp-2025-08-11.jpg
+image: ./photo.jpg
 ---

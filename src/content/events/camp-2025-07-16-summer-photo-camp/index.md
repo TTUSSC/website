@@ -3,5 +3,5 @@ date: '2025-07-16'
 name: '夏季攝影手作營'
 desc: '與攝影社合辦營隊'
 type: camp
-image: ../../assets/events/camp-2025-07-16.jpg
+image: ./photo.jpg
 ---
