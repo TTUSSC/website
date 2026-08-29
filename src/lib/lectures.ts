@@ -1,8 +1,13 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/ui';
 
-/** Formats a semester id like `114-2` as `114 下學期`. */
-export function semesterLabel(semester: string): string {
+/**
+ * Formats a semester id like `114-2` as `114 下學期` (zh-tw) or
+ * `Spring 114` (en) — term `1` is the fall semester, `2` is spring.
+ */
+export function semesterLabel(semester: string, lang: Lang = 'zh-tw'): string {
 	const [year, term] = semester.split('-');
+	if (lang === 'en') return `${term === '1' ? 'Fall' : 'Spring'} ${year}`;
 	return `${year} ${term === '1' ? '上' : '下'}學期`;
 }
 

@@ -29,11 +29,13 @@ const content = {
 	'zh-tw': {
 		titlePrefix: '社課',
 		description: '學長姐手把手教學，搭配業界前輩實戰分享。',
+		titleSeparator: '｜',
 	},
 	en: {
 		titlePrefix: 'Lectures',
 		description:
 			'Hands-on teaching from senior members, paired with real-world sharing from industry mentors.',
+		titleSeparator: ' | ',
 	},
 } as const;
 const lang = getLang(Astro.currentLocale);
@@ -41,7 +43,7 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 ---
 
 <BaseLayout
-	title={`${t.titlePrefix}｜${semesterLabel(semester)}`}
+	title={`${t.titlePrefix}${t.titleSeparator}${semesterLabel(semester, lang)}`}
 	description={t.description}
 >
 	<SemesterLectureList

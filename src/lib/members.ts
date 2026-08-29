@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/ui';
 
 // Formal/financial-style numerals (壹貳參...), matching the old site's
 // hardcoded year labels (e.g. `14` -> `第拾肆屆`, `10` -> `第拾屆`).
@@ -12,8 +13,12 @@ function chineseNumeral(n: number): string {
 	return ones === 0 ? tensPart : `${tensPart}${DIGITS[ones]}`;
 }
 
-/** Formats a year id like `14` as `第拾肆屆` using formal Chinese numerals. */
-export function yearLabel(year: string): string {
+/**
+ * Formats a year id like `14` as `第拾肆屆` (zh-tw, formal Chinese
+ * numerals) or `Year 14` (en).
+ */
+export function yearLabel(year: string, lang: Lang = 'zh-tw'): string {
+	if (lang === 'en') return `Year ${year}`;
 	return `第${chineseNumeral(Number(year))}屆`;
 }
 

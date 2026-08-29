@@ -33,6 +33,7 @@ const content = {
 		intro:
 			'來自電機系、資工系、工設系等不同科系，每個人都帶著獨特的專長和興趣，共同為推廣開源文化而努力。',
 		titlePrefix: '成員',
+		titleSeparator: '｜',
 	},
 	en: {
 		eyebrow: 'Members',
@@ -40,6 +41,7 @@ const content = {
 		intro:
 			'Coming from majors like Electrical Engineering, Computer Science, and Industrial Design, each member brings their own skills and interests to help promote open-source culture.',
 		titlePrefix: 'Members',
+		titleSeparator: ' | ',
 	},
 } as const;
 const lang = getLang(Astro.currentLocale);
@@ -47,7 +49,7 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 ---
 
 <BaseLayout
-	title={`${t.titlePrefix}｜${yearLabel(year)}`}
+	title={`${t.titlePrefix}${t.titleSeparator}${yearLabel(year, lang)}`}
 	description={t.intro}
 >
 	<div class="max-w-5xl mx-auto px-6 py-20 md:py-24">
@@ -74,7 +76,7 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 								: 'text-clay border border-chalk hover:border-ink hover:text-ink',
 						]}
 					>
-						{yearLabel(y)}
+						{yearLabel(y, lang)}
 					</a>
 				))
 			}
