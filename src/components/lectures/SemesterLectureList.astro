@@ -382,7 +382,7 @@ const entriesWithContent = await Promise.all(
 </script>
 
 <script>
-	const root = document.currentScript!.closest(
+	const root = document.querySelector(
 		'[data-semester-base-url]',
 	) as HTMLElement;
 	const semesterBaseUrl = root.dataset.semesterBaseUrl!;
