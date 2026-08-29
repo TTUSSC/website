@@ -90,47 +90,47 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 					))
 				}
 				<div
-					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5"
+					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5 flex items-end justify-between gap-4"
 				>
-					<p
-						class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow"
-					>
-						{photos[0].alt}
-					</p>
-					<p
-						class="carousel-caption-desc mt-0.5 text-xs md:text-sm text-white/80 leading-relaxed"
-					>
-						{photos[0].desc}
-					</p>
-				</div>
-			</div>
-
-			<div class="mt-4 flex justify-end">
-				<div class="flex items-end gap-3 shrink-0">
-					<a
-						href="https://instagram.com/ttussc_/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="flex items-center gap-1 text-clay hover:text-ink text-xs transition-colors duration-200 group whitespace-nowrap"
-					>
-						{t.moreLink}
-						<svg
-							class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							viewBox="0 0 24 24"
-							aria-hidden="true"
+					<div class="min-w-0">
+						<p
+							class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow"
 						>
-							<path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4"></path>
-						</svg>
-					</a>
-					<Image
-						src={activityWave}
-						alt=""
-						width={160}
-						class="w-14 md:w-16 select-none pointer-events-none drop-shadow-sm shrink-0"
-					/>
+							{photos[0].alt}
+						</p>
+						<p
+							class="carousel-caption-desc mt-0.5 text-xs md:text-sm text-white/80 leading-relaxed"
+						>
+							{photos[0].desc}
+						</p>
+					</div>
+
+					<div class="flex items-end gap-2 shrink-0">
+						<a
+							href="https://instagram.com/ttussc_/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center gap-1 text-white/70 hover:text-white text-xs transition-colors duration-200 group whitespace-nowrap drop-shadow"
+						>
+							{t.moreLink}
+							<svg
+								class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<path stroke-linecap="round" d="M5 12h14m-4-4l4 4-4 4"></path>
+							</svg>
+						</a>
+						<Image
+							src={activityWave}
+							alt=""
+							width={160}
+							class="hidden md:block w-14 md:w-16 select-none pointer-events-none drop-shadow-sm shrink-0"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
