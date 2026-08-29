@@ -1,0 +1,9 @@
+---
+name: '黃郁寧'
+title: '編輯組長'
+order: 3
+image: '../../../assets/members/hyn.jpg'
+ig: '__hhyn.7'
+---
+
+資工系學生，也可以叫我芋泥，但我不吃芋泥跟芋頭，特別不能加在火鍋裡面。
