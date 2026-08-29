@@ -1,17 +1,36 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { useTranslations, getLang } from '../i18n/ui';
+import { groupLecturesBySemester } from '../lib/lectures';
+import { groupMembersByYear } from '../lib/members';
 
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
 const pathname = Astro.url.pathname;
 
+// Link straight to the newest semester/year instead of the bare
+// /lecture//member/ path — those are meta-refresh redirect stubs (needed
+// for output: 'static', since there's no server to pick the "latest" page
+// per-request) and visibly flash an unstyled page before bouncing.
+// Skipping the stub on normal nav clicks avoids that; the stub itself
+// still exists for direct/bookmarked visits to the bare path.
+const { allSemesters } = await groupLecturesBySemester();
+const { allYears } = await groupMembersByYear();
+
 const navLinks = [
-	{ path: '', label: t('nav.home') },
-	{ path: 'about', label: t('nav.about') },
-	{ path: 'member', label: t('nav.member') },
-	{ path: 'lecture', label: t('nav.lecture') },
-	{ path: 'event', label: t('nav.event') },
+	{ path: '', href: '', label: t('nav.home') },
+	{ path: 'about', href: 'about', label: t('nav.about') },
+	{
+		path: 'member',
+		href: allYears[0] ? `member/${allYears[0]}` : 'member',
+		label: t('nav.member'),
+	},
+	{
+		path: 'lecture',
+		href: allSemesters[0] ? `lecture/${allSemesters[0]}` : 'lecture',
+		label: t('nav.lecture'),
+	},
+	{ path: 'event', href: 'event', label: t('nav.event') },
 ];
 
 const isActive = (path: string) => {
@@ -42,7 +61,7 @@ const isActive = (path: string) => {
 				navLinks.map((link) => (
 					<li>
 						<a
-							href={getRelativeLocaleUrl(lang, link.path)}
+							href={getRelativeLocaleUrl(lang, link.href)}
 							class:list={[
 								'px-3 py-1.5 text-[15px] font-medium rounded-md transition-all duration-200 hover:text-ink hover:bg-fog',
 								isActive(link.path) ? 'text-ink bg-fog' : 'text-clay',
@@ -114,7 +133,7 @@ const isActive = (path: string) => {
 			{
 				navLinks.map((link) => (
 					<a
-						href={getRelativeLocaleUrl(lang, link.path)}
+						href={getRelativeLocaleUrl(lang, link.href)}
 						class:list={[
 							'block px-3 py-2 text-sm rounded-md transition-all hover:text-ink hover:bg-fog',
 							isActive(link.path) ? 'text-ink bg-fog' : 'text-clay',
