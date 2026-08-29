@@ -25,6 +25,23 @@ const content = {
 			},
 		],
 	},
+	en: {
+		heading: 'What We Do',
+		items: [
+			{
+				title: 'Courses',
+				desc: 'We hold lectures, talks, and workshops teaching members tools like HackMD, Linux, and Git, building real skills and connecting them with the open-source community.',
+			},
+			{
+				title: 'Community',
+				desc: 'Meet like-minded friends, gather anytime to discuss tech or join community events, and feel the appeal of working together.',
+			},
+			{
+				title: 'Service',
+				desc: "We run tech-focused volunteer camps every winter and summer break, giving back to the community by putting what we've learned into practice.",
+			},
+		],
+	},
 } as const;
 
 const lang = getLang(Astro.currentLocale);
