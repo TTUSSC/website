@@ -1,0 +1,30 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getLang } from '../../i18n/ui';
+import { groupMembersByYear } from '../../lib/members';
+
+const { allYears } = await groupMembersByYear();
+const latestYear = allYears[0];
+
+if (!latestYear) {
+	throw new Error(
+		'No member years found — src/content/members/ must have at least one year folder before this page can build.',
+	);
+}
+
+const lang = getLang(Astro.currentLocale);
+const target = getRelativeLocaleUrl(lang, `member/${latestYear}`);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content={`0; url=${target}`} />
+		<link rel="canonical" href={target} />
+		<title>成員</title>
+	</head>
+	<body>
+		<p>正在前往最新一屆的成員名單…… <a href={target}>點此繼續</a></p>
+	</body>
+</html>
