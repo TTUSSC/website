@@ -23,7 +23,7 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 ---
 
 <section
-	class="noise-bg relative overflow-hidden min-h-[calc(100vh-3.5rem)] flex items-center py-16 md:py-0"
+	class="noise-bg relative overflow-hidden flex items-center py-20 md:py-0 md:min-h-[calc(100vh-3.5rem)]"
 >
 	<div class="relative z-10 max-w-5xl mx-auto px-6 w-full md:-mt-8">
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
@@ -150,7 +150,10 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 		</div>
 	</div>
 	<div
-		class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-sand/60"
+		id="hero-scroll-hint"
+		role="button"
+		tabindex="0"
+		class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-sand/60 cursor-pointer"
 	>
 		<span class="text-[10px] uppercase tracking-widest">Scroll</span>
 		<svg
@@ -169,3 +172,20 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 	>
 	</div>
 </section>
+
+<script>
+	const scrollHint = document.getElementById('hero-scroll-hint');
+	const nextSection = document.getElementById('what-we-do');
+
+	const scrollToNext = () => {
+		nextSection?.scrollIntoView({ behavior: 'smooth' });
+	};
+
+	scrollHint?.addEventListener('click', scrollToNext);
+	scrollHint?.addEventListener('keydown', (event) => {
+		if (event.key === 'Enter' || event.key === ' ') {
+			event.preventDefault();
+			scrollToNext();
+		}
+	});
+</script>

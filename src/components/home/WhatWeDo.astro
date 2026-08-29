@@ -49,7 +49,7 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 ---
 
-<section class="py-20 md:py-28">
+<section id="what-we-do" class="py-20 md:py-28">
 	<div class="max-w-5xl mx-auto px-6">
 		<div class="mb-10 scroll-reveal">
 			<h2 class="text-3xl md:text-4xl font-bold text-ink">{t.heading}</h2>
