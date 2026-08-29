@@ -1,8 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SemesterLectureList from '../../../components/lectures/SemesterLectureList.astro';
 import { groupLecturesBySemester } from '../../../lib/lectures';
+import { getLang } from '../../../i18n/ui';
 
 export async function getStaticPaths() {
 	const { bySemester, allSemesters } = await groupLecturesBySemester();
@@ -16,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-	entries: Awaited<ReturnType<typeof getCollection<'lectures'>>>;
+	entries: CollectionEntry<'lectures'>[];
 	allSemesters: string[];
 	slug: string;
 }
@@ -24,12 +25,29 @@ interface Props {
 const { semester } = Astro.params as { semester: string };
 const { entries, allSemesters, slug } = Astro.props as Props;
 const entry = entries.find((e) => e.data.slug === slug)!;
+
+const content = {
+	'zh-tw': {
+		fallbackDescription: (name: string) => `TTUSSC 社課：${name}`,
+	},
+} as const;
+const lang = getLang(Astro.currentLocale);
+const t = content[lang as keyof typeof content] ?? content['zh-tw'];
+
+/** Derives a short plain-text excerpt from the lecture's Markdown body. */
+function excerptFrom(body: string | undefined): string | undefined {
+	const plain = (body ?? '').trim().replace(/\s+/g, ' ');
+	if (!plain) return undefined;
+	const limit = 120;
+	if (plain.length <= limit) return plain;
+	return `${plain.slice(0, limit).trimEnd()}…`;
+}
+
+const description =
+	excerptFrom(entry.body) ?? t.fallbackDescription(entry.data.name);
 ---
 
-<BaseLayout
-	title={entry.data.name}
-	description={`TTUSSC 社課：${entry.data.name}`}
->
+<BaseLayout title={entry.data.name} description={description}>
 	<SemesterLectureList
 		semester={semester}
 		entries={entries}

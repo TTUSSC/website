@@ -1,5 +1,11 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
+/** Formats a semester id like `114-2` as `114 下學期`. */
+export function semesterLabel(semester: string): string {
+	const [year, term] = semester.split('-');
+	return `${year} ${term === '1' ? '上' : '下'}學期`;
+}
+
 /**
  * Groups all lecture entries by semester (derived from the entry id's
  * leading path segment), sorted newest-first both across semesters and

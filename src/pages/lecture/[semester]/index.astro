@@ -1,13 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SemesterLectureList from '../../../components/lectures/SemesterLectureList.astro';
-import { groupLecturesBySemester } from '../../../lib/lectures';
-
-function semesterLabel(semester: string): string {
-	const [year, term] = semester.split('-');
-	return `${year} ${term === '1' ? '上' : '下'}學期`;
-}
+import { groupLecturesBySemester, semesterLabel } from '../../../lib/lectures';
+import { getLang } from '../../../i18n/ui';
 
 export async function getStaticPaths() {
 	const { bySemester, allSemesters } = await groupLecturesBySemester();
@@ -22,17 +18,26 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-	entries: Awaited<ReturnType<typeof getCollection<'lectures'>>>;
+	entries: CollectionEntry<'lectures'>[];
 	allSemesters: string[];
 }
 
 const { semester } = Astro.params as { semester: string };
 const { entries, allSemesters } = Astro.props as Props;
+
+const content = {
+	'zh-tw': {
+		titlePrefix: '社課',
+		description: '學長姐手把手教學，搭配業界前輩實戰分享。',
+	},
+} as const;
+const lang = getLang(Astro.currentLocale);
+const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 ---
 
 <BaseLayout
-	title={`社課｜${semesterLabel(semester)}`}
-	description="學長姐手把手教學，搭配業界前輩實戰分享。"
+	title={`${t.titlePrefix}｜${semesterLabel(semester)}`}
+	description={t.description}
 >
 	<SemesterLectureList
 		semester={semester}

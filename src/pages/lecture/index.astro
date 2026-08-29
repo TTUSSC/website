@@ -1,13 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getLang } from '../../i18n/ui';
+import { groupLecturesBySemester } from '../../lib/lectures';
 
-const lectures = await getCollection('lectures');
-const semesters = [
-	...new Set(lectures.map((entry) => entry.id.split('/')[0])),
-].sort();
-const latestSemester = semesters.at(-1);
+const { allSemesters } = await groupLecturesBySemester();
+const latestSemester = allSemesters[0];
 
 if (!latestSemester) {
 	throw new Error(
