@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventGallery from '../../components/events/EventGallery.astro';
+import { groupEventsByType } from '../../lib/events';
+import { getLang } from '../../i18n/ui';
+
+const { byType } = await groupEventsByType();
+
+const content = {
+	'zh-tw': {
+		eyebrow: '活動紀錄',
+		heading: '活動',
+		intro:
+			'紀錄社團的每一個足跡——從每週社課到年度營隊，從校園到開源社群，我們一起走過的每個時刻。',
+		sections: [
+			{ type: 'lecture', heading: '最近社課', accentClass: 'bg-moss' },
+			{ type: 'camp', heading: '營隊活動', accentClass: 'bg-rust' },
+			{ type: 'community', heading: '開源社群', accentClass: 'bg-clay' },
+			{ type: 'competition', heading: '全社評', accentClass: 'bg-moss' },
+			{ type: 'others', heading: '其他活動', accentClass: 'bg-rust' },
+		],
+	},
+} as const;
+const lang = getLang(Astro.currentLocale);
+const t = content[lang as keyof typeof content] ?? content['zh-tw'];
+
+const visibleSections = t.sections
+	.map((section) => ({ ...section, events: byType.get(section.type) }))
+	.filter((section) => section.events && section.events.length > 0);
+---
+
+<BaseLayout title={t.heading} description={t.intro}>
+	<div class="max-w-5xl mx-auto px-6 py-20 md:py-24">
+		<span
+			class="text-[11px] font-display font-semibold uppercase tracking-[0.2em] text-rust"
+		>
+			{t.eyebrow}
+		</span>
+		<h1 class="font-display text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">
+			{t.heading}
+		</h1>
+		<p class="text-clay mb-14 text-base md:text-lg leading-relaxed max-w-2xl">
+			{t.intro}
+		</p>
+
+		<div class="space-y-16">
+			{
+				visibleSections.map((section, i) => (
+					<>
+						{i > 0 && (
+							<div class="h-px bg-gradient-to-r from-transparent via-chalk to-transparent" />
+						)}
+						<EventGallery
+							heading={section.heading}
+							events={section.events!}
+							accentClass={section.accentClass}
+						/>
+					</>
+				))
+			}
+		</div>
+	</div>
+</BaseLayout>
