@@ -44,6 +44,47 @@ const content = {
 			},
 		],
 	},
+	en: {
+		title: 'About | TTUSSC',
+		description:
+			'TTUSSC is a student-run community dedicated to promoting open-source culture and information transparency.',
+		eyebrow: 'About',
+		heading: 'Open Source: A New Chapter of Collaboration and Sharing',
+		intro: [
+			'In an age of information explosion and rapid technological change, people increasingly value the protection of intellectual property, hoping regulation brings convenience and innovation. Yet the patent wars and over-protection that follow often hinder the flow of knowledge and the progress of technology. Facing this reality, we believe there is another way.',
+			'The essence of "open source" is sharing and collaboration. From sharing knowledge to advancing culture, the open-source spirit puts code out in the open for everyone to review, letting anyone take part in fixing and improving it. This open model not only guards against privacy breaches and malicious software, but also drives technology forward together, opening the way to a future built on transparency and trust.',
+		],
+		sections: [
+			{
+				title: 'Who We Are',
+				bar: 'bg-rust',
+				text: 'TTUSSC is a student-run community dedicated to promoting open-source culture and information transparency. We put open-source ideals into practice, exploring how open source can improve daily life and shape the future.',
+			},
+			{
+				title: 'What We Do',
+				bar: 'bg-moss',
+				items: [
+					{
+						label: 'Courses',
+						text: 'We hold lectures, talks, and workshops teaching members tools like HackMD, Linux, and Git, building real skills and connecting them with the open-source community.',
+					},
+					{
+						label: 'Community',
+						text: 'Meet like-minded friends, gather anytime to discuss tech or join community events, and feel the appeal of working together.',
+					},
+					{
+						label: 'Service',
+						text: "We run tech-focused volunteer camps every winter and summer break, giving back to the community by putting what we've learned into practice.",
+					},
+				],
+			},
+			{
+				title: 'Join Us',
+				bar: 'bg-clay',
+				text: 'Lecture schedules and details are posted on our website each semester, with weekly updates on our Instagram too. Come join TTUSSC, explore the world of open source, and make sharing and collaboration part of your everyday life!',
+			},
+		],
+	},
 } as const;
 
 const lang = getLang(Astro.currentLocale);
