@@ -89,24 +89,23 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 						</div>
 					))
 				}
-			</div>
-
-			<div
-				class="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4"
-			>
-				<div class="min-w-0">
+				<div
+					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5"
+				>
 					<p
-						class="carousel-caption-title font-display font-bold text-lg md:text-xl text-ink"
+						class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow"
 					>
 						{photos[0].alt}
 					</p>
 					<p
-						class="carousel-caption-desc mt-1 text-sm text-clay leading-relaxed"
+						class="carousel-caption-desc mt-0.5 text-xs md:text-sm text-white/80 leading-relaxed"
 					>
 						{photos[0].desc}
 					</p>
 				</div>
+			</div>
 
+			<div class="mt-4 flex justify-end">
 				<div class="flex items-end gap-3 shrink-0">
 					<a
 						href="https://instagram.com/ttussc_/"
