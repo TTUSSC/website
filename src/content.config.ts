@@ -35,4 +35,22 @@ const lectures = defineCollection({
 	}),
 });
 
-export const collections = { lectures };
+const members = defineCollection({
+	loader: glob({
+		pattern: '**/*.md',
+		base: 'src/content/members',
+	}),
+	schema: ({ image }) =>
+		z.object({
+			name: z.string(),
+			title: z.string(),
+			// Display order within a year — leadership order in the source data
+			// isn't derivable from name or filename, so it's carried explicitly.
+			order: z.number(),
+			image: image().optional(),
+			ig: z.string().optional(),
+			tags: z.array(z.string()).default([]),
+		}),
+});
+
+export const collections = { lectures, members };
