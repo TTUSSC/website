@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import { render, type CollectionEntry } from 'astro:content';
+
+interface Props {
+	member: CollectionEntry<'members'>;
+}
+
+const { member } = Astro.props;
+const { data } = member;
+const { Content } = await render(member);
+const hasDesc = Boolean(member.body?.trim());
+---
+
+<div
+	class="hover-lift bg-paper-warm rounded-2xl p-6 md:p-7 border border-chalk/60"
+>
+	<div class="flex gap-5">
+		<div
+			class="shrink-0 w-20 h-20 rounded-xl overflow-hidden bg-fog flex items-center justify-center"
+		>
+			{
+				data.image ? (
+					<Image
+						src={data.image}
+						alt={data.name}
+						class="w-full h-full object-cover"
+						loading="lazy"
+					/>
+				) : (
+					<span class="text-3xl">🐧</span>
+				)
+			}
+		</div>
+		<div class="flex-1 min-w-0">
+			<div class="flex items-baseline gap-2 flex-wrap">
+				<h3 class="font-display font-semibold text-ink text-base md:text-lg">
+					{data.name}
+				</h3>
+				<span class="text-xs md:text-sm text-sand">{data.title}</span>
+			</div>
+			{
+				data.ig && (
+					<a
+						href={`https://www.instagram.com/${data.ig}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-xs text-rust hover:underline"
+					>
+						@{data.ig}
+					</a>
+				)
+			}
+			{
+				hasDesc && (
+					<div class="mt-2 text-sm md:text-[15px] text-clay leading-relaxed">
+						<Content />
+					</div>
+				)
+			}
+			{
+				data.tags.length > 0 && (
+					<div class="mt-2 flex flex-wrap gap-1.5">
+						{data.tags.map((tag) => (
+							<span class="px-2 py-0.5 text-xs bg-fog text-clay rounded-sm">
+								#{tag}
+							</span>
+						))}
+					</div>
+				)
+			}
+		</div>
+	</div>
+</div>
