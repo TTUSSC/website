@@ -1,0 +1,49 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getLang, type Lang } from '../i18n/ui';
+
+const lang = getLang(Astro.currentLocale);
+const pathname = Astro.url.pathname;
+
+// Strip the current locale's path prefix to get a locale-agnostic relative
+// path — `en` is prefixed (`/en/...`), `zh-tw` isn't
+// (`prefixDefaultLocale: false`), matching the convention NavBar.astro's
+// `navLinks[].href` already uses with `getRelativeLocaleUrl`.
+const withoutLocalePrefix =
+	lang === 'en' ? pathname.replace(/^\/en\/?/, '/') : pathname;
+const relativePath = withoutLocalePrefix.replace(/^\//, '');
+
+const options: { value: Lang; label: string }[] = [
+	{ value: 'zh-tw', label: '繁體中文' },
+	{ value: 'en', label: 'English' },
+];
+---
+
+<select
+	class="lang-switch text-xs md:text-[13px] font-medium text-clay border border-chalk rounded-md px-2 py-1.5 bg-paper hover:border-ink hover:text-ink transition-all duration-200 cursor-pointer"
+	aria-label="Language / 語言"
+>
+	{
+		options.map((option) => (
+			<option
+				value={getRelativeLocaleUrl(option.value, relativePath)}
+				selected={option.value === lang}
+			>
+				{option.label}
+			</option>
+		))
+	}
+</select>
+
+<script>
+	// Astro dedupes identical inline module scripts to one execution per
+	// page — this must wire up every `.lang-switch` instance (desktop +
+	// mobile) in one pass, not assume a single instance.
+	document
+		.querySelectorAll<HTMLSelectElement>('.lang-switch')
+		.forEach((select) => {
+			select.addEventListener('change', () => {
+				window.location.href = select.value;
+			});
+		});
+</script>
