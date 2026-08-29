@@ -91,8 +91,10 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 				}
 			</div>
 
-			<div class="mt-6 flex items-end justify-between gap-4 flex-wrap">
-				<div>
+			<div
+				class="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4"
+			>
+				<div class="min-w-0">
 					<p
 						class="carousel-caption-title font-display font-bold text-lg md:text-xl text-ink"
 					>
@@ -105,7 +107,7 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 					</p>
 				</div>
 
-				<div class="flex items-end gap-3">
+				<div class="flex items-end gap-3 shrink-0">
 					<a
 						href="https://instagram.com/ttussc_/"
 						target="_blank"
