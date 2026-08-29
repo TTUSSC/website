@@ -39,6 +39,11 @@ const members = defineCollection({
 	loader: glob({
 		pattern: '**/*.md',
 		base: 'src/content/members',
+		// Use the file path (unique by construction) as the entry id instead of
+		// the default (which uses `slug` verbatim) — this lets recurring
+		// activities reuse the same memorable slug across different semesters,
+		// and avoids silent collisions if two different filenames slugify to the same string.
+		generateId: ({ entry }) => entry,
 	}),
 	schema: ({ image }) =>
 		z.object({
