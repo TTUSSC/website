@@ -58,4 +58,22 @@ const members = defineCollection({
 		}),
 });
 
-export const collections = { lectures, members };
+const events = defineCollection({
+	loader: glob({
+		pattern: '**/*.md',
+		base: 'src/content/events',
+		// Use the file path (unique by construction) as the entry id, matching
+		// the lectures/members collections' generateId override.
+		generateId: ({ entry }) => entry,
+	}),
+	schema: ({ image }) =>
+		z.object({
+			date: z.coerce.date(),
+			name: z.string(),
+			desc: z.string().optional(),
+			type: z.enum(['camp', 'community', 'competition', 'lecture', 'others']),
+			image: image().optional(),
+		}),
+});
+
+export const collections = { lectures, members, events };
