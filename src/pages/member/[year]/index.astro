@@ -1,0 +1,80 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import MemberCard from '../../../components/members/MemberCard.astro';
+import { groupMembersByYear, yearLabel } from '../../../lib/members';
+import { getLang } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+	const { byYear, allYears } = await groupMembersByYear();
+
+	return allYears.map((year) => ({
+		params: { year },
+		props: {
+			entries: byYear.get(year)!,
+			allYears,
+		},
+	}));
+}
+
+interface Props {
+	entries: CollectionEntry<'members'>[];
+	allYears: string[];
+}
+
+const { year } = Astro.params as { year: string };
+const { entries, allYears } = Astro.props as Props;
+
+const content = {
+	'zh-tw': {
+		eyebrow: 'Members',
+		heading: '社團成員',
+		intro:
+			'來自電機系、資工系、工設系等不同科系，每個人都帶著獨特的專長和興趣，共同為推廣開源文化而努力。',
+		titlePrefix: '成員',
+	},
+} as const;
+const lang = getLang(Astro.currentLocale);
+const t = content[lang as keyof typeof content] ?? content['zh-tw'];
+---
+
+<BaseLayout
+	title={`${t.titlePrefix}｜${yearLabel(year)}`}
+	description={t.intro}
+>
+	<div class="max-w-5xl mx-auto px-6 py-20 md:py-24">
+		<span
+			class="text-[11px] font-display font-semibold uppercase tracking-[0.2em] text-moss"
+			>{t.eyebrow}</span
+		>
+		<h1 class="font-display text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">
+			{t.heading}
+		</h1>
+		<p class="text-clay mb-10 max-w-2xl text-base md:text-lg leading-relaxed">
+			{t.intro}
+		</p>
+
+		<div class="flex flex-wrap gap-2 mb-10">
+			{
+				allYears.map((y) => (
+					<a
+						href={getRelativeLocaleUrl(lang, `member/${y}`)}
+						class:list={[
+							'px-4 py-1.5 text-sm font-display font-medium rounded-md transition-all duration-200',
+							y === year
+								? 'bg-ink text-paper'
+								: 'text-clay border border-chalk hover:border-ink hover:text-ink',
+						]}
+					>
+						{yearLabel(y)}
+					</a>
+				))
+			}
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+			{entries.map((member) => <MemberCard member={member} />)}
+		</div>
+	</div>
+</BaseLayout>
