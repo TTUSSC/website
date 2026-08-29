@@ -1,6 +1,6 @@
 ---
 date: '2025-11-25'
-name: '誰說純軟不會組電腦？ '
+name: '誰說純軟不會組電腦？'
 slug: 'pc-building-basics'
 difficulty: 1
 lecturer: 'jacky'

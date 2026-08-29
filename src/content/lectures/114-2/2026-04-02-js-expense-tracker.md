@@ -1,6 +1,6 @@
 ---
 date: '2026-04-02'
-name: ' 0 開始的前端實作：JavaScript 記帳系統'
+name: '0 開始的前端實作：JavaScript 記帳系統'
 slug: 'js-expense-tracker'
 difficulty: 2.25
 lecturer: '老高'
