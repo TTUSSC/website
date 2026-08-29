@@ -450,4 +450,19 @@ const entriesWithContent = await Promise.all(
 		);
 		if (target && !target.open) target.showModal();
 	}
+
+	window.addEventListener('popstate', () => {
+		const currentlyOpen =
+			document.querySelector<HTMLDialogElement>('dialog[open]');
+		const shouldBeOpen = modals.find(
+			(dialog) =>
+				dialog.dataset.slug &&
+				location.pathname === lectureUrl(dialog.dataset.slug),
+		);
+
+		if (shouldBeOpen === currentlyOpen) return;
+
+		if (currentlyOpen) currentlyOpen.close();
+		if (shouldBeOpen) shouldBeOpen.showModal();
+	});
 </script>
