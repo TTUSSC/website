@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getLang } from '../i18n/ui';
 
 interface Props {
@@ -9,7 +10,26 @@ interface Props {
 
 const { title, description, ogImage = '/logo.png' } = Astro.props;
 const lang = getLang(Astro.currentLocale);
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// Astro.url.pathname resolves to the un-prefixed path on a /en/* page during
+// static build (the fallbackType: 'rewrite' page is literally the zh-tw
+// route), but in `astro dev` it's the real /en/-prefixed path — strip a
+// possible /en prefix so both environments produce the same locale-agnostic
+// path to build the canonical/alternate URLs from.
+const localeAgnosticPath = Astro.url.pathname
+	.replace(/^\/en(\/|$)/, '/')
+	.replace(/^\//, '');
+const canonicalURL = new URL(
+	getRelativeLocaleUrl(lang, localeAgnosticPath),
+	Astro.site,
+);
+const alternateZhURL = new URL(
+	getRelativeLocaleUrl('zh-tw', localeAgnosticPath),
+	Astro.site,
+);
+const alternateEnURL = new URL(
+	getRelativeLocaleUrl('en', localeAgnosticPath),
+	Astro.site,
+);
 const ogImageURL = new URL(ogImage, Astro.site);
 const ogLocale = lang === 'zh-tw' ? 'zh_TW' : 'en_US';
 ---
@@ -22,6 +42,9 @@ const ogLocale = lang === 'zh-tw' ? 'zh_TW' : 'en_US';
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
+<link rel="alternate" hreflang="zh-TW" href={alternateZhURL} />
+<link rel="alternate" hreflang="en" href={alternateEnURL} />
+<link rel="alternate" hreflang="x-default" href={alternateZhURL} />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
