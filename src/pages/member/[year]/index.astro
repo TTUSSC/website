@@ -34,6 +34,13 @@ const content = {
 			'來自電機系、資工系、工設系等不同科系，每個人都帶著獨特的專長和興趣，共同為推廣開源文化而努力。',
 		titlePrefix: '成員',
 	},
+	en: {
+		eyebrow: 'Members',
+		heading: 'Our Members',
+		intro:
+			'Coming from majors like Electrical Engineering, Computer Science, and Industrial Design, each member brings their own skills and interests to help promote open-source culture.',
+		titlePrefix: 'Members',
+	},
 } as const;
 const lang = getLang(Astro.currentLocale);
 const t = content[lang as keyof typeof content] ?? content['zh-tw'];
