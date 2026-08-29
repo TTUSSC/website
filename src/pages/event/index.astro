@@ -20,6 +20,23 @@ const content = {
 			{ type: 'others', heading: '其他活動', accentClass: 'bg-rust' },
 		],
 	},
+	en: {
+		eyebrow: 'Activity Log',
+		heading: 'Events',
+		intro:
+			"A record of every step we've taken as a club — from weekly lectures to annual camps, from campus to the open-source community, every moment we've shared along the way.",
+		sections: [
+			{ type: 'lecture', heading: 'Recent Lectures', accentClass: 'bg-moss' },
+			{ type: 'camp', heading: 'Camps', accentClass: 'bg-rust' },
+			{
+				type: 'community',
+				heading: 'Open Source Community',
+				accentClass: 'bg-clay',
+			},
+			{ type: 'competition', heading: 'Club Fair', accentClass: 'bg-moss' },
+			{ type: 'others', heading: 'Other Events', accentClass: 'bg-rust' },
+		],
+	},
 } as const;
 const lang = getLang(Astro.currentLocale);
 const t = content[lang as keyof typeof content] ?? content['zh-tw'];
