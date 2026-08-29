@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SemesterLectureList from '../../../components/lectures/SemesterLectureList.astro';
+import { groupLecturesBySemester } from '../../../lib/lectures';
 
 function semesterLabel(semester: string): string {
 	const [year, term] = semester.split('-');
@@ -9,21 +10,12 @@ function semesterLabel(semester: string): string {
 }
 
 export async function getStaticPaths() {
-	const lectures = await getCollection('lectures');
-	const bySemester = new Map<string, typeof lectures>();
-	for (const entry of lectures) {
-		const [semester] = entry.id.split('/');
-		if (!bySemester.has(semester)) bySemester.set(semester, []);
-		bySemester.get(semester)!.push(entry);
-	}
-	const allSemesters = [...bySemester.keys()].sort().reverse();
+	const { bySemester, allSemesters } = await groupLecturesBySemester();
 
 	return allSemesters.map((semester) => ({
 		params: { semester },
 		props: {
-			entries: bySemester
-				.get(semester)!
-				.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+			entries: bySemester.get(semester)!,
 			allSemesters,
 		},
 	}));

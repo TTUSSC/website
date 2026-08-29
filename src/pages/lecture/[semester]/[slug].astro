@@ -2,26 +2,17 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SemesterLectureList from '../../../components/lectures/SemesterLectureList.astro';
+import { groupLecturesBySemester } from '../../../lib/lectures';
 
 export async function getStaticPaths() {
-	const lectures = await getCollection('lectures');
-	const bySemester = new Map<string, typeof lectures>();
-	for (const entry of lectures) {
-		const [semester] = entry.id.split('/');
-		if (!bySemester.has(semester)) bySemester.set(semester, []);
-		bySemester.get(semester)!.push(entry);
-	}
-	const allSemesters = [...bySemester.keys()].sort().reverse();
+	const { bySemester, allSemesters } = await groupLecturesBySemester();
 
-	return [...bySemester.entries()].flatMap(([semester, semesterEntries]) => {
-		const entries = semesterEntries.sort(
-			(a, b) => b.data.date.getTime() - a.data.date.getTime(),
-		);
-		return entries.map((entry) => ({
+	return [...bySemester.entries()].flatMap(([semester, entries]) =>
+		entries.map((entry) => ({
 			params: { semester, slug: entry.data.slug },
 			props: { entries, allSemesters, slug: entry.data.slug },
-		}));
-	});
+		})),
+	);
 }
 
 interface Props {
