@@ -36,6 +36,9 @@ const { heading, events, accentClass } = Astro.props;
 						)}
 						<div class="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent transition-all duration-300 group-hover:from-ink/75" />
 						<div class="absolute bottom-0 left-0 right-0 px-3 pb-3">
+							<p class="text-white/70 text-[11px] drop-shadow">
+								{event.data.date.toISOString().slice(0, 10)}
+							</p>
 							<p class="text-white font-display font-semibold text-sm drop-shadow">
 								{event.data.name}
 							</p>
