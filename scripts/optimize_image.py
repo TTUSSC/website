@@ -14,14 +14,47 @@ with a .jpg extension.
 from __future__ import annotations
 
 import argparse
+import io
 import sys
 from pathlib import Path
 
 from PIL import Image
 
 MAX_DIMENSION = 2000
-JPEG_QUALITY = 82
+# Target ceiling for the encoded JPEG, comfortably under the
+# check-added-large-files pre-commit hook's 500 KiB default limit.
+TARGET_JPEG_BYTES = 400 * 1024
+MIN_JPEG_QUALITY = 40
+MAX_JPEG_QUALITY = 92
 SOURCE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
+
+
+def _encode_jpeg(img: Image.Image, quality: int) -> bytes:
+    buf = io.BytesIO()
+    img.save(buf, "JPEG", quality=quality, optimize=True)
+    return buf.getvalue()
+
+
+def _best_jpeg_quality(img: Image.Image) -> tuple[bytes, int]:
+    """Binary-search the highest quality whose encoded size stays under
+    TARGET_JPEG_BYTES. A fixed quality percentage produces wildly
+    different file sizes across photos of different resolution and
+    detail, so it's the size we actually care about (what the
+    large-files hook checks), not the quality number, that should be
+    the target.
+    """
+    lo, hi = MIN_JPEG_QUALITY, MAX_JPEG_QUALITY
+    best = _encode_jpeg(img, lo)
+    best_quality = lo
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        encoded = _encode_jpeg(img, mid)
+        if len(encoded) <= TARGET_JPEG_BYTES:
+            best, best_quality = encoded, mid
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return best, best_quality
 
 
 def optimize_image(src: Path, dest: Path) -> None:
@@ -35,7 +68,8 @@ def optimize_image(src: Path, dest: Path) -> None:
         if suffix in {".jpg", ".jpeg"}:
             if img.mode != "RGB":
                 img = img.convert("RGB")
-            img.save(dest, "JPEG", quality=JPEG_QUALITY, optimize=True)
+            encoded, _quality = _best_jpeg_quality(img)
+            dest.write_bytes(encoded)
         elif suffix == ".png":
             img.save(dest, "PNG", optimize=True)
         else:
