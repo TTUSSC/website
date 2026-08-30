@@ -59,10 +59,10 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 						<button
 							type="button"
 							class:list={[
-								'carousel-tab px-3 py-1.5 text-xs font-display font-medium rounded-md transition-all duration-200',
+								'carousel-tab px-3 py-1.5 text-xs font-display font-medium rounded-md border transition-all duration-200',
 								i === 0
-									? 'bg-ink text-paper'
-									: 'text-clay border border-chalk hover:border-ink hover:text-ink',
+									? 'bg-ink text-paper border-transparent'
+									: 'text-clay border-chalk hover:border-ink hover:text-ink',
 							]}
 							data-alt={photo.alt}
 							data-desc={photo.desc}
@@ -90,16 +90,16 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 					))
 				}
 				<div
-					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5 flex items-end justify-between gap-4"
+					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5 flex items-end justify-between gap-2 md:gap-4"
 				>
 					<div class="min-w-0">
 						<p
-							class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow"
+							class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow-md break-words"
 						>
 							{photos[0].alt}
 						</p>
 						<p
-							class="carousel-caption-desc mt-0.5 text-xs md:text-sm text-white/80 leading-relaxed"
+							class="carousel-caption-desc mt-0.5 text-xs md:text-sm text-white/80 leading-relaxed line-clamp-2"
 						>
 							{photos[0].desc}
 						</p>
@@ -162,9 +162,11 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 			const isCurrent = i === current;
 			tab.classList.toggle('bg-ink', isCurrent);
 			tab.classList.toggle('text-paper', isCurrent);
-			tab.classList.toggle('border', !isCurrent);
+			tab.classList.toggle('border-transparent', isCurrent);
 			tab.classList.toggle('border-chalk', !isCurrent);
 			tab.classList.toggle('text-clay', !isCurrent);
+			tab.classList.toggle('hover:border-ink', !isCurrent);
+			tab.classList.toggle('hover:text-ink', !isCurrent);
 		});
 		slides.forEach((slide, i) =>
 			slide.classList.toggle('is-current', i === current),
