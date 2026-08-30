@@ -36,12 +36,17 @@ TTUSSC（Tatung University Open Source and Service Club）致力於推廣開源�
 
 - [Node.js](https://nodejs.org/) >= 22.12.0
 - [pnpm](https://pnpm.io/)
+- [uv](https://docs.astral.sh/uv/)（跑 `scripts/` 底下的 Python 腳本與部分 pre-commit hook 用）
+- [pre-commit](https://pre-commit.com/)
 
 ### 安裝與啟動
 
 ```bash
 # 安裝依賴
 pnpm install
+
+# 安裝 git hooks（格式化、圖片最佳化、commit message 檢查等）
+pre-commit install --hook-type pre-commit --hook-type commit-msg
 
 # 啟動開發伺服器
 pnpm dev
