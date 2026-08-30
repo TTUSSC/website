@@ -32,6 +32,7 @@ Consult these guides before working on related tasks:
 - Do not commit files under `docs/` or test artifacts unless the user explicitly approves them.
 - Tests may be created for verification without being committed.
 - Use subagents for genuinely heavy or independent work, not routine edits.
+- Run every image through `scripts/optimize_image.py <input> <output>` before committing it (single file or a whole directory). Raw phone/camera photos routinely land well above the `check-added-large-files` pre-commit hook's limit and fail the commit.
 
 ## Commit messages
 
