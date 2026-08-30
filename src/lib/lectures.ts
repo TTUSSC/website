@@ -13,8 +13,9 @@ export function semesterLabel(semester: string, lang: Lang = 'zh-tw'): string {
 
 /**
  * Groups all lecture entries by semester (derived from the entry id's
- * leading path segment), sorted newest-first both across semesters and
- * within each semester's entries.
+ * leading path segment). Semesters are sorted newest-first (so pages default
+ * to the current semester); entries within each semester are sorted
+ * chronologically (earliest first), matching how a syllabus reads.
  */
 export async function groupLecturesBySemester() {
 	const lectures = await getCollection('lectures');
@@ -26,7 +27,7 @@ export async function groupLecturesBySemester() {
 	}
 	const allSemesters = [...bySemester.keys()].sort().reverse();
 	for (const entries of bySemester.values()) {
-		entries.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+		entries.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 	}
 	return { bySemester, allSemesters };
 }
