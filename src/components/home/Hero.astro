@@ -23,7 +23,7 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 ---
 
 <section
-	class="noise-bg relative overflow-hidden flex items-start md:items-center pt-16 md:py-0 min-h-[calc(100vh-3.5rem)]"
+	class="noise-bg relative overflow-hidden flex items-center pt-8 pb-8 md:py-0 md:min-h-[calc(100vh-3.5rem)]"
 >
 	<div class="relative z-10 max-w-5xl mx-auto px-6 w-full md:-mt-8">
 		<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
@@ -148,11 +148,29 @@ const t = content[lang as keyof typeof content] ?? content['zh-tw'];
 				</div>
 			</div>
 		</div>
+
+		<div
+			role="button"
+			tabindex="0"
+			class="hero-scroll-hint md:hidden mt-10 flex flex-col items-center gap-1.5 text-sand/60 cursor-pointer w-fit mx-auto"
+		>
+			<span class="text-[10px] uppercase tracking-widest">Scroll</span>
+			<svg
+				class="w-4 h-4 animate-bounce"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.5"
+				viewBox="0 0 24 24"
+				aria-hidden="true"
+			>
+				<path stroke-linecap="round" d="M19 9l-7 7-7-7"></path>
+			</svg>
+		</div>
 	</div>
 	<div
 		role="button"
 		tabindex="0"
-		class="hero-scroll-hint flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1.5 text-sand/60 cursor-pointer"
+		class="hero-scroll-hint hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1.5 text-sand/60 cursor-pointer"
 	>
 		<span class="text-[10px] uppercase tracking-widest">Scroll</span>
 		<svg
