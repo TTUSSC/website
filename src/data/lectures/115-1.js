@@ -72,7 +72,7 @@ export const semesterData = [
   {
     date: '9/29',
     name: 'Mouse.exe 已停止運作，正在載入 /bin/bash……',
-    difficulty: 0,
+    difficulty: 1,
     lecturer: '小方',
     location: 'A8-B209',
     tags: ['Shell'],

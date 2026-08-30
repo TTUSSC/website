@@ -27,11 +27,14 @@
               class="hover-lift group relative overflow-hidden rounded-2xl bg-fog aspect-[4/3] cursor-pointer snap-start shrink-0 w-[76vw] md:w-[310px]"
             >
               <img
-                v-if="item.img"
-                :src="item.img"
-                :alt="item.title"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
+                 v-if="item.img"
+                 :src="item.img"
+                 :alt="item.title"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent transition-all duration-300 group-hover:from-ink/75"
@@ -102,11 +105,14 @@
               class="hover-lift group relative overflow-hidden rounded-2xl bg-fog aspect-[4/3] cursor-pointer snap-start shrink-0 w-[76vw] md:w-[310px]"
             >
               <img
-                v-if="item.img"
-                :src="item.img"
-                :alt="item.title"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
+                 v-if="item.img"
+                 :src="item.img"
+                 :alt="item.title"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent transition-all duration-300 group-hover:from-ink/75"
@@ -176,11 +182,14 @@
               class="hover-lift group relative overflow-hidden rounded-2xl bg-fog aspect-[4/3] cursor-pointer snap-start shrink-0 w-[76vw] md:w-[310px]"
             >
               <img
-                v-if="item.img"
-                :src="item.img"
-                :alt="item.title"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
+                 v-if="item.img"
+                 :src="item.img"
+                 :alt="item.title"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent transition-all duration-300 group-hover:from-ink/75"
@@ -250,11 +259,14 @@
               class="hover-lift group relative overflow-hidden rounded-2xl bg-fog aspect-[4/3] cursor-pointer snap-start shrink-0 w-[76vw] md:w-[310px]"
             >
               <img
-                v-if="item.img"
-                :src="item.img"
-                :alt="item.title"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
+                 v-if="item.img"
+                 :src="item.img"
+                 :alt="item.title"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent transition-all duration-300 group-hover:from-ink/75"
@@ -321,87 +333,118 @@ const socialReviewScrollEl = ref(null)
 
 const recentActivities = [
   {
+    title: '20260528 期末大會',
+    desc: '來回顧吧',
+    img: '/img/lectures/webp/20260528_期末大會.webp',
+  },
+  {
+    title: '20260527 Java',
+    desc: 'Java進階',
+    img: '/img/lectures/webp/20260527_Java.webp',
+  },
+  {
+    title: '20260521 3D列印',
+    desc: '打印出酷酷作品',
+    img: '/img/lectures/webp/20260521_3D列印.webp',
+  },
+  {
+    title: '20260514 樹梅派微控制器入門',
+    desc: '一起了解樹梅派',
+    img: '/img/lectures/webp/20260514_樹梅派微控制器入門.webp',
+  },
+  {
+    title: '20260507 後端',
+    desc: '後端實作',
+    img: '/img/lectures/webp/20260507_後端.webp',
+  },
+  {
+    title: '20260430 Docker',
+    desc: '學習docker技術',
+    img: '/img/lectures/webp/20260430_Docker.webp',
+  },
+  {
     title: '20260402 從 0 開始的前端實作：JavaScript 記帳系統',
     desc: '和網頁有互動了 !',
-    img: '/img/lectures/20260402_從 0 開始的前端實作：JavaScript 記帳系統.jpg',
+    img: '/img/lectures/webp/20260402_從 0 開始的前端實作：JavaScript 記帳系統.webp',
   },
   {
     title: '20260326 零基礎打造自己的網站  HTML × Tailwind CSS 網頁前端入門',
     desc: '打造酷酷的網頁 !',
-    img: '/img/lectures/20260326_零基礎打造自己的網站  HTML × Tailwind CSS 網頁前端入門.jpg',
+    img: '/img/lectures/webp/20260326_零基礎打造自己的網站  HTML × Tailwind CSS 網頁前端入門.webp',
   },
   {
     title: '20260319 Git 起來！Denny 學長帶你雲端協作',
     desc: 'Git 進階實作 !',
-    img: '/img/lectures/20260319_Git 起來！Denny 學長帶你雲端協作.jpg',
+    img: '/img/lectures/webp/20260319_Git 起來！Denny 學長帶你雲端協作.webp',
   },
   {
     title: '20260312 Git 起來！ Denny 學長帶你本地實踐',
     desc: 'Git 基礎實作 !',
-    img: '/img/lectures/20260312_Git 起來！ Denny 學長帶你本地實踐.jpg',
+    img: '/img/lectures/webp/20260312_Git 起來！ Denny 學長帶你本地實踐.webp',
   },
   {
     title: '20260305 AI不只有聊天 ? 做出屬於自己的AI Agent吧 !',
     desc: '萬崧的第一堂社課 ~',
-    img: '/img/lectures/20260305_AI.jpg',
+    img: '/img/lectures/webp/20260305_AI.webp',
   },
   {
     title: '20260226 期初大會',
     desc: '114-2 學期社課正式開跑',
-    img: '/img/lectures/20260226期初大會.jpg',
+    img: '/img/lectures/webp/20260226期初大會.webp',
   },
-  {
-    title: '20251211 期末大會',
-    desc: 'TakeTurnsUnwarppingSecretSantaChristmas',
-    img: '/img/lectures/20251211_TakeTurnsUnwarppingSecretSantaChristmas.jpg',
-  },
-  {
-    title: '20251205 做孩子的啦啦隊！',
-    desc: '志工培訓',
-    img: '/img/lectures/20251205_做孩子的啦啦隊！—志工培訓_260228_1.jpg',
-  },
+  
 ]
 
 // ── 營隊活動 ──
 const campActivities = [
   {
+    title: '20260713 兒童心理學',
+    desc: '兒童心理學營隊',
+    img: '/img/camps/webp/20260713_兒童心理學.webp',
+  },
+  {
     title: '20260125-0130 小小創客大冒險',
     desc: 'ARDUINO冬日創客營',
-    img: '/img/camps/2026 winter_vacation_camp.png',
+    img: '/img/camps/webp/20260125-0130_小小創客大冒險.webp',
   },
   {
     title: '20250811-0813 電資創客營',
     desc: '暑假營隊',
-    img: '/img/camps/20250811電資創客營.jpg',
+    img: '/img/camps/webp/20250811-0813_電資創客營.webp',
   },
   {
     title: '20250716 夏季攝影手作營',
     desc: '與攝影社合辦營隊',
-    img: '/img/camps/20250716_夏季攝影手作營.jpg',
+    img: '/img/camps/webp/20250716_夏季攝影手作營.webp',
   },
 ]
 
 // ── 開源社群 ──
 const communityActivities = [
   {
+    title: '20260821 HITCON',
+    desc: '黑客年會',
+    img: '/img/Open-Source-Activity/webp/20260821_HITCON.webp',
+  },
+  {
     title: '20260328 SITCON',
     desc: '開源社今年又來啦~',
-    img: '/img/Open-Source-Activity/20260328_SITCON.jpg',
+    img: '/img/Open-Source-Activity/webp/20260328_SITCON.webp',
   },
   {
     title: '20250810 COSCUP',
     desc: '開源人開源魂',
-    img: '/img/Open-Source-Activity/202508COSCUP.jpg',
+    img: '/img/Open-Source-Activity/webp/20250810_COSCUP.webp',
   },
   {
     title: '20250308 SITCON',
     desc: '開源人年會',
-    img: '/img/Open-Source-Activity/20250308_SITCON.jpg',
+    img: '/img/Open-Source-Activity/webp/20250308_SITCON.webp',
   },
   {
     title: '20240803 COSCUP',
     desc: '開源人年會',
-    img: '/img/Open-Source-Activity/20240803_COSCUP.jpg',
+    img: '/img/Open-Source-Activity/webp/20240803_COSCUP.webp',
   },
 ]
 
@@ -410,12 +453,12 @@ const socialReviewActivities = [
   {
     title: '20260328-29 全社評',
     desc: '認識到很多社團哦 ~',
-    img: '/img/National-Clubs/20260328-29_全社評.jpg',
+    img: '/img/National-Clubs/webp/20260328-29_全社評.webp',
   },
   {
     title: '20250329-30 全社評',
     desc: '希望每年都來 ~',
-    img: '/img/National-Clubs/20250329-30_全社評.jpg',
+    img: '/img/National-Clubs/webp/20250329-30_全社評.webp',
   },
 ]
 

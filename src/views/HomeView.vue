@@ -426,14 +426,14 @@ const activityPhotos = [
     desc: '20260528_期末大會',
   },
   {
-    src: '/img/camps/2026 winter_vacation_camp.png',
+    src: '/img/camps/20260713_兒童心理學.jpg',
     alt: '營隊活動',
-    desc: '2026 小小創客大冒險 - ARDUINO冬日創客營',
+    desc: '2026 兒童心理學營隊',
   },
   {
-    src: '/img/Open-Source-Activity/20260328_SITCON.jpg',
+    src: '/img/Open-Source-Activity/20260821_HITCON.jpg',
     alt: '開源社群',
-    desc: '20260328 SITCON',
+    desc: '20260821 HITCON',
   },
 ]
 const currentPhoto = ref(0)
