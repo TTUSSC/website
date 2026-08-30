@@ -18,6 +18,11 @@ repos:
         language: system
         types: [text]
         exclude: ^pnpm-lock\.yaml$
+      - id: optimize-images
+        name: optimize images
+        entry: bash -c 'for f in "$@"; do uv run scripts/optimize_image.py "$f" "$f"; done' --
+        language: system
+        files: \.(jpe?g|png)$
       - id: check-commit-msg
         name: check commit message
         entry: uv run scripts/check_commit_msg.py
