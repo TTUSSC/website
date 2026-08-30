@@ -9,6 +9,20 @@ pnpm astro check   # 型別與 schema 檢查
 pnpm astro build   # 確認能正常建置
 ```
 
+## 上傳照片
+
+任何要放進 `src/assets/` 的照片，**先用 `scripts/optimize_image.py` 處理過再加進 git**，不要直接把手機或相機拍的原始檔丟進來。原始檔動輒好幾 MB，會被 `check-added-large-files` 這個 pre-commit hook 擋下來，讓 commit 直接失敗。
+
+```bash
+# 單一檔案
+uv run scripts/optimize_image.py 原始照片.jpg src/assets/members/rainyu_05_10.jpg
+
+# 整個資料夾
+uv run scripts/optimize_image.py 一批原始照片的資料夾/ src/assets/events/community-2026-08-21-hitcon/
+```
+
+這個腳本會把照片縮到最長邊 2000px 以內，用 82% 品質重新壓縮；輸出格式看目的檔名的副檔名，`.jpg` 存 JPEG、`.png` 存 PNG。這跟 Astro 內建的 `image()` 最佳化是兩回事：`image()` 是建置時依裝置需求產生多種尺寸與格式，這裡的腳本顧的是另一件事，讓**進 git 的原始檔**不要太大。
+
 ## 新增成員／新的一屆
 
 **路徑：** `src/content/members/<屆別>/<檔名>.md`
@@ -44,7 +58,7 @@ tags: ['音樂', '遊戲']
 
 正文是 `---` 之後的部分，內容是這位成員的自我介紹，顯示在成員卡片上。
 
-**照片：** 先把照片放進 `src/assets/members/`，再用 `image` 欄位以相對路徑指過去。Astro 會自動處理最佳化與格式轉換，不需要自己壓縮或轉檔。
+**照片：** 依「上傳照片」一節處理過後放進 `src/assets/members/`，再用 `image` 欄位以相對路徑指過去。
 
 ## 新增課程／新學期課表
 
@@ -127,7 +141,7 @@ image: ./photo.jpg
 **新增步驟：**
 
 1. 在 `src/content/events/` 底下新增目錄，依上述命名慣例取名。
-2. 把活動照片存成目錄裡的 `photo.jpg`。
+2. 把活動照片依「上傳照片」一節處理過後，存成目錄裡的 `photo.jpg`。
 3. 新增 `index.md`，填入上面的 frontmatter 欄位。
 4. 執行 `pnpm astro check` 跟 `pnpm astro build` 確認沒問題。
 
