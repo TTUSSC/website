@@ -52,7 +52,7 @@
             </p>
             <div class="reveal reveal-d3 mt-8 flex flex-wrap gap-3">
               <a
-                href="https://forms.gle/GWUsti9y7igNq9gXA"
+                href="https://forms.gle/SDdfMnS5KNCH8vCcA"
                 target="_blank"
                 class="group inline-flex items-center gap-2 px-5 py-2.5 bg-ink text-paper text-sm font-medium rounded-md hover:bg-ink-soft transition-colors duration-300"
               >

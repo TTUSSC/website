@@ -4,7 +4,7 @@ export const semesterData = [
     name: '期初大會',
     difficulty: 0,
     lecturer: '萬崧',
-    location: '挺生大樓 307 教室',
+    location: 'A3-125',
     tags: ['期初大會'],
     type: '主線',
     description:
@@ -26,9 +26,9 @@ export const semesterData = [
   {
     date: '9/15',
     name: '軟體很 Open，Source 很自由',
-    difficulty: 0,
+    difficulty: 1,
     lecturer: '萬崧',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['軟體'],
     type: '主線',
     description:
@@ -49,9 +49,9 @@ export const semesterData = [
   {
     date: '9/22',
     name: '微軟大戰代碼 ! 你的第一把開發武器',
-    difficulty: 0,
+    difficulty: 1,
     lecturer: '萬崧',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['Vibe Coding'],
     type: '主線',
     description:
@@ -74,7 +74,7 @@ export const semesterData = [
     name: 'Mouse.exe 已停止運作，正在載入 /bin/bash……',
     difficulty: 0,
     lecturer: '小方',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['Shell'],
     type: '主線',
     description:
@@ -94,9 +94,9 @@ export const semesterData = [
   {
     date: '10/7',
     name: '2026 的新魔法 ! Vibe Coding 靈魂寫碼術',
-    difficulty: 0,
+    difficulty: 2,
     lecturer: '萬崧',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['Vibe Coding'],
     type: '主線',
     description:
@@ -116,9 +116,9 @@ export const semesterData = [
   {
     date: '10/13',
     name: 'Python：用幾行程式碼解放 AI 潛能',
-    difficulty: 0,
+    difficulty: 2,
     lecturer: '萬崧',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['python', 'AI'],
     type: '主線',
     description:
@@ -141,7 +141,7 @@ export const semesterData = [
     name: '期中考前讀書會',
     difficulty: 0,
     lecturer: '',
-    location: '挺生大樓 307 教室',
+    location: '社辦',
     tags: ['讀書會'],
     type: '支線',
     description:
@@ -163,7 +163,7 @@ export const semesterData = [
     name: '社遊',
     difficulty: 0,
     lecturer: '',
-    location: '挺生大樓 307 教室',
+    location: '',
     tags: ['社游'],
     type: '支線',
     description:
@@ -185,7 +185,7 @@ export const semesterData = [
     name: '資訊倫理課程',
     difficulty: 0,
     lecturer: '登評、詠俊',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['資訊倫理'],
     type: '主線',
     description:
@@ -207,8 +207,8 @@ export const semesterData = [
     date: '11/17',
     name: 'Email',
     difficulty: 0,
-    lecturer: '卓立',
-    location: '挺生大樓 307 教室',
+    lecturer: '卓立教授',
+    location: 'A8-B209',
     tags: ['Email'],
     type: '主線',
     description:
@@ -233,7 +233,7 @@ export const semesterData = [
     name: '3D Printing (1) — 建模 ',
     difficulty: 0,
     lecturer: '昕妮',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['3D printing'],
     type: '主線',
     description:
@@ -257,7 +257,7 @@ export const semesterData = [
     name: '3D Printing (2) — 成品檢討與切片(一)',
     difficulty: 0,
     lecturer: '昕妮',
-    location: '挺生大樓 307 教室',
+    location: 'A8-B209',
     tags: ['3D printing'],
     type: '主線',
     description: '',
@@ -278,7 +278,7 @@ export const semesterData = [
     name: '期末大會 - 聖誕節交換禮物 🎁',
     difficulty: 0,
     lecturer: '萬崧',
-    location: '挺生大樓 307 教室',
+    location: 'A3-125',
     tags: ['期末大會'],
     type: '主線',
     description:
@@ -301,7 +301,7 @@ export const semesterData = [
     name: '期末考前讀書會',
     difficulty: 0,
     lecturer: '',
-    location: '挺生大樓 307 教室',
+    location: '社辦',
     tags: ['讀書會'],
     type: '支線',
     description:

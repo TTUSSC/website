@@ -49,13 +49,13 @@ export const memberData = {
       title: '資訊 x 文書組長',
       ig: 'jeff950725',
       desc: '資工系學生，目前正在學習資安',
-      tags: [],
+      tags: ['鳥派','明日方舟'],
     },
     {
       image: trueURL('img/member/changfeng.jpg'),
       name: '李程峰',
       title: '資訊 x 文書',
-      ig: '',
+      ig: 'zack_li_',
       desc: '資工系學生，正在學習AI和資安，努力做專題中',
       tags: [],
     },
@@ -73,7 +73,7 @@ export const memberData = {
       title: '財務',
       ig: '',
       desc: '大同大學開源社總務組組員，男，吃素，無宗教信仰，還沒測mbti。',
-      tags: [],
+      tags: ['電機系'],
     },
     {
       image: trueURL('img/member/fang.jpg'),
@@ -101,7 +101,7 @@ export const memberData = {
     },
     {
       image: trueURL('img/member/xiaoyinzhong.jpg'),
-      name: '鍾尹婕',
+      name: '鐘尹婕',
       title: '設計組長',
       ig: 'xiaoyinzhong',
       desc: '化生系學生，喜歡看書，喜歡動漫，喜歡嘗試新事物。目前努力學習在6小時之內睡飽12小時',
