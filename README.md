@@ -1,43 +1,99 @@
-# Astro Starter Kit: Minimal
+<div align="center">
+  <img src="public/logo.png" alt="TTUSSC Logo" width="120" />
+  <h1>TTUSSC 科學開源服務社</h1>
+  <p><strong>大同大學科學開源服務社官方網站</strong></p>
 
-```sh
-pnpm create astro@latest -- --template minimal
+  <p>
+    <a href="https://discord.com/invite/29PsKfe45h">
+      <img src="https://img.shields.io/badge/Discord-加入社群-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+    </a>
+    <img src="https://img.shields.io/badge/Astro-7-BC52EE?style=for-the-badge&logo=astro&logoColor=white" alt="Astro 7" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/pnpm-10-F69220?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm" />
+  </p>
+</div>
+
+---
+
+## 關於我們
+
+TTUSSC（Tatung University Open Source and Service Club）致力於推廣開源文化、技術學習與志工服務。透過社課與講座學習開源工具，專案實作累積經驗，並參與資訊營隊與研討會志工。
+
+## 技術棧
+
+| 類別       | 工具                      |
+| ---------- | ------------------------- |
+| 框架       | Astro 7（靜態輸出）       |
+| 樣式       | Tailwind CSS 4            |
+| 內容管理   | Astro Content Collections |
+| 多語言     | astro:i18n（zh-tw / en）  |
+| 套件管理   | pnpm                      |
+| 程式碼品質 | Prettier + pre-commit     |
+
+## 快速開始
+
+### 前置需求
+
+- [Node.js](https://nodejs.org/) >= 22.12.0
+- [pnpm](https://pnpm.io/)
+
+### 安裝與啟動
+
+```bash
+# 安裝依賴
+pnpm install
+
+# 啟動開發伺服器
+pnpm dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### 其他指令
 
-## 🚀 Project Structure
+```bash
+# 建置生產版本
+pnpm build
 
-Inside of your Astro project, you'll see the following folders and files:
+# 預覽建置結果
+pnpm preview
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+# 型別與內容檢查
+pnpm astro check
+
+# 格式化程式碼
+pnpm exec prettier --write .
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 專案結構
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```
+src/
+├── assets/           # 圖片等靜態資源（經 Astro image 最佳化）
+├── components/       # 共用元件
+├── content/          # 內容集合（lectures、members、events）
+├── content.config.ts # 內容集合的 schema 定義
+├── i18n/             # 語言字典與工具函式
+├── layouts/          # 頁面版型
+├── lib/              # 工具函式
+├── pages/            # 路由（含 /en/ 對應的英文版本）
+└── styles/           # 全域樣式
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 貢獻
 
-## 🧞 Commands
+歡迎所有社員與有興趣的朋友一起貢獻！
 
-All commands are run from the root of the project, from a terminal:
+1. Fork 這個專案
+2. 建立你的分支 (`git checkout -b feature/amazing-feature`)
+3. 提交變更 (`git commit -m 'feat: add amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 開一個 Pull Request
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## 授權
 
-## 👀 Want to learn more?
+本專案採用 [MIT License](LICENSE) 授權。
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+<div align="center">
+  <sub>Made by TTUSSC</sub>
+</div>
