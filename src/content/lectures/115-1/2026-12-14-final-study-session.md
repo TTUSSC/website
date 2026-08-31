@@ -4,7 +4,7 @@ name: '期末考前讀書會'
 slug: 'final-study-session'
 difficulty: 0
 lecturer: ''
-location: '挺生大樓 307 教室'
+location: '社辦'
 tags: ['讀書會']
 type: '支線'
 timeline:

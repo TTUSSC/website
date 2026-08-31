@@ -1,5 +1,5 @@
 ---
-name: '鍾尹婕'
+name: '鐘尹婕'
 title: '設計組長'
 order: 12
 image: '../../../assets/members/xiaoyinzhong.jpg'
