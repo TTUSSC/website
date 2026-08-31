@@ -2,9 +2,9 @@
 date: '2026-10-13'
 name: 'Python：用幾行程式碼解放 AI 潛能'
 slug: 'python-ai-api'
-difficulty: 0
+difficulty: 2
 lecturer: '萬崧'
-location: '挺生大樓 307 教室'
+location: 'A8-B209'
 tags: ['python', 'AI']
 type: '主線'
 timeline:

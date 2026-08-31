@@ -4,7 +4,7 @@ name: '期初大會'
 slug: 'opening-ceremony'
 difficulty: 0
 lecturer: '萬崧'
-location: '挺生大樓 307 教室'
+location: 'A3-125'
 tags: ['期初大會']
 type: '主線'
 timeline:
