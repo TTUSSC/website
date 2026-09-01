@@ -55,12 +55,10 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 			<h2 class="text-3xl md:text-4xl font-bold text-ink">{t.heading}</h2>
 		</div>
 
-		<div
-			class="accordion scroll-reveal hidden md:flex gap-3 h-[300px] md:h-[360px]"
-		>
+		<div class="accordion scroll-reveal hidden md:flex gap-3 h-75 md:h-90">
 			{
 				items.map((item, i) => (
-					<div class="accordion-item relative overflow-hidden rounded-2xl bg-fog cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[100px] md:w-[120px] shrink-0">
+					<div class="accordion-item relative overflow-hidden rounded-2xl bg-fog cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-25 md:w-30 shrink-0">
 						<BlurImage
 							src={item.img}
 							alt={item.title}
@@ -96,7 +94,7 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 			{
 				items.map((item, i) => (
 					<div class="rounded-2xl overflow-hidden bg-paper-warm border border-chalk/60">
-						<div class="relative aspect-[16/9]">
+						<div class="relative aspect-video">
 							<BlurImage
 								src={item.img}
 								alt={item.title}
@@ -131,8 +129,8 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 			const isActive = i === activeIndex;
 
 			item.classList.toggle('flex-[5]', isActive);
-			item.classList.toggle('w-[100px]', !isActive);
-			item.classList.toggle('md:w-[120px]', !isActive);
+			item.classList.toggle('w-25', !isActive);
+			item.classList.toggle('md:w-30', !isActive);
 			item.classList.toggle('shrink-0', !isActive);
 
 			const photo = item.querySelector<HTMLElement>('.accordion-photo')!;
