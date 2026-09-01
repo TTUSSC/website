@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { getLang } from '../../i18n/ui';
+import BlurImage from '../common/BlurImage.astro';
 import activity1 from '../../assets/home/activity-1.jpg';
 import activity2 from '../../assets/home/activity-2.jpg';
 import activity3 from '../../assets/home/activity-3.jpg';
@@ -81,9 +82,10 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 							class="carousel-slide absolute inset-0"
 							class:list={{ 'is-current': i === 0 }}
 						>
-							<Image
+							<BlurImage
 								src={photo.img}
 								alt={photo.alt}
+								width={1600}
 								class="w-full h-full object-cover"
 							/>
 						</div>
