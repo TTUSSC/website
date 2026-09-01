@@ -1,6 +1,6 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import BlurImage from '../common/BlurImage.astro';
 
 interface Props {
 	heading: string;
@@ -24,17 +24,17 @@ const { heading, events, accentClass } = Astro.props;
 		>
 			{
 				events.map((event) => (
-					<div class="hover-lift group relative overflow-hidden rounded-2xl bg-fog aspect-4/3 cursor-pointer snap-start shrink-0 w-[76vw] md:w-77.5">
+					<div class="hover-lift group relative overflow-hidden rounded-2xl bg-fog aspect-[4/3] cursor-pointer snap-start shrink-0 w-[76vw] md:w-[310px]">
 						{event.data.image && (
-							<BlurImage
+							<Image
 								src={event.data.image}
 								alt={event.data.name}
-								width={310}
-								class="w-full h-full object-cover"
-								imgClass="transition-transform duration-500 group-hover:scale-105"
+								width={620}
+								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+								loading="lazy"
 							/>
 						)}
-						<div class="absolute inset-0 bg-linear-to-t from-ink/55 via-transparent to-transparent transition-all duration-300 group-hover:from-ink/75" />
+						<div class="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent transition-all duration-300 group-hover:from-ink/75" />
 						<div class="absolute bottom-0 left-0 right-0 px-3 pb-3">
 							<p class="text-white/70 text-[11px] drop-shadow">
 								{event.data.date.toISOString().slice(0, 10)}
