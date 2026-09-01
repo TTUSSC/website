@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets';
 import { getLang } from '../../i18n/ui';
+import BlurImage from '../common/BlurImage.astro';
 import lectureImg from '../../assets/home/what-we-do-lecture.jpg';
 import communityImg from '../../assets/home/what-we-do-community.jpg';
 import serviceImg from '../../assets/home/what-we-do-service.jpg';
@@ -61,10 +61,12 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 			{
 				items.map((item, i) => (
 					<div class="accordion-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[100px] md:w-[120px] shrink-0">
-						<Image
+						<BlurImage
 							src={item.img}
 							alt={item.title}
-							class="accordion-photo absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 scale-110"
+							width={1600}
+							class="w-full h-full object-cover object-center"
+							imgClass="accordion-photo transition-transform duration-700 scale-110"
 						/>
 						<div class="accordion-overlay absolute inset-0 transition-all duration-500 bg-[#0d2a4a]/65" />
 						<div class="accordion-caption absolute inset-0 flex items-end p-7 md:p-10">
@@ -95,9 +97,10 @@ const items = t.items.map((item, i) => ({ ...item, img: images[i] }));
 				items.map((item, i) => (
 					<div class="rounded-2xl overflow-hidden bg-paper-warm border border-chalk/60">
 						<div class="relative aspect-[16/9]">
-							<Image
+							<BlurImage
 								src={item.img}
 								alt={item.title}
+								width={1600}
 								class="w-full h-full object-cover"
 							/>
 						</div>
