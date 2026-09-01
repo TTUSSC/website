@@ -28,7 +28,12 @@ const {
 	width={Math.min(src.width, 24)}
 	quality={20}
 	aria-hidden="true"
-	class:list={['absolute inset-0 scale-110 blur-xl', className]}
+	style="opacity:0"
+	onload="this.style.opacity=1"
+	class:list={[
+		'absolute inset-0 scale-105 blur-md transition-opacity duration-300',
+		className,
+	]}
 />
 <Image
 	src={src}
@@ -41,7 +46,7 @@ const {
 	style="opacity:0"
 	onload="this.style.opacity=1"
 	class:list={[
-		'absolute inset-0 transition-opacity duration-500',
+		'absolute inset-0 transition-opacity duration-300 ease-out',
 		className,
 		imgClass,
 	]}
