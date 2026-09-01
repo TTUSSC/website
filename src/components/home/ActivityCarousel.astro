@@ -75,7 +75,7 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 				}
 			</div>
 
-			<div class="relative rounded-2xl overflow-hidden bg-fog aspect-[16/9]">
+			<div class="relative rounded-2xl overflow-hidden bg-fog aspect-video">
 				{
 					photos.map((photo, i) => (
 						<div
@@ -92,11 +92,11 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 					))
 				}
 				<div
-					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5 flex items-end justify-between gap-2 md:gap-4"
+					class="absolute inset-x-0 bottom-0 bg-linear-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5 flex items-end justify-between gap-2 md:gap-4"
 				>
 					<div class="min-w-0">
 						<p
-							class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow-md break-words"
+							class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow-md wrap-break-word"
 						>
 							{photos[0].alt}
 						</p>
