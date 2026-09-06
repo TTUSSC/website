@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import { getLang } from '../../i18n/ui';
-import BlurImage from '../common/BlurImage.astro';
 import activity1 from '../../assets/home/activity-1.jpg';
 import activity2 from '../../assets/home/activity-2.jpg';
 import activity3 from '../../assets/home/activity-3.jpg';
@@ -19,7 +18,7 @@ const content = {
 				alt: '最近社課',
 				desc: '20260528 期末大會',
 			},
-			{ alt: '營隊活動', desc: '2026 兒童心理學營隊' },
+			{ alt: '營隊活動', desc: '2026 光劍電資創客營' },
 			{ alt: '社群活動', desc: '20260821 HITCON' },
 		],
 	},
@@ -32,7 +31,7 @@ const content = {
 				alt: 'Recent Lectures',
 				desc: '20260528 期末大會',
 			},
-			{ alt: 'Camps', desc: '2026 兒童心理學營隊' },
+			{ alt: '營隊活動', desc: '2026 光劍電資創客營' },
 			{ alt: 'Community Events', desc: '20260821 HITCON' },
 		],
 	},
@@ -75,28 +74,27 @@ const photos = t.photos.map((photo, i) => ({ ...photo, img: images[i] }));
 				}
 			</div>
 
-			<div class="relative rounded-2xl overflow-hidden bg-fog aspect-video">
+			<div class="relative rounded-2xl overflow-hidden bg-fog aspect-[16/9]">
 				{
 					photos.map((photo, i) => (
 						<div
 							class="carousel-slide absolute inset-0"
 							class:list={{ 'is-current': i === 0 }}
 						>
-							<BlurImage
+							<Image
 								src={photo.img}
 								alt={photo.alt}
-								width={900}
 								class="w-full h-full object-cover"
 							/>
 						</div>
 					))
 				}
 				<div
-					class="absolute inset-x-0 bottom-0 bg-linear-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5 flex items-end justify-between gap-2 md:gap-4"
+					class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent px-5 py-4 md:px-6 md:py-5 flex items-end justify-between gap-2 md:gap-4"
 				>
 					<div class="min-w-0">
 						<p
-							class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow-md wrap-break-word"
+							class="carousel-caption-title font-display font-bold text-base md:text-lg text-white drop-shadow-md break-words"
 						>
 							{photos[0].alt}
 						</p>
