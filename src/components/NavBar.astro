@@ -50,7 +50,6 @@ const isActive = (path: string) => {
 	class="sticky top-0 z-50 border-b border-chalk bg-paper transition-all duration-500"
 >
 	<nav class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-
 		<a
 			href={getRelativeLocaleUrl(lang, '')}
 			class="navbar-brand flex items-center gap-2.5 font-display font-bold text-ink tracking-tight hover:text-rust transition-colors duration-300"
@@ -67,9 +66,7 @@ const isActive = (path: string) => {
 							href={getRelativeLocaleUrl(lang, link.href)}
 							class:list={[
 								'px-3 py-1.5 text-[15px] font-medium rounded-md transition-all duration-200 hover:text-ink hover:bg-fog',
-								isActive(link.path)
-									? 'text-ink bg-fog'
-									: 'text-clay',
+								isActive(link.path) ? 'text-ink bg-fog' : 'text-clay',
 							]}
 						>
 							{link.label}
@@ -81,7 +78,6 @@ const isActive = (path: string) => {
 
 		<!-- Desktop buttons -->
 		<div class="hidden md:flex items-center gap-2">
-
 			<LangSwitch />
 
 			<a
@@ -102,7 +98,6 @@ const isActive = (path: string) => {
 
 				Discord
 			</a>
-
 		</div>
 
 		<!-- Mobile menu button -->
@@ -120,10 +115,7 @@ const isActive = (path: string) => {
 				stroke-width="1.5"
 				viewBox="0 0 24 24"
 			>
-				<path
-					stroke-linecap="round"
-					d="M4 7h16M4 12h10M4 17h14"
-				></path>
+				<path stroke-linecap="round" d="M4 7h16M4 12h10M4 17h14"></path>
 			</svg>
 
 			<svg
@@ -134,13 +126,9 @@ const isActive = (path: string) => {
 				stroke-width="1.5"
 				viewBox="0 0 24 24"
 			>
-				<path
-					stroke-linecap="round"
-					d="M6 18L18 6M6 6l12 12"
-				></path>
+				<path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"></path>
 			</svg>
 		</button>
-
 	</nav>
 
 	<!-- Mobile menu -->
@@ -149,16 +137,13 @@ const isActive = (path: string) => {
 		class="hidden md:hidden border-t border-chalk bg-paper shadow-xl"
 	>
 		<div class="px-6 py-3 space-y-0.5">
-
 			{
 				navLinks.map((link) => (
 					<a
 						href={getRelativeLocaleUrl(lang, link.href)}
 						class:list={[
 							'block px-3 py-2 text-sm rounded-md transition-all hover:text-ink hover:bg-fog',
-							isActive(link.path)
-								? 'text-ink bg-fog'
-								: 'text-clay',
+							isActive(link.path) ? 'text-ink bg-fog' : 'text-clay',
 						]}
 					>
 						{link.label}
@@ -171,7 +156,6 @@ const isActive = (path: string) => {
 			</div>
 
 			<div class="pt-3 flex gap-2">
-
 				<a
 					href="https://discord.com/invite/29PsKfe45h"
 					target="_blank"
@@ -180,12 +164,9 @@ const isActive = (path: string) => {
 				>
 					Discord
 				</a>
-
 			</div>
-
 		</div>
 	</div>
-
 </header>
 
 <script>
@@ -194,8 +175,7 @@ const isActive = (path: string) => {
 	const mobileMenu = document.getElementById('navbar-mobile-menu')!;
 	const iconOpen = document.getElementById('navbar-icon-open')!;
 	const iconClose = document.getElementById('navbar-icon-close')!;
-	const brand =
-		document.querySelector<HTMLAnchorElement>('.navbar-brand')!;
+	const brand = document.querySelector<HTMLAnchorElement>('.navbar-brand')!;
 
 	const setScrolled = (scrolled: boolean) => {
 		header.classList.toggle('bg-paper/90', scrolled);
@@ -203,56 +183,32 @@ const isActive = (path: string) => {
 		header.classList.toggle('border-chalk/80', scrolled);
 	};
 
-	window.addEventListener(
-		'scroll',
-		() => setScrolled(window.scrollY > 20),
-	);
+	window.addEventListener('scroll', () => setScrolled(window.scrollY > 20));
 
 	let menuOpen = false;
 
 	const setMenuOpen = (open: boolean) => {
 		menuOpen = open;
 
-		mobileMenu.classList.toggle(
-			'hidden',
-			!open,
-		);
+		mobileMenu.classList.toggle('hidden', !open);
 
-		iconOpen.classList.toggle(
-			'hidden',
-			open,
-		);
+		iconOpen.classList.toggle('hidden', open);
 
-		iconClose.classList.toggle(
-			'hidden',
-			!open,
-		);
+		iconClose.classList.toggle('hidden', !open);
 
-		toggle.setAttribute(
-			'aria-expanded',
-			String(open),
-		);
+		toggle.setAttribute('aria-expanded', String(open));
 	};
 
-	toggle.addEventListener(
-		'click',
-		() => setMenuOpen(!menuOpen),
-	);
+	toggle.addEventListener('click', () => setMenuOpen(!menuOpen));
 
 	mobileMenu
 		.querySelectorAll('a')
-		.forEach((a) =>
-			a.addEventListener(
-				'click',
-				() => setMenuOpen(false),
-			),
-		);
+		.forEach((a) => a.addEventListener('click', () => setMenuOpen(false)));
 
 	let clickCount = 0;
 	let lastClickTime = 0;
 
 	brand.addEventListener('click', (event) => {
-
 		// Already on the brand's target page:
 		// block the reload so repeated clicks can
 		// accumulate toward the easter egg below.
