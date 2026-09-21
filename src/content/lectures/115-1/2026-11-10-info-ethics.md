@@ -1,6 +1,6 @@
 ---
 date: '2026-11-10'
-name: '資訊倫理課程'
+name: '黑白之間：技術人的資訊倫理課—從血淚教訓看權限界線與白帽精神'
 slug: 'info-ethics'
 difficulty: 0
 lecturer: '登評、詠俊'
