@@ -1,7 +1,7 @@
 ---
-date: '2026-08-21'
-name: 'HITCON'
-desc: '駭客年會'
+date: '2026-08-09'
+name: 'COSCUP'
+desc: 'COSCUP'
 type: community
 image: ./photo.jpg
 ---
