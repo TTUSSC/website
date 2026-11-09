@@ -13,6 +13,8 @@ timeline:
     { 'time': '18:30 ~ 20:45', 'event': '社課' },
     { 'time': '20:45 ~ 21:00', 'event': '表單回饋' },
   ]
+slide: 'https://canva.link/3dg8875cgr9p727'
+cowrite: 'https://hackmd.io/@ttussc/SyALzvatMx'
 ---
 
 【白帽與黑帽的抉擇：技術力、資訊倫理與自我保護的必修課】
