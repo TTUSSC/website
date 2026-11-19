@@ -17,8 +17,10 @@ const lang = getLang(Astro.currentLocale);
 
 <html lang={lang}>
 	<head>
-		<Head title={title} description={description} ogImage={ogImage} />
-	</head>
+		<Head title={title} description={description} ogImage={ogImage} /></head
+	>\
+	<slot name="head" />
+
 	<body class="min-h-screen flex flex-col">
 		<NavBar />
 		<main class="flex-1">
