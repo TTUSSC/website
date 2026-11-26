@@ -14,6 +14,7 @@ timeline:
     { 'time': '19:10~20:10', 'event': '聖誕派對' },
     { 'time': '20:10~20:30', 'event': '填寫問卷、收拾場地' },
   ]
+kktix: 'https://ttussc.kktix.cc/events/115-1final-gathering-copy-2'
 ---
 
 嘿！期末將近，是時候該放鬆一下啦～🎄
